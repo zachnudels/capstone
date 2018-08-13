@@ -51,44 +51,14 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\bfy.cs" />
-     <Compile Include="Assets\cap.cs" />
-     <Compile Include="Assets\changer.cs" />
-     <Compile Include="Assets\fallingDown.cs" />
-     <Compile Include="Assets\fallingPlatform.cs" />
-     <Compile Include="Assets\fb.cs" />
-     <Compile Include="Assets\forwardBack.cs" />
-     <Compile Include="Assets\FPS1.cs" />
-     <Compile Include="Assets\fpscamera.cs" />
-     <Compile Include="Assets\FPSControl.cs" />
-     <Compile Include="Assets\inputC.cs" />
-     <Compile Include="Assets\Manage.cs" />
-     <Compile Include="Assets\MoveC.cs" />
-     <Compile Include="Assets\MovePlayer.cs" />
-     <Compile Include="Assets\platformAttach.cs" />
-     <Compile Include="Assets\platforms\NewBehaviourScript.cs" />
-     <Compile Include="Assets\playerAnimation.cs" />
-     <Compile Include="Assets\PlayerC.cs" />
-     <Compile Include="Assets\rotateUp.cs" />
-     <Compile Include="Assets\ru.cs" />
-     <Compile Include="Assets\scripts\audioController.cs" />
-     <Compile Include="Assets\scripts\Bullet.cs" />
-     <Compile Include="Assets\scripts\change.cs" />
-     <Compile Include="Assets\scripts\Gun.cs" />
-     <Compile Include="Assets\scripts\InputControl.cs" />
-     <Compile Include="Assets\scripts\MoveControl.cs" />
-     <Compile Include="Assets\scripts\orbitCamera.cs" />
-     <Compile Include="Assets\scripts\Player.cs" />
-     <Compile Include="Assets\scripts\PlayerShooting.cs" />
-     <Compile Include="Assets\scripts\ranMaterial.cs" />
-     <Compile Include="Assets\scripts\ranSpawn.cs" />
-     <Compile Include="Assets\scripts\Shoot.cs" />
-     <Compile Include="Assets\scripts\thirdPerson.cs" />
-     <Compile Include="Assets\Shared\Manager.cs" />
-     <Compile Include="Assets\Spin.cs" />
-     <Compile Include="Assets\spinning.cs" />
-     <Compile Include="Assets\stayOn.cs" />
-     <Compile Include="Assets\yBackForth.cs" />
+     <Compile Include="Assets\scripts\fallingPlatform.cs" />
+     <Compile Include="Assets\scripts\forwardBack.cs" />
+     <Compile Include="Assets\scripts\MovePlayer.cs" />
+     <Compile Include="Assets\scripts\platformAttach.cs" />
+     <Compile Include="Assets\scripts\rotateUp.cs" />
+     <Compile Include="Assets\scripts\Spin.cs" />
+     <Compile Include="Assets\scripts\stayOn.cs" />
+     <Compile Include="Assets\scripts\yBackForth.cs" />
  <Reference Include="UnityEngine.UIAutomation">
  <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/UIAutomation/UnityEngine.UIAutomation.dll</HintPath>
  </Reference>
@@ -154,42 +124,6 @@
  </Reference>
  <Reference Include="UnityEditor.OSXStandalone.Extensions">
  <HintPath>/Applications/Unity/Unity.app/Contents/PlaybackEngines/MacStandaloneSupport/UnityEditor.OSXStandalone.Extensions.dll</HintPath>
- </Reference>
- <Reference Include="AsyncBridge.Net35">
- <HintPath>/Users/lauracohen1/Desktop/GamesCapstone/capstone/Assets/Plugins/GitHub/Editor/AsyncBridge.Net35.dll</HintPath>
- </Reference>
- <Reference Include="GitHub.Api">
- <HintPath>/Users/lauracohen1/Desktop/GamesCapstone/capstone/Assets/Plugins/GitHub/Editor/GitHub.Api.dll</HintPath>
- </Reference>
- <Reference Include="GitHub.Logging">
- <HintPath>/Users/lauracohen1/Desktop/GamesCapstone/capstone/Assets/Plugins/GitHub/Editor/GitHub.Logging.dll</HintPath>
- </Reference>
- <Reference Include="GitHub.Unity">
- <HintPath>/Users/lauracohen1/Desktop/GamesCapstone/capstone/Assets/Plugins/GitHub/Editor/GitHub.Unity.dll</HintPath>
- </Reference>
- <Reference Include="ICSharpCode.SharpZipLib">
- <HintPath>/Users/lauracohen1/Desktop/GamesCapstone/capstone/Assets/Plugins/GitHub/Editor/ICSharpCode.SharpZipLib.dll</HintPath>
- </Reference>
- <Reference Include="Mono.Posix">
- <HintPath>/Users/lauracohen1/Desktop/GamesCapstone/capstone/Assets/Plugins/GitHub/Editor/Mono.Posix.dll</HintPath>
- </Reference>
- <Reference Include="ReadOnlyCollectionsInterfaces">
- <HintPath>/Users/lauracohen1/Desktop/GamesCapstone/capstone/Assets/Plugins/GitHub/Editor/ReadOnlyCollectionsInterfaces.dll</HintPath>
- </Reference>
- <Reference Include="sfw.net">
- <HintPath>/Users/lauracohen1/Desktop/GamesCapstone/capstone/Assets/Plugins/GitHub/Editor/sfw.net.dll</HintPath>
- </Reference>
- <Reference Include="System.Threading">
- <HintPath>/Users/lauracohen1/Desktop/GamesCapstone/capstone/Assets/Plugins/GitHub/Editor/System.Threading.dll</HintPath>
- </Reference>
- <Reference Include="LibGit2SharpUnity">
- <HintPath>/Users/lauracohen1/Desktop/GamesCapstone/capstone/Assets/Plugins/LibGit2Sharp/Editor/LibGit2SharpUnity.dll</HintPath>
- </Reference>
- <Reference Include="UniGit">
- <HintPath>/Users/lauracohen1/Desktop/GamesCapstone/capstone/Assets/Plugins/UniGit/Editor/UniGit.dll</HintPath>
- </Reference>
- <Reference Include="UniGitResources">
- <HintPath>/Users/lauracohen1/Desktop/GamesCapstone/capstone/Assets/Plugins/UniGit/Editor/UniGitResources.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.Advertisements">
  <HintPath>/Users/lauracohen1/Library/Unity/cache/packages/packages.unity.com/com.unity.ads@2.0.3/UnityEngine.Advertisements.dll</HintPath>
