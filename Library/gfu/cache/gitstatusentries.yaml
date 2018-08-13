@@ -1,0 +1,251 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &1
+MonoBehaviour:
+  m_ObjectHideFlags: 61
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 995438498, guid: 68c7e4565cde54155bb78d8e935f1dd4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cacheType: 5
+  lastUpdatedAtString: 2018-08-13T11:54:54.116+02:00
+  initializedAtString: 2018-08-13T10:57:37.675+02:00
+  entries:
+  - path: Assembly-CSharp.csproj
+    fullPath: /Users/lauracohen1/Desktop/GamesCapstone/capstone/Assembly-CSharp.csproj
+    projectPath: Assembly-CSharp.csproj
+    originalPath: 
+    status: 3
+    staged: 0
+  - path: Assets/Animation.meta
+    fullPath: /Users/lauracohen1/Desktop/GamesCapstone/capstone/Assets/Animation.meta
+    projectPath: Assets/Animation.meta
+    originalPath: 
+    status: 5
+    staged: 0
+  - path: Assets/Animation/Player.controller
+    fullPath: /Users/lauracohen1/Desktop/GamesCapstone/capstone/Assets/Animation/Player.controller
+    projectPath: Assets/Animation/Player.controller
+    originalPath: 
+    status: 5
+    staged: 0
+  - path: Assets/Animation/Player.controller.meta
+    fullPath: /Users/lauracohen1/Desktop/GamesCapstone/capstone/Assets/Animation/Player.controller.meta
+    projectPath: Assets/Animation/Player.controller.meta
+    originalPath: 
+    status: 5
+    staged: 0
+  - path: Assets/FuturisticWeaponsSet.meta
+    fullPath: /Users/lauracohen1/Desktop/GamesCapstone/capstone/Assets/FuturisticWeaponsSet.meta
+    projectPath: Assets/FuturisticWeaponsSet.meta
+    originalPath: 
+    status: 5
+    staged: 0
+  - path: Assets/FuturisticWeaponsSet/bazooka.meta
+    fullPath: /Users/lauracohen1/Desktop/GamesCapstone/capstone/Assets/FuturisticWeaponsSet/bazooka.meta
+    projectPath: Assets/FuturisticWeaponsSet/bazooka.meta
+    originalPath: 
+    status: 5
+    staged: 0
+  - path: Assets/FuturisticWeaponsSet/bazooka/explosion_bazooka.wav
+    fullPath: /Users/lauracohen1/Desktop/GamesCapstone/capstone/Assets/FuturisticWeaponsSet/bazooka/explosion_bazooka.wav
+    projectPath: Assets/FuturisticWeaponsSet/bazooka/explosion_bazooka.wav
+    originalPath: 
+    status: 5
+    staged: 0
+  - path: Assets/FuturisticWeaponsSet/bazooka/explosion_bazooka.wav.meta
+    fullPath: /Users/lauracohen1/Desktop/GamesCapstone/capstone/Assets/FuturisticWeaponsSet/bazooka/explosion_bazooka.wav.meta
+    projectPath: Assets/FuturisticWeaponsSet/bazooka/explosion_bazooka.wav.meta
+    originalPath: 
+    status: 5
+    staged: 0
+  - path: Assets/FuturisticWeaponsSet/hand_gun.meta
+    fullPath: /Users/lauracohen1/Desktop/GamesCapstone/capstone/Assets/FuturisticWeaponsSet/hand_gun.meta
+    projectPath: Assets/FuturisticWeaponsSet/hand_gun.meta
+    originalPath: 
+    status: 5
+    staged: 0
+  - path: Assets/FuturisticWeaponsSet/hand_gun/shot_hand_gun.wav
+    fullPath: /Users/lauracohen1/Desktop/GamesCapstone/capstone/Assets/FuturisticWeaponsSet/hand_gun/shot_hand_gun.wav
+    projectPath: Assets/FuturisticWeaponsSet/hand_gun/shot_hand_gun.wav
+    originalPath: 
+    status: 5
+    staged: 0
+  - path: Assets/FuturisticWeaponsSet/hand_gun/shot_hand_gun.wav.meta
+    fullPath: /Users/lauracohen1/Desktop/GamesCapstone/capstone/Assets/FuturisticWeaponsSet/hand_gun/shot_hand_gun.wav.meta
+    projectPath: Assets/FuturisticWeaponsSet/hand_gun/shot_hand_gun.wav.meta
+    originalPath: 
+    status: 5
+    staged: 0
+  - path: Assets/platforms.meta
+    fullPath: /Users/lauracohen1/Desktop/GamesCapstone/capstone/Assets/platforms.meta
+    projectPath: Assets/platforms.meta
+    originalPath: 
+    status: 5
+    staged: 0
+  - path: Assets/platforms/NewBehaviourScript.cs
+    fullPath: /Users/lauracohen1/Desktop/GamesCapstone/capstone/Assets/platforms/NewBehaviourScript.cs
+    projectPath: Assets/platforms/NewBehaviourScript.cs
+    originalPath: 
+    status: 5
+    staged: 0
+  - path: Assets/platforms/NewBehaviourScript.cs.meta
+    fullPath: /Users/lauracohen1/Desktop/GamesCapstone/capstone/Assets/platforms/NewBehaviourScript.cs.meta
+    projectPath: Assets/platforms/NewBehaviourScript.cs.meta
+    originalPath: 
+    status: 5
+    staged: 0
+  - path: Library/assetDatabase3
+    fullPath: /Users/lauracohen1/Desktop/GamesCapstone/capstone/Library/assetDatabase3
+    projectPath: Library/assetDatabase3
+    originalPath: 
+    status: 3
+    staged: 0
+  - path: Library/CrashedAssetImports.txt
+    fullPath: /Users/lauracohen1/Desktop/GamesCapstone/capstone/Library/CrashedAssetImports.txt
+    projectPath: Library/CrashedAssetImports.txt
+    originalPath: 
+    status: 5
+    staged: 0
+  - path: Library/metadata/1b/1b981610202b64c57a2e93ac30f0f28b
+    fullPath: /Users/lauracohen1/Desktop/GamesCapstone/capstone/Library/metadata/1b/1b981610202b64c57a2e93ac30f0f28b
+    projectPath: Library/metadata/1b/1b981610202b64c57a2e93ac30f0f28b
+    originalPath: 
+    status: 5
+    staged: 0
+  - path: Library/metadata/1b/1b981610202b64c57a2e93ac30f0f28b.info
+    fullPath: /Users/lauracohen1/Desktop/GamesCapstone/capstone/Library/metadata/1b/1b981610202b64c57a2e93ac30f0f28b.info
+    projectPath: Library/metadata/1b/1b981610202b64c57a2e93ac30f0f28b.info
+    originalPath: 
+    status: 5
+    staged: 0
+  - path: Library/metadata/25/2513681a5a97649978b616a281e765e1
+    fullPath: /Users/lauracohen1/Desktop/GamesCapstone/capstone/Library/metadata/25/2513681a5a97649978b616a281e765e1
+    projectPath: Library/metadata/25/2513681a5a97649978b616a281e765e1
+    originalPath: 
+    status: 5
+    staged: 0
+  - path: Library/metadata/25/2513681a5a97649978b616a281e765e1.info
+    fullPath: /Users/lauracohen1/Desktop/GamesCapstone/capstone/Library/metadata/25/2513681a5a97649978b616a281e765e1.info
+    projectPath: Library/metadata/25/2513681a5a97649978b616a281e765e1.info
+    originalPath: 
+    status: 5
+    staged: 0
+  - path: Library/metadata/3b/3b4dbf9b29e274d2086d36747a99492a
+    fullPath: /Users/lauracohen1/Desktop/GamesCapstone/capstone/Library/metadata/3b/3b4dbf9b29e274d2086d36747a99492a
+    projectPath: Library/metadata/3b/3b4dbf9b29e274d2086d36747a99492a
+    originalPath: 
+    status: 5
+    staged: 0
+  - path: Library/metadata/3b/3b4dbf9b29e274d2086d36747a99492a.info
+    fullPath: /Users/lauracohen1/Desktop/GamesCapstone/capstone/Library/metadata/3b/3b4dbf9b29e274d2086d36747a99492a.info
+    projectPath: Library/metadata/3b/3b4dbf9b29e274d2086d36747a99492a.info
+    originalPath: 
+    status: 5
+    staged: 0
+  - path: Library/metadata/9a/9a71329dc360f4edf995e623be9266e8
+    fullPath: /Users/lauracohen1/Desktop/GamesCapstone/capstone/Library/metadata/9a/9a71329dc360f4edf995e623be9266e8
+    projectPath: Library/metadata/9a/9a71329dc360f4edf995e623be9266e8
+    originalPath: 
+    status: 5
+    staged: 0
+  - path: Library/metadata/9a/9a71329dc360f4edf995e623be9266e8.info
+    fullPath: /Users/lauracohen1/Desktop/GamesCapstone/capstone/Library/metadata/9a/9a71329dc360f4edf995e623be9266e8.info
+    projectPath: Library/metadata/9a/9a71329dc360f4edf995e623be9266e8.info
+    originalPath: 
+    status: 5
+    staged: 0
+  - path: Library/metadata/b0/b00177400ce884a1f8777420c5b09e13
+    fullPath: /Users/lauracohen1/Desktop/GamesCapstone/capstone/Library/metadata/b0/b00177400ce884a1f8777420c5b09e13
+    projectPath: Library/metadata/b0/b00177400ce884a1f8777420c5b09e13
+    originalPath: 
+    status: 5
+    staged: 0
+  - path: Library/metadata/b0/b00177400ce884a1f8777420c5b09e13.info
+    fullPath: /Users/lauracohen1/Desktop/GamesCapstone/capstone/Library/metadata/b0/b00177400ce884a1f8777420c5b09e13.info
+    projectPath: Library/metadata/b0/b00177400ce884a1f8777420c5b09e13.info
+    originalPath: 
+    status: 5
+    staged: 0
+  - path: Library/metadata/b0/b00177400ce884a1f8777420c5b09e13.resource
+    fullPath: /Users/lauracohen1/Desktop/GamesCapstone/capstone/Library/metadata/b0/b00177400ce884a1f8777420c5b09e13.resource
+    projectPath: Library/metadata/b0/b00177400ce884a1f8777420c5b09e13.resource
+    originalPath: 
+    status: 5
+    staged: 0
+  - path: Library/metadata/c2/c284e446580db45d2b1593e95cfcd264
+    fullPath: /Users/lauracohen1/Desktop/GamesCapstone/capstone/Library/metadata/c2/c284e446580db45d2b1593e95cfcd264
+    projectPath: Library/metadata/c2/c284e446580db45d2b1593e95cfcd264
+    originalPath: 
+    status: 5
+    staged: 0
+  - path: Library/metadata/c2/c284e446580db45d2b1593e95cfcd264.info
+    fullPath: /Users/lauracohen1/Desktop/GamesCapstone/capstone/Library/metadata/c2/c284e446580db45d2b1593e95cfcd264.info
+    projectPath: Library/metadata/c2/c284e446580db45d2b1593e95cfcd264.info
+    originalPath: 
+    status: 5
+    staged: 0
+  - path: Library/metadata/da/da4909ef271fe4165b6cf6dd86159379
+    fullPath: /Users/lauracohen1/Desktop/GamesCapstone/capstone/Library/metadata/da/da4909ef271fe4165b6cf6dd86159379
+    projectPath: Library/metadata/da/da4909ef271fe4165b6cf6dd86159379
+    originalPath: 
+    status: 5
+    staged: 0
+  - path: Library/metadata/da/da4909ef271fe4165b6cf6dd86159379.info
+    fullPath: /Users/lauracohen1/Desktop/GamesCapstone/capstone/Library/metadata/da/da4909ef271fe4165b6cf6dd86159379.info
+    projectPath: Library/metadata/da/da4909ef271fe4165b6cf6dd86159379.info
+    originalPath: 
+    status: 5
+    staged: 0
+  - path: Library/metadata/f6/f6cb1f581b7444b23a05b613a16420d5
+    fullPath: /Users/lauracohen1/Desktop/GamesCapstone/capstone/Library/metadata/f6/f6cb1f581b7444b23a05b613a16420d5
+    projectPath: Library/metadata/f6/f6cb1f581b7444b23a05b613a16420d5
+    originalPath: 
+    status: 5
+    staged: 0
+  - path: Library/metadata/f6/f6cb1f581b7444b23a05b613a16420d5.info
+    fullPath: /Users/lauracohen1/Desktop/GamesCapstone/capstone/Library/metadata/f6/f6cb1f581b7444b23a05b613a16420d5.info
+    projectPath: Library/metadata/f6/f6cb1f581b7444b23a05b613a16420d5.info
+    originalPath: 
+    status: 5
+    staged: 0
+  - path: Library/metadata/f6/f6cb1f581b7444b23a05b613a16420d5.resource
+    fullPath: /Users/lauracohen1/Desktop/GamesCapstone/capstone/Library/metadata/f6/f6cb1f581b7444b23a05b613a16420d5.resource
+    projectPath: Library/metadata/f6/f6cb1f581b7444b23a05b613a16420d5.resource
+    originalPath: 
+    status: 5
+    staged: 0
+  - path: Library/metadata/ff/ffa42069207894a039df4eafa584940b
+    fullPath: /Users/lauracohen1/Desktop/GamesCapstone/capstone/Library/metadata/ff/ffa42069207894a039df4eafa584940b
+    projectPath: Library/metadata/ff/ffa42069207894a039df4eafa584940b
+    originalPath: 
+    status: 5
+    staged: 0
+  - path: Library/metadata/ff/ffa42069207894a039df4eafa584940b.info
+    fullPath: /Users/lauracohen1/Desktop/GamesCapstone/capstone/Library/metadata/ff/ffa42069207894a039df4eafa584940b.info
+    projectPath: Library/metadata/ff/ffa42069207894a039df4eafa584940b.info
+    originalPath: 
+    status: 5
+    staged: 0
+  - path: Library/ScriptAssemblies/Assembly-CSharp.dll
+    fullPath: /Users/lauracohen1/Desktop/GamesCapstone/capstone/Library/ScriptAssemblies/Assembly-CSharp.dll
+    projectPath: Library/ScriptAssemblies/Assembly-CSharp.dll
+    originalPath: 
+    status: 3
+    staged: 0
+  - path: Library/ScriptAssemblies/Assembly-CSharp.dll.mdb
+    fullPath: /Users/lauracohen1/Desktop/GamesCapstone/capstone/Library/ScriptAssemblies/Assembly-CSharp.dll.mdb
+    projectPath: Library/ScriptAssemblies/Assembly-CSharp.dll.mdb
+    originalPath: 
+    status: 3
+    staged: 0
+  - path: Temp/UnityTempFile-0d4800b554b6a4fc093ecead8d801628
+    fullPath: /Users/lauracohen1/Desktop/GamesCapstone/capstone/Temp/UnityTempFile-0d4800b554b6a4fc093ecead8d801628
+    projectPath: Temp/UnityTempFile-0d4800b554b6a4fc093ecead8d801628
+    originalPath: 
+    status: 1
+    staged: 0
