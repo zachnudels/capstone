@@ -53,6 +53,7 @@
   <ItemGroup>
      <Compile Include="Assets\scripts\fallingPlatform.cs" />
      <Compile Include="Assets\scripts\forwardBack.cs" />
+     <Compile Include="Assets\scripts\generatePlatforms.cs" />
      <Compile Include="Assets\scripts\MovePlayer.cs" />
      <Compile Include="Assets\scripts\platformAttach.cs" />
      <Compile Include="Assets\scripts\rotateUp.cs" />

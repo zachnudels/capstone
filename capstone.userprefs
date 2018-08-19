@@ -1,17 +1,8 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/platformAttach.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/scripts/yBackForth.cs">
     <Files>
-      <File FileName="Assets/forwardBack.cs" Line="1" Column="1" />
-      <File FileName="Assets/yBackForth.cs" Line="12" Column="15" />
-      <File FileName="Assets/fallingPlatform.cs" Line="18" Column="41" />
-      <File FileName="../../../Documents/GitHub/3dworld/3DWorld copy/Assets/scripts/forwardBack copy.cs" Line="1" Column="1" />
-      <File FileName="Assets/platformAttach.cs" Line="2" Column="1" />
-      <File FileName="Assets/inputC.cs" Line="18" Column="1" />
-      <File FileName="Assets/MoveC.cs" Line="11" Column="1" />
-      <File FileName="Assets/PlayerC.cs" Line="23" Column="5" />
-      <File FileName="Assets/Manage.cs" Line="10" Column="31" />
-      <File FileName="Assets/cap.cs" Line="21" Column="1" />
+      <File FileName="Assets/scripts/yBackForth.cs" Line="14" Column="8" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

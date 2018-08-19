@@ -3,6 +3,8 @@ using System.Collections;
 
 public class rotateUp : MonoBehaviour
 {
+
+	//allows the platform to rotate
 	public float speed = 20f;
 
 

@@ -3,6 +3,7 @@ using System.Collections;
 
 public class Spin : MonoBehaviour
 {
+	//allows the platform to spin
 	public float speed = 20f;
 
 
