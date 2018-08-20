@@ -46,10 +46,11 @@ public class generatePlatforms : MonoBehaviour {
 
 			//first platform should be regular
 			//can change the && i != 0 to continue I think will do that later
+			//the first platform should be a regular platform
 			if (i == 0) {
 				randomPlatformHolder [i] = availablePlatforms [8];
 			}
-
+			//find whose platform range we randomly rolled on
 			if (1 <= chosenPlatform <= 7 && i != 0) {
 				//small platform
 				randomPlatformHolder[i] = availablePlatforms[5];
