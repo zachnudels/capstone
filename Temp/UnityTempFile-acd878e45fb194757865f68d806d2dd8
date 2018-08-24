@@ -95,7 +95,6 @@
 -define:UNITY_2017
 -define:PLATFORM_ARCH_64
 -define:UNITY_64
--define:UNITY_ANALYTICS
 -define:ENABLE_AUDIO
 -define:ENABLE_CACHING
 -define:ENABLE_CLOTH
@@ -183,6 +182,7 @@
 -define:UNITY_TEAM_LICENSE
 'Assets/scripts/fallingPlatform.cs'
 'Assets/scripts/forwardBack.cs'
+'Assets/scripts/generatePlatforms.cs'
 'Assets/scripts/MovePlayer.cs'
 'Assets/scripts/platformAttach.cs'
 'Assets/scripts/rotateUp.cs'

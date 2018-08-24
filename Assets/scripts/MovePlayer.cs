@@ -20,16 +20,20 @@ public class MovePlayer : MonoBehaviour {
 
 		CharacterController controller = GetComponent<CharacterController> ();
 
-		if (controller.isGrounded) {
+
 			moveDirection = new Vector3 (0, 0, Input.GetAxis ("Vertical"));
 			moveDirection = transform.TransformDirection (moveDirection);
 			moveDirection *= speed;
 			if (Input.GetButton ("Jump")) {
 				moveDirection.y = jumpSpeed;
 			}
+		if (Input.GetKey (KeyCode.C)) {
+			moveDirection.y = -jumpSpeed;
 		}
+			
 
-		moveDirection.y -= gravity * Time.deltaTime;
+
+		//moveDirection.y -= gravity * Time.deltaTime;
 		controller.Move (moveDirection * Time.deltaTime);
 
 		transform.Rotate (0, Input.GetAxis ("Horizontal"), 0);
