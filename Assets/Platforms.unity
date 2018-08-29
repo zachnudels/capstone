@@ -588,6 +588,18 @@ Prefab:
       propertyPath: m_TagString
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 4800459476067354, guid: 0a4c6880f73d94453b18ced158f7e94d, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 78
+      objectReference: {fileID: 0}
+    - target: {fileID: 4800459476067354, guid: 0a4c6880f73d94453b18ced158f7e94d, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4800459476067354, guid: 0a4c6880f73d94453b18ced158f7e94d, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 99
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 54543430606928064, guid: 0a4c6880f73d94453b18ced158f7e94d, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 0a4c6880f73d94453b18ced158f7e94d, type: 2}
