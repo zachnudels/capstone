@@ -19,6 +19,7 @@ public class MCSAnimationController : MonoBehaviour {
 	public GameObject TPSloc;
 	private int time;
 	private bool inJump;
+	private float jumpTime;
 	private RaycastHit hit;
 
 
@@ -46,21 +47,25 @@ public class MCSAnimationController : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
+		jumpTime += Time.unscaledDeltaTime;
 			
 		walking = Input.GetAxis ("Vertical");
 		anim.SetFloat ("walking", walking);
 		turning = Input.GetAxis("Horizontal");
 		transform.Rotate (new Vector3 (0.0f, turnSpeed*turning*Time.deltaTime));
 
-//		jump = Input.GetKeyDown (KeyCode.Space);
+		bool jumpHit = Input.GetKeyDown (KeyCode.Space);
 		bool onGround = Physics.Raycast (transform.position + (new Vector3 (-0.1f, 0.0f, -0.1f)), (Vector3.down), out hit, 0.2f);
 		anim.SetBool ("onGround", onGround);
 
 		jump = Input.GetKey (KeyCode.Space);
-		anim.SetBool ("jump", jump);
+		anim.SetBool ("jump", jumpHit);
+		if(jumpHit)
+		Debug.Log (jumpTime);
 
-
-		if (jump && onGround) {
+		if (jumpHit  && jumpTime >1.2f) {
+			
+			jumpTime = 0.0f;
 			RB.mass = 0.1f;
 			inJump = true;
 		}
