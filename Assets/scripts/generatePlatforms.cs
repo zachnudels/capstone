@@ -123,15 +123,107 @@ public class generatePlatforms : MonoBehaviour {
 				XpositiveOrNegative [j] = 0;
 				ZpositiveOrNegative [j] = 0;
 			}
+
+
+
+
+			///////////////////////CHECKING UPPER BOUND FOR XBF, YBF
+			/// 
+			/// 
+		
+			/*
+			if ((j != 0) && (randomPlatformHolder [j] == availablePlatforms [1])) {////////////////////////UPPER YBF	
+
+
+				//for z, the moving platform will move -20 to +20 from its position, so must put it 20 away to not crash
+				float zadd = 20.0f;
+
+				//will it be added to the back or front? Check what last one was, add to the same.
+				int ZposOrNeg = ZpositiveOrNegative[j-1];
+
+				//if going out of boundaries on POS side, switch to NEG
+				if(((randomZHolder[j-1] + 25.0f) > 50.0f)){
+					ZposOrNeg = 0;
+				}
+				else if(((randomZHolder[j-1] - 25.0f) < -120.0f)){
+					ZposOrNeg = 1;
+
+				}
+				//if negative or postive add/sub the scale Z (7 for yBF) and add/sub the random range
+				if (ZposOrNeg == 0) {
+					randomZ = randomZHolder [j] - 7.0f - zadd;
+				} else if (ZposOrNeg == 1) {
+					randomZ = randomZHolder [j] + 7.0f + zadd;
+				}
+
+
+				randomZHolder [j] += randomZ;
+
+
+
+
+
+			}
+			if ((j != 0) && (randomPlatformHolder [j] == availablePlatforms [2])) {////////////////////////UPPER YBF	
+
+
+				//for z, the moving platform will move -20 to +20 from its position, so must put it 20 away to not crash
+				float xadd = 20.0f;
+
+				//will it be added to the back or front? Check what last one was, add to the same.
+				int XposOrNeg = XpositiveOrNegative[j-1];
+
+				//if going out of boundaries on POS side, switch to NEG
+				if(((randomXHolder[j-1] + 25.0f) > 50.0f)){
+					XposOrNeg = 0;
+				}
+				else if(((randomXHolder[j-1] - 25.0f) < -120.0f)){
+					XposOrNeg = 1;
+
+				}
+				//if negative or postive add/sub the scale Z (7 for yBF) and add/sub the random range
+				if (XposOrNeg == 0) {
+					randomX = randomXHolder [j] - 7.0f - xadd;
+				} else if (XposOrNeg == 1) {
+					randomX = randomXHolder [j] + 7.0f + xadd;
+				}
+
+
+				randomXHolder [j] += randomX;
+
+
+
+
+			}
+
+			*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 			if ((j != 0) && (randomPlatformHolder [j - 1] == availablePlatforms [0])) {///////////////////////////////////////////FALLING
 				///////////////////////////////////////////////////////////////////////////////////////////////////////// Y
 
 				//if the last platform is falling
-				randomY = randomYHolder[j-1] - 5.0f;
+				randomY = randomYHolder[j-1] - 2.0f;
 
 				///////////////////////////////////////////////////////////////////////////////////////////////////////// X
 				//the x that will be added
-				float xadd = Random.Range (0.0f, 6.0f);
+				float xadd = Random.Range (1.0f, 2.0f);
 
 				//will it be added to the back or front
 				int XposOrNeg = XpositiveOrNegative[j-1];
@@ -154,7 +246,7 @@ public class generatePlatforms : MonoBehaviour {
 				///////////////////////////////////////////////////////////////////////////////////////////////////////// Z
 
 				//now we do the same for the Z position, how much will it move by
-				float zadd = Random.Range(0.0f, 6.0f);
+				float zadd = Random.Range(1.0f, 2.0f);
 
 				//will it be added to the back or front
 				int ZposOrNeg = ZpositiveOrNegative[j-1];
@@ -216,7 +308,7 @@ public class generatePlatforms : MonoBehaviour {
 				///////////////////////////////////////////////////////////////////////////////////////////////////////// Z
 
 				//for z, the moving platform will move -20 to +20 from its position, so must put it 20 away to not crash
-				float zadd = 20.0f;
+				float zadd = 40.0f;
 
 				//will it be added to the back or front? Check what last one was, add to the same.
 				int ZposOrNeg = ZpositiveOrNegative[j-1];
@@ -278,7 +370,7 @@ public class generatePlatforms : MonoBehaviour {
 				///////////////////////////////////////////////////////////////////////////////////////////////////////// X
 
 				//for z, the moving platform will move -20 to +20 from its position, so must put it 20 away to not crash
-				float xadd = 20.0f;
+				float xadd = 40.0f;
 
 				//will it be added to the back or front? Check what last one was, add to the same.
 				int XposOrNeg = XpositiveOrNegative[j-1];
@@ -313,12 +405,12 @@ public class generatePlatforms : MonoBehaviour {
 				///////////////////////////////////////////////////////////////////////////////////////////////////////// Y
 
 				//if the last platform is falling
-				randomY = Random.Range(3.0f, 7.0f);
+				randomY = Random.Range(3.0f, 5.0f);
 				randomY += randomYHolder [j - 1];  
 
 				///////////////////////////////////////////////////////////////////////////////////////////////////////// X
 				//the x that will be added
-				float xadd = Random.Range (0.0f, 6.0f);
+				float xadd = Random.Range (1.0f, 2.0f);
 
 				//will it be added to the back or front, check last
 				int XposOrNeg = XpositiveOrNegative[j-1];
@@ -341,7 +433,7 @@ public class generatePlatforms : MonoBehaviour {
 				///////////////////////////////////////////////////////////////////////////////////////////////////////// Z
 
 				//now we do the same for the Z position, how much will it move by
-				float zadd = Random.Range(0.0f, 6.0f);
+				float zadd = Random.Range(1.0f, 2.0f);
 
 				//will it be added to the back or front, check last one
 				int ZposOrNeg = ZpositiveOrNegative[j-1];
@@ -375,13 +467,13 @@ public class generatePlatforms : MonoBehaviour {
 
 				///////////////////////////////////////////////////////////////////////////////////////////////////////// Y
 
-				//if the last platform is falling
-				randomY = Random.Range(3.0f, 7.0f);
+
+				randomY = Random.Range(3.0f, 5.0f);
 				randomY += randomYHolder [j - 1];  
 
 				///////////////////////////////////////////////////////////////////////////////////////////////////////// X
 				//the x that will be added,
-				float xadd = Random.Range (0.0f, 6.0f);
+				float xadd = Random.Range (1.0f, 2.0f);
 
 				//will it be added to the back or front, check last
 				int XposOrNeg = XpositiveOrNegative[j-1];
@@ -404,7 +496,7 @@ public class generatePlatforms : MonoBehaviour {
 				///////////////////////////////////////////////////////////////////////////////////////////////////////// Z
 
 				//now we do the same for the Z position, how much will it move by
-				float zadd = Random.Range(0.0f, 6.0f);
+				float zadd = Random.Range(1.0f, 2.0f);
 
 				//will it be added to the back or front, check last
 				int ZposOrNeg = ZpositiveOrNegative[j-1];
@@ -442,12 +534,12 @@ public class generatePlatforms : MonoBehaviour {
 				///////////////////////////////////////////////////////////////////////////////////////////////////////// Y
 
 
-				randomY = Random.Range(2.0f, 7.0f);
+				randomY = Random.Range(3.0f, 5.0f);
 				randomY += randomYHolder [j - 1];
 
 				///////////////////////////////////////////////////////////////////////////////////////////////////////// X
 				//the x that will be added
-				float xadd = Random.Range (0.0f, 6.0f);
+				float xadd = Random.Range (1.0f, 2.0f);
 
 				//will it be added to the back or front
 				int XposOrNeg = XpositiveOrNegative[j-1];
@@ -470,7 +562,7 @@ public class generatePlatforms : MonoBehaviour {
 				///////////////////////////////////////////////////////////////////////////////////////////////////////// Z
 
 				//now we do the same for the Z position, how much will it move by
-				float zadd = Random.Range(0.0f, 6.0f);
+				float zadd = Random.Range(1.0f, 2.0f);
 
 				//will it be added to the back or front
 				int ZposOrNeg = ZpositiveOrNegative[j-1];
@@ -504,12 +596,12 @@ public class generatePlatforms : MonoBehaviour {
 				///////////////////////////////////////////////////////////////////////////////////////////////////////// Y
 
 
-				randomY = Random.Range(0.0f, 1.0f);
+				randomY = Random.Range(3.0f, 5.0f);
 				randomY += randomYHolder [j - 1];
 
 				///////////////////////////////////////////////////////////////////////////////////////////////////////// X
 				//the x that will be added
-				float xadd = Random.Range (0.0f, 2.0f);
+				float xadd = Random.Range (1.0f, 2.0f);
 
 				//will it be added to the back or front
 				int XposOrNeg = XpositiveOrNegative[j-1];
@@ -525,14 +617,16 @@ public class generatePlatforms : MonoBehaviour {
 				//if negative or postive add/sub the scale X (50 for medium) and add/sub the random range
 				if (XposOrNeg == 0) {
 					randomX = randomXHolder [j - 1] - 50.0f - xadd;
+					randomXHolder [j - 1] += -15.0f;
 				} else if (XposOrNeg == 1) {
 					randomX = randomXHolder [j - 1] + 50.0f + xadd;
+					randomXHolder [j - 1] += 15.0f;
 				}
 
 				///////////////////////////////////////////////////////////////////////////////////////////////////////// Z
 
 				//now we do the same for the Z position, how much will it move by
-				float zadd = Random.Range(0.0f, 6.0f);
+				float zadd = Random.Range(1.0f, 2.0f);
 
 				//will it be added to the back or front
 				int ZposOrNeg = ZpositiveOrNegative[j-1];
@@ -548,8 +642,10 @@ public class generatePlatforms : MonoBehaviour {
 				//if negative or postive add/sub the scale Z (20 for medium) and add/sub the random range
 				if (ZposOrNeg == 0) {
 					randomZ = randomZHolder [j - 1] - 20.0f - zadd;
+					randomZHolder [j-1] += -9.0f;
 				} else if (ZposOrNeg == 1) {
 					randomZ = randomZHolder [j - 1] + 20.0f + zadd;
+					randomZHolder [j-1] += 9.0f;
 				}
 
 				randomXHolder [j] = randomX;
@@ -557,6 +653,7 @@ public class generatePlatforms : MonoBehaviour {
 				randomZHolder [j] = randomZ;
 				XpositiveOrNegative [j] = XposOrNeg;
 				ZpositiveOrNegative [j] = ZposOrNeg;
+
 
 			
 
@@ -568,12 +665,12 @@ public class generatePlatforms : MonoBehaviour {
 				///////////////////////////////////////////////////////////////////////////////////////////////////////// Y
 
 
-				randomY = Random.Range(2.0f, 7.0f);
+				randomY = Random.Range(3.0f, 5.0f);
 				randomY += randomYHolder [j - 1];
 
 				///////////////////////////////////////////////////////////////////////////////////////////////////////// X
 				//the x that will be added
-				float xadd = Random.Range (0.0f, 6.0f);
+				float xadd = Random.Range (1.0f, 2.0f);
 
 				//will it be added to the back or front
 				int XposOrNeg = XpositiveOrNegative[j-1];
@@ -588,15 +685,17 @@ public class generatePlatforms : MonoBehaviour {
 				}
 				//if negative or postive add/sub the scale X (100 for large) and add/sub the random range
 				if (XposOrNeg == 0) {
-					randomX = randomXHolder [j - 1] - 100.0f - xadd;
+					randomX = randomXHolder [j - 1] - 50.0f - xadd;
+					//randomXHolder [j - 1] += -30.0f;
 				} else if (XposOrNeg == 1) {
-					randomX = randomXHolder [j - 1] + 100.0f + xadd;
+					randomX = randomXHolder [j - 1] + 50.0f + xadd;
+					//randomXHolder [j - 1] += 30.0f;
 				}
 
 				///////////////////////////////////////////////////////////////////////////////////////////////////////// Z
 
 				//now we do the same for the Z position, how much will it move by
-				float zadd = Random.Range(0.0f, 6.0f);
+				float zadd = Random.Range(1.0f, 2.0f);
 
 				//will it be added to the back or front
 				int ZposOrNeg = ZpositiveOrNegative[j-1];
@@ -611,9 +710,11 @@ public class generatePlatforms : MonoBehaviour {
 				}
 				//if negative or postive add/sub the scale Z (30 for large) and add/sub the random range
 				if (ZposOrNeg == 0) {
-					randomZ = randomZHolder [j - 1] - 30.0f - zadd;
+					randomZ = randomZHolder [j - 1] - 15.0f - zadd;
+					//randomZHolder [j-1] += -9.0f;
 				} else if (ZposOrNeg == 1) {
-					randomZ = randomZHolder [j - 1] + 30.0f + zadd;
+					randomZ = randomZHolder [j - 1] + 25.0f + zadd;
+					//randomZHolder [j-1] += 9.0f;
 				}
 
 				randomXHolder [j] = randomX;
@@ -633,12 +734,12 @@ public class generatePlatforms : MonoBehaviour {
 				///////////////////////////////////////////////////////////////////////////////////////////////////////// Y
 
 
-				randomY = Random.Range(2.0f, 7.0f);
+				randomY = Random.Range(3.0f, 5.0f);
 				randomY += randomYHolder [j - 1];
 
 				///////////////////////////////////////////////////////////////////////////////////////////////////////// X
 				//the x that will be added
-				float xadd = Random.Range (0.0f, 6.0f);
+				float xadd = Random.Range (1.0f, 2.0f);
 
 				//will it be added to the back or front
 				int XposOrNeg = XpositiveOrNegative[j-1];
@@ -661,7 +762,7 @@ public class generatePlatforms : MonoBehaviour {
 				///////////////////////////////////////////////////////////////////////////////////////////////////////// Z
 
 				//now we do the same for the Z position, how much will it move by
-				float zadd = Random.Range(0.0f, 6.0f);
+				float zadd = Random.Range(1.0f, 2.0f);
 
 				//will it be added to the back or front
 				int ZposOrNeg = ZpositiveOrNegative[j-1];
@@ -711,6 +812,7 @@ public class generatePlatforms : MonoBehaviour {
 		makeRandoms ();
 	
 		for (int i = 0; i < numberOfPlatforms; i++) {
+
 			spawnPosition = new Vector3 (randomXHolder[i], randomYHolder[i], randomZHolder[i]);
 			Instantiate (randomPlatformHolder[i], spawnPosition, transform.rotation);
 			
