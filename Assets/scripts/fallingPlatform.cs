@@ -5,7 +5,7 @@ using UnityEngine;
 public class fallingPlatform : MonoBehaviour {
 
 
-	public GameObject player;
+	public GameObject Player;
 	bool isFalling = false;
 	float fallSpeed = 0;
 	float yPos = 0;
@@ -13,6 +13,7 @@ public class fallingPlatform : MonoBehaviour {
 
 	void Start(){
 		yPos = transform.position.y;
+		Player = GameObject.FindGameObjectWithTag("Player").gameObject;
 	}
 
 	void OnTriggerEnter(Collider collider){
