@@ -19,15 +19,16 @@ public class MCSAnimationController : MonoBehaviour {
 	public GameObject TPSloc;
 	private int time;
 	private bool inJump;
+	private float jumpTime;
 	private RaycastHit hit;
 
 
-//	private Vector3 idleGunPos;
-//	private Quaternion idleGunRot;
-//	private Vector3 movingGunPos;
-//	private Quaternion movingGunRot;
+	//	private Vector3 idleGunPos;
+	//	private Quaternion idleGunRot;
+	//	private Vector3 movingGunPos;
+	//	private Quaternion movingGunRot;
 	private Vector3 velocity;
-//	private Transform idleTrans;
+	//	private Transform idleTrans;
 	// Use this for initialization
 	void Start () {
 		currentCam = tp;
@@ -42,54 +43,58 @@ public class MCSAnimationController : MonoBehaviour {
 
 
 	}
-	
+
 	// Update is called once per frame
 	void Update () {
 
-			
+		jumpTime += Time.unscaledDeltaTime;
+
 		walking = Input.GetAxis ("Vertical");
 		anim.SetFloat ("walking", walking);
 		turning = Input.GetAxis("Horizontal");
 		transform.Rotate (new Vector3 (0.0f, turnSpeed*turning*Time.deltaTime));
 
-//		jump = Input.GetKeyDown (KeyCode.Space);
+		bool jumpHit = Input.GetKeyDown (KeyCode.Space);
 		bool onGround = Physics.Raycast (transform.position + (new Vector3 (-0.1f, 0.0f, -0.1f)), (Vector3.down), out hit, 0.2f);
 		anim.SetBool ("onGround", onGround);
 
 		jump = Input.GetKey (KeyCode.Space);
-		anim.SetBool ("jump", jump);
+		anim.SetBool ("jump", jumpHit);
+		if(jumpHit)
+			Debug.Log (jumpTime);
 
+		if (jumpHit  && jumpTime >1.2f) {
 
-		if (jump && onGround) {
+			jumpTime = 0.0f;
 			RB.mass = 0.1f;
 			inJump = true;
 		}
 		if (inJump) {
-//			Debug.Log (time);
-//			transform.Translate (Vector3.forward*Time.deltaTime*2);
+			//			Debug.Log (time);
+			//			transform.Translate (Vector3.forward*Time.deltaTime*2);
 			if (time < 7) {
 				RB.AddRelativeForce (new Vector3 (0.0f, 21.0f, 0.0f));
-//				RB.AddRelativeForce (transform.Find("M3DFemale").forward*6);
+				//				RB.AddRelativeForce (transform.Find("M3DFemale").forward*6);
 
 
-				
-//				transform.Translate (Vector3.up*Time.deltaTime*3);
-//				RB.mass = 0.05f;
+
+				//				transform.Translate (Vector3.up*Time.deltaTime*3);
+				//				RB.mass = 0.05f;
 			} else if(time > 7 || !jump){
-//				RB.AddRelativeForce (new Vector3 (0.0f, -21.0f, 0.0f));
-//				transform.Translate (-Vector3.up*Time.deltaTime*3);
-//				RB.mass = 70.0f;
+				//				RB.AddRelativeForce (new Vector3 (0.0f, -21.0f, 0.0f));
+				//				transform.Translate (-Vector3.up*Time.deltaTime*3);
+				//				RB.mass = 70.0f;
 			}
 
 			time++;
 			if (time == 15) {
-//				transform.Translate (Vector3.forward*Time.deltaTime);
+				//				transform.Translate (Vector3.forward*Time.deltaTime);
 				time = 0;
 				inJump = false;
 			}
 		}
-//		Debug.DrawRay (transform.position+(new Vector3(0.0f, 0.1f, 0.0f)), Vector3.down);
-//		Debug.Log (transform.position);
+		//		Debug.DrawRay (transform.position+(new Vector3(0.0f, 0.1f, 0.0f)), Vector3.down);
+		//		Debug.Log (transform.position);
 		if (!inJump) {
 			bool fall = !Physics.Raycast (transform.position+(new Vector3(0.0f, 0.1f, 0.0f)),(Vector3.down), out hit, 4.5f);
 			anim.SetBool ("fall", fall);
@@ -102,10 +107,10 @@ public class MCSAnimationController : MonoBehaviour {
 
 
 
-//		Debug.Log (fall);
+		//		Debug.Log (fall);
 
 
 
-		}
-			
+	}
+
 }
