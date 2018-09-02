@@ -30,6 +30,11 @@ public class MCSAnimationController : MonoBehaviour {
 	private Vector3 velocity;
 	//	private Transform idleTrans;
 	// Use this for initialization
+
+	public bool spawner = false;
+	public GameObject SpawnObject;
+	private float spawnx, spawny, spawnz;
+
 	void Start () {
 		currentCam = tp;
 		anim = GetComponent<Animator> ();
@@ -103,6 +108,23 @@ public class MCSAnimationController : MonoBehaviour {
 		if (anim.GetCurrentAnimatorStateInfo (0).IsName ("Roll")) {
 			Debug.Log ("Roll");
 			RB.AddRelativeForce (new Vector3 (0.0f, -5.0f, 0.0f));
+		}
+
+		// Add Checkpoint to Game World with Key Press 'R'
+		if (Input.GetKeyDown (KeyCode.R) && spawner == true) {
+			Instantiate (SpawnObject, transform.position, transform.rotation);
+			spawnx = transform.position.x;
+			spawny = transform.position.y;
+			spawnz = transform.position.z;
+
+			//Debug.Log (SpawnObject.transform.position);
+		}
+
+		//Debug.Log (RB.velocity.y);
+
+		// If falling, move back to Checkpoint
+		if (RB.velocity.y < -55) {
+			transform.position = new Vector3 (spawnx, spawny, spawnz);
 		}
 
 
