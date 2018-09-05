@@ -60,7 +60,8 @@ public class MCSAnimationController : MonoBehaviour {
 		transform.Rotate (new Vector3 (0.0f, turnSpeed*turning*Time.deltaTime));
 
 		bool jumpHit = Input.GetKeyDown (KeyCode.Space);
-		bool onGround = Physics.Raycast (transform.position + (new Vector3 (-0.1f, 0.0f, -0.1f)), (Vector3.down), out hit, 0.2f);
+		bool onGround = Physics.Raycast (transform.position + (new Vector3 (-0.1f, 0.2f, -0.1f)), (Vector3.down), out hit, 1);
+		Debug.DrawRay (transform.position +new Vector3 (-0.1f, 0.2f, -0.1f), (Vector3.down), Color.green);
 		anim.SetBool ("onGround", onGround);
 
 		jump = Input.GetKey (KeyCode.Space);
@@ -123,7 +124,7 @@ public class MCSAnimationController : MonoBehaviour {
 		//Debug.Log (RB.velocity.y);
 
 		// If falling, move back to Checkpoint
-		if (RB.velocity.y < -55) {
+		if (RB.velocity.y < -55 && spawnx !=0 && spawny != 0 && spawnz != 0) {
 			transform.position = new Vector3 (spawnx, spawny, spawnz);
 		}
 
