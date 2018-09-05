@@ -63,6 +63,9 @@ public class MCSAnimationController : NetworkBehaviour {
 
 		if (id.isLocalPlayer) {
 
+			//transform.GetComponent<NetworkAnimator> ().GetParameterAutoSend (0);
+			//transform.GetComponent<NetworkAnimator> ().GetParameterAutoSend (1);
+
 			jumpTime += Time.unscaledDeltaTime;
 
 			walking = Input.GetAxis ("Vertical");
@@ -151,6 +154,7 @@ public class MCSAnimationController : NetworkBehaviour {
 
 
 		}
+
 	}
 
 }
