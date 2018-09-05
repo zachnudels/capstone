@@ -18,7 +18,7 @@ public class PlayerNetwork : NetworkBehaviour {
 
 		//anim = GetComponent<NetworkAnimator> ();
 
-		anim = GetComponentInChildren<NetworkAnimator> ();
+		anim = GetComponent<NetworkAnimator> ();
 
 		//transform.GetComponent<NetworkAnimator> ().SetParameterAutoSend (0, true);
 		//transform.GetComponent<NetworkAnimator> ().SetParameterAutoSend (1, true);
