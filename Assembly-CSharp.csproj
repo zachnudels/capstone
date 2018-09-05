@@ -63,8 +63,6 @@
      <Compile Include="Assets\MORPH3D\Vendor\Unity\Shaders\Hair\HairRenderer.cs" />
      <Compile Include="Assets\MORPH3D\Vendor\Unity\Shaders\UniqueShadow\UniqueShadow.cs" />
      <Compile Include="Assets\MORPH3D\Vendor\Unity\Shaders\UniqueShadow\UniqueShadowSun.cs" />
-     <Compile Include="Assets\PositionBoost.cs" />
-     <Compile Include="Assets\PostJump.cs" />
      <Compile Include="Assets\PostProcessing\Runtime\Attributes\GetSetAttribute.cs" />
      <Compile Include="Assets\PostProcessing\Runtime\Attributes\MinAttribute.cs" />
      <Compile Include="Assets\PostProcessing\Runtime\Attributes\TrackballAttribute.cs" />
@@ -130,14 +128,16 @@
      <Compile Include="Assets\scripts\MCSAnimationController.cs" />
      <Compile Include="Assets\scripts\MovePlayer.cs" />
      <Compile Include="Assets\scripts\platformAttach.cs" />
+     <Compile Include="Assets\scripts\PositionBoost.cs" />
+     <Compile Include="Assets\scripts\PostJump.cs" />
      <Compile Include="Assets\scripts\powerupGenerator.cs" />
      <Compile Include="Assets\scripts\rotateUp.cs" />
+     <Compile Include="Assets\scripts\SpeedBoost.cs" />
      <Compile Include="Assets\scripts\Spin.cs" />
      <Compile Include="Assets\scripts\stayOn.cs" />
      <Compile Include="Assets\scripts\TPCamera.cs" />
      <Compile Include="Assets\scripts\TPScameramove.cs" />
      <Compile Include="Assets\scripts\yBackForth.cs" />
-     <Compile Include="Assets\SpeedBoost.cs" />
      <None Include="Assets\PostProcessing\Resources\Shaders\DepthOfField.shader" />
      <None Include="Assets\MORPH3D\Vendor\Unity\Shaders\Standard\StandardSpecular-doublesided.shader" />
      <None Include="Assets\PostProcessing\Resources\Shaders\MotionBlur.cginc" />
