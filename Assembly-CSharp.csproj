@@ -122,6 +122,7 @@
      <Compile Include="Assets\RPG Character Animation Pack\Elements\ImageEffects\Scripts\Triangles.cs" />
      <Compile Include="Assets\scripts\BlackHoleBoy.cs" />
      <Compile Include="Assets\scripts\CameraOrbit.cs" />
+     <Compile Include="Assets\scripts\CheckPoint.cs" />
      <Compile Include="Assets\scripts\fallingPlatform.cs" />
      <Compile Include="Assets\scripts\forwardBack.cs" />
      <Compile Include="Assets\scripts\generatePlatforms.cs" />

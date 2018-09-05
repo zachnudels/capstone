@@ -21,6 +21,7 @@ GameObject:
   - component: {fileID: 4214742914835932}
   - component: {fileID: 33792099107375936}
   - component: {fileID: 23433202710872152}
+  - component: {fileID: 114387619956257876}
   - component: {fileID: 114570984553975476}
   - component: {fileID: 64595893063913664}
   - component: {fileID: 114875646069257662}
@@ -38,7 +39,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1692567589730466}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 60.83, y: -2.61, z: 45}
+  m_LocalPosition: {x: -16.92615, y: -8.5, z: -87.024895}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -99,6 +100,18 @@ MeshCollider:
   m_CookingOptions: 14
   m_SkinWidth: 0.01
   m_Mesh: {fileID: 4300000, guid: fce0ecff534816b49af71ef31033c259, type: 3}
+--- !u!114 &114387619956257876
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1692567589730466}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e2c7cd237f04a41f8b9906a668184506, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  particleEffect: {fileID: 0}
 --- !u!114 &114570984553975476
 MonoBehaviour:
   m_ObjectHideFlags: 1
