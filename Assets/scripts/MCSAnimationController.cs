@@ -14,14 +14,14 @@ public class MCSAnimationController : MonoBehaviour {
 
 	public GameObject tp;
 	private Rigidbody RB;
+	public AudioSource footsteps;
 
-	private GameObject currentCam;
 	public GameObject TPSloc;
 	private int time;
 	private bool inJump;
 	private float jumpTime;
 	private RaycastHit hit;
-
+	public AudioClip footstepClip;
 
 	//	private Vector3 idleGunPos;
 	//	private Quaternion idleGunRot;
@@ -34,17 +34,20 @@ public class MCSAnimationController : MonoBehaviour {
 	public bool spawner = false;
 	public GameObject SpawnObject;
 	private float spawnx, spawny, spawnz;
+	private bool isWalking;
 
 	void Start () {
-		currentCam = tp;
+//		currentCam = tp;
 		anim = GetComponent<Animator> ();
 		walking = 0.0f; 
 		time = 0;
 		turning = 0.0f;
 		inJump = false;
 		jump = false;
+		isWalking = false;
 		Physics.gravity = new Vector3 (0, gravity, 0);
 		RB = GetComponentInParent<Rigidbody> ();
+		Debug.Log (footsteps == null);
 
 
 	}
@@ -53,15 +56,27 @@ public class MCSAnimationController : MonoBehaviour {
 	void Update () {
 
 		jumpTime += Time.unscaledDeltaTime;
+		footsteps.Play ();
 
 		walking = Input.GetAxis ("Vertical");
 		anim.SetFloat ("walking", walking);
+		if (walking > 0.1 && !isWalking) {
+//			footsteps.Play ();
+//			AudioSource.PlayClipAtPoint (footstepClip, transform.position);
+			transform.Find("Footsteps").GetComponent<AudioSource>().Play();
+			isWalking = true;
+		} else if (walking < 0.1 && isWalking) {
+			transform.Find("Footsteps").GetComponent<AudioSource>().Stop();
+			isWalking = false;
+		}
+//		Debug.Log (walking>0.1);
+
 		turning = Input.GetAxis("Horizontal");
 		transform.Rotate (new Vector3 (0.0f, turnSpeed*turning*Time.deltaTime));
 
 		bool jumpHit = Input.GetKeyDown (KeyCode.Space);
 		bool onGround = Physics.Raycast (transform.position + (new Vector3 (-0.1f, 0.2f, -0.1f)), (Vector3.down), out hit, 1);
-		Debug.DrawRay (transform.position +new Vector3 (-0.1f, 0.2f, -0.1f), (Vector3.down), Color.green);
+//		Debug.DrawRay (transform.position +new Vector3 (-0.1f, 0.2f, -0.1f), (Vector3.down), Color.green);
 		anim.SetBool ("onGround", onGround);
 
 		jump = Input.GetKey (KeyCode.Space);
