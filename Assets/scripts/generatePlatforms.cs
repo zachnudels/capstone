@@ -10,6 +10,8 @@ public class generatePlatforms : MonoBehaviour {
 	float startingY;
 	int chosenPlatform;
 
+	public int lights_per_platforms;
+
 	Vector3 position;
 
 	public GameObject fallingPlatform;	//0
@@ -21,6 +23,8 @@ public class generatePlatforms : MonoBehaviour {
 	public GameObject mediumPlatform;	//6
 	public GameObject largePlatform;	//7
 	public GameObject regularPlatform;	//8
+
+	public GameObject lightPrefab;
 
 	float[] randomXHolder;
 	float[] randomYHolder;
@@ -809,14 +813,31 @@ public class generatePlatforms : MonoBehaviour {
 		availablePlatforms [7] = largePlatform;
 		availablePlatforms [8] = regularPlatform;
 
+
+
 		makeRandoms ();
+
+
+		int platforms_per_light = 100/lights_per_platforms;
+		Debug.Log (platforms_per_light);
+		Debug.Log (numberOfPlatforms);
+		int light_count = 0;
 	
 		for (int i = 0; i < numberOfPlatforms; i++) {
-
+			
 			spawnPosition = new Vector3 (randomXHolder[i], randomYHolder[i], randomZHolder[i]);
 			Instantiate (randomPlatformHolder[i], spawnPosition, transform.rotation);
+			if (i % platforms_per_light == 0) {
+				light_count++;
+				Vector3 lightPos = spawnPosition + new Vector3 (0.0f, 5, 0.0f);
+				Quaternion lightInitRot = Quaternion.Euler(new Vector3 (135, 0, 0) + transform.rotation.eulerAngles);
+				Instantiate (lightPrefab, lightPos, lightInitRot);
+
+			}
+
 			
 		}
+		Debug.Log (light_count);
 
 	
 
