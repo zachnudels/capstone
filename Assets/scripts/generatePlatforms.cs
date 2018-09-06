@@ -1,8 +1,9 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Networking;
 
-public class generatePlatforms : MonoBehaviour {
+public class generatePlatforms : NetworkBehaviour {
 	float randomX;
 	float randomY;
 	float randomZ;
@@ -32,6 +33,8 @@ public class generatePlatforms : MonoBehaviour {
 
 	GameObject[] randomPlatformHolder;
 	GameObject[] availablePlatforms = new GameObject[9];
+
+	GameObject MyInstantiate;
 
 
 	void makeRandoms(){
@@ -814,8 +817,8 @@ public class generatePlatforms : MonoBehaviour {
 		for (int i = 0; i < numberOfPlatforms; i++) {
 
 			spawnPosition = new Vector3 (randomXHolder[i], randomYHolder[i], randomZHolder[i]);
-			Instantiate (randomPlatformHolder[i], spawnPosition, transform.rotation);
-			
+			MyInstantiate = Instantiate (randomPlatformHolder[i], spawnPosition, transform.rotation);
+			NetworkServer.Spawn (MyInstantiate);
 		}
 
 	
