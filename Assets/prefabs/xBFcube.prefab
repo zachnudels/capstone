@@ -23,6 +23,8 @@ GameObject:
   - component: {fileID: 65401723559008288}
   - component: {fileID: 23078839275983872}
   - component: {fileID: 114629084054921588}
+  - component: {fileID: 114680267370701034}
+  - component: {fileID: 114621566022817436}
   m_Layer: 0
   m_Name: xBFcube
   m_TagString: Untagged
@@ -194,6 +196,27 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Player: {fileID: 0}
+--- !u!114 &114621566022817436
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1344751299735254}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1768714887, guid: dc443db3e92b4983b9738c1131f555cb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_TransformSyncMode: 1
+  m_SendInterval: 0.1
+  m_SyncRotationAxis: 7
+  m_RotationSyncCompression: 0
+  m_SyncSpin: 0
+  m_MovementTheshold: 0.001
+  m_VelocityThreshold: 0.0001
+  m_SnapThreshold: 5
+  m_InterpolateRotation: 1
+  m_InterpolateMovement: 1
 --- !u!114 &114629084054921588
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -208,3 +231,35 @@ MonoBehaviour:
   speed: 5
   rightLimit: 100
   leftLimit: 100
+--- !u!114 &114680267370701034
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1344751299735254}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 372142912, guid: dc443db3e92b4983b9738c1131f555cb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_SceneId:
+    m_Value: 0
+  m_AssetId:
+    i0: 111
+    i1: 233
+    i2: 250
+    i3: 237
+    i4: 53
+    i5: 93
+    i6: 20
+    i7: 25
+    i8: 58
+    i9: 214
+    i10: 31
+    i11: 81
+    i12: 167
+    i13: 81
+    i14: 148
+    i15: 184
+  m_ServerOnly: 0
+  m_LocalPlayerAuthority: 0
