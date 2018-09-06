@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class MCSAnimationController : MonoBehaviour {
 
+
 	private Animator anim;
 	private float walking;
 	private float turning;
@@ -14,14 +15,14 @@ public class MCSAnimationController : MonoBehaviour {
 
 	public GameObject tp;
 	private Rigidbody RB;
+	//	public AudioSource footsteps;
 
-	private GameObject currentCam;
 	public GameObject TPSloc;
 	private int time;
 	private bool inJump;
 	private float jumpTime;
 	private RaycastHit hit;
-
+	//	public AudioClip footstepClip;
 
 	//	private Vector3 idleGunPos;
 	//	private Quaternion idleGunRot;
@@ -34,17 +35,20 @@ public class MCSAnimationController : MonoBehaviour {
 	public bool spawner = false;
 	public GameObject SpawnObject;
 	private float spawnx, spawny, spawnz;
+	private bool isWalking;
 
 	void Start () {
-		currentCam = tp;
+		//		currentCam = tp;
 		anim = GetComponent<Animator> ();
 		walking = 0.0f; 
 		time = 0;
 		turning = 0.0f;
 		inJump = false;
 		jump = false;
+		isWalking = false;
 		Physics.gravity = new Vector3 (0, gravity, 0);
 		RB = GetComponentInParent<Rigidbody> ();
+		//		Debug.Log (footsteps == null);
 
 
 	}
@@ -53,9 +57,19 @@ public class MCSAnimationController : MonoBehaviour {
 	void Update () {
 
 		jumpTime += Time.unscaledDeltaTime;
+		//		footsteps.Play ();
 
 		walking = Input.GetAxis ("Vertical");
 		anim.SetFloat ("walking", walking);
+		if (walking > 0.1 && !isWalking) {
+			transform.Find("Footsteps").GetComponent<AudioSource>().Play();
+			transform.Find ("Footsteps").GetComponent<AudioSource> ().volume = 0.3f;
+			isWalking = true;
+		} else if (walking < 0.1 && isWalking || inJump) {
+			transform.Find("Footsteps").GetComponent<AudioSource>().Stop();
+			isWalking = false;
+		}
+
 		turning = Input.GetAxis("Horizontal");
 		transform.Rotate (new Vector3 (0.0f, turnSpeed*turning*Time.deltaTime));
 
