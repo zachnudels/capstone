@@ -10,9 +10,9 @@ public class forwardBack : MonoBehaviour
 
 
 	void Start(){
-		rightLimit = transform.position.x + 35f;
+		rightLimit = transform.position.x + 20f;
 		//change -20
-		leftLimit = transform.position.x;
+		leftLimit = transform.position.x -20f;
 		speed = Random.Range(2.0f, 20.0f);
 	}
 	void Update(){

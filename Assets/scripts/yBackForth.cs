@@ -11,9 +11,9 @@ public class yBackForth : MonoBehaviour
 
 
 	void Start(){
-		rightLimit = transform.position.z + 40f;
+		rightLimit = transform.position.z + 20f;
 		//changed - 20
-		leftLimit = transform.position.z;
+		leftLimit = transform.position.z -20;
 
 		speed = Random.Range(2.0f, 18.0f);
 
