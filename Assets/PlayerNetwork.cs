@@ -30,10 +30,13 @@ public class PlayerNetwork : NetworkBehaviour {
 		if (id.isLocalPlayer) {
 			anim.GetParameterAutoSend (0);
 			anim.GetParameterAutoSend (1);
+			anim.GetParameterAutoSend (2);
+			anim.GetParameterAutoSend (3);
 		}
 
 		anim.SetParameterAutoSend (0, true);
 		anim.SetParameterAutoSend (1, true);
-		
+		anim.SetParameterAutoSend (2, true);
+		anim.SetParameterAutoSend (3, true);
 	}
 }
