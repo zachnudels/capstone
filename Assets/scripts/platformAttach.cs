@@ -18,6 +18,10 @@ public class platformAttach : MonoBehaviour {
 			print ("trigger has platform");
 			Player.transform.parent.parent = transform;
 		}
+		if (other.gameObject.tag == "platform") {
+			print ("trigger has platform");
+			GameObject.Find ("XBFcube").GetComponent<forwardBack> ().direction *= -1;
+		}
 	}
 
 	private void OnTriggerExit(Collider other){

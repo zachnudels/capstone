@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{5D9F8868-6F7E-643B-25D9-CB8EA60A3368}</ProjectGuid>
+    <ProjectGuid>{1DA180FE-74DD-D58F-9695-108C424BE4FA}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp-firstpass</AssemblyName>
@@ -127,16 +127,16 @@
  <HintPath>/Applications/Unity/Unity.app/Contents/PlaybackEngines/MacStandaloneSupport/UnityEditor.OSXStandalone.Extensions.dll</HintPath>
  </Reference>
  <Reference Include="ICSharpCode.SharpZipLib">
- <HintPath>/Users/lauracohen1/Documents/GitHub/capstone/Assets/MORPH3D/Scripts/Plugins/ICSharpCode.SharpZipLib.dll</HintPath>
+ <HintPath>/Users/lauracohen1/Desktop/capstone copy/Assets/MORPH3D/Scripts/Plugins/ICSharpCode.SharpZipLib.dll</HintPath>
  </Reference>
  <Reference Include="M3D_DLL">
- <HintPath>/Users/lauracohen1/Documents/GitHub/capstone/Assets/MORPH3D/Scripts/Plugins/M3D_DLL.dll</HintPath>
+ <HintPath>/Users/lauracohen1/Desktop/capstone copy/Assets/MORPH3D/Scripts/Plugins/M3D_DLL.dll</HintPath>
  </Reference>
  <Reference Include="M3DIMPORT_DLL">
- <HintPath>/Users/lauracohen1/Documents/GitHub/capstone/Assets/MORPH3D/Scripts/Plugins/M3DIMPORT_DLL.dll</HintPath>
+ <HintPath>/Users/lauracohen1/Desktop/capstone copy/Assets/MORPH3D/Scripts/Plugins/M3DIMPORT_DLL.dll</HintPath>
  </Reference>
  <Reference Include="MCS_Utilities">
- <HintPath>/Users/lauracohen1/Documents/GitHub/capstone/Assets/MORPH3D/Scripts/Plugins/MCS_Utilities.dll</HintPath>
+ <HintPath>/Users/lauracohen1/Desktop/capstone copy/Assets/MORPH3D/Scripts/Plugins/MCS_Utilities.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.Advertisements">
  <HintPath>/Users/lauracohen1/Library/Unity/cache/packages/packages.unity.com/com.unity.ads@2.0.3/UnityEngine.Advertisements.dll</HintPath>

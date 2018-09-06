@@ -25,7 +25,7 @@ GameObject:
   - component: {fileID: 114371982774929598}
   m_Layer: 0
   m_Name: RotateCube
-  m_TagString: Untagged
+  m_TagString: platform
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -43,7 +43,7 @@ GameObject:
   - component: {fileID: 23842824276701716}
   m_Layer: 0
   m_Name: RotateCube (1)
-  m_TagString: Untagged
+  m_TagString: platform
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

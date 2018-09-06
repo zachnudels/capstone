@@ -6,7 +6,16 @@ public class forwardBack : MonoBehaviour
 	public float speed;
 	public float rightLimit = 20f;
 	public float leftLimit = 50f;
-	private int direction = 1;
+	public int direction = 1;
+
+	void OnCollisionEnter(Collision collision){
+		print ("trigger has hit " + collision.gameObject.tag);
+		if (collision.gameObject.tag == "platform" || collision.gameObject.tag == "spinPlat" ) {
+			print ("changed direction");
+			direction = direction * -1;
+		}
+	}
+
 
 
 	void Start(){

@@ -27,7 +27,7 @@ public class BlackHoleBoy : MonoBehaviour {
 	void Update () {
 		shimmy ();
 		pullPlayer();
-		Debug.Log (timePassed);
+//		Debug.Log (timePassed);
 		if (timePassed > 20) {
 			Destroy (this.gameObject);
 		}

@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{A0D3939D-C1C5-32A4-B114-28F3E51713C6}</ProjectGuid>
+    <ProjectGuid>{34299D67-C9FD-81ED-2A32-A1872A6D3ADB}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp-Editor</AssemblyName>
@@ -162,16 +162,16 @@
  <HintPath>/Applications/Unity/Unity.app/Contents/PlaybackEngines/MacStandaloneSupport/UnityEditor.OSXStandalone.Extensions.dll</HintPath>
  </Reference>
  <Reference Include="ICSharpCode.SharpZipLib">
- <HintPath>/Users/lauracohen1/Documents/GitHub/capstone/Assets/MORPH3D/Scripts/Plugins/ICSharpCode.SharpZipLib.dll</HintPath>
+ <HintPath>/Users/lauracohen1/Desktop/capstone copy/Assets/MORPH3D/Scripts/Plugins/ICSharpCode.SharpZipLib.dll</HintPath>
  </Reference>
  <Reference Include="M3D_DLL">
- <HintPath>/Users/lauracohen1/Documents/GitHub/capstone/Assets/MORPH3D/Scripts/Plugins/M3D_DLL.dll</HintPath>
+ <HintPath>/Users/lauracohen1/Desktop/capstone copy/Assets/MORPH3D/Scripts/Plugins/M3D_DLL.dll</HintPath>
  </Reference>
  <Reference Include="M3DIMPORT_DLL">
- <HintPath>/Users/lauracohen1/Documents/GitHub/capstone/Assets/MORPH3D/Scripts/Plugins/M3DIMPORT_DLL.dll</HintPath>
+ <HintPath>/Users/lauracohen1/Desktop/capstone copy/Assets/MORPH3D/Scripts/Plugins/M3DIMPORT_DLL.dll</HintPath>
  </Reference>
  <Reference Include="MCS_Utilities">
- <HintPath>/Users/lauracohen1/Documents/GitHub/capstone/Assets/MORPH3D/Scripts/Plugins/MCS_Utilities.dll</HintPath>
+ <HintPath>/Users/lauracohen1/Desktop/capstone copy/Assets/MORPH3D/Scripts/Plugins/MCS_Utilities.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.Advertisements">
  <HintPath>/Users/lauracohen1/Library/Unity/cache/packages/packages.unity.com/com.unity.ads@2.0.3/UnityEngine.Advertisements.dll</HintPath>
@@ -203,9 +203,9 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Assembly-CSharp-firstpass.csproj">
-      <Project>{5D9F8868-6F7E-643B-25D9-CB8EA60A3368}</Project>      <Name>Assembly-CSharp-firstpass</Name>    </ProjectReference>
+      <Project>{1DA180FE-74DD-D58F-9695-108C424BE4FA}</Project>      <Name>Assembly-CSharp-firstpass</Name>    </ProjectReference>
     <ProjectReference Include="Assembly-CSharp.csproj">
-      <Project>{34D8EBE8-0895-E73F-36B9-6B7F011AA638}</Project>      <Name>Assembly-CSharp</Name>    </ProjectReference>
+      <Project>{63A0162B-B6EC-BBCE-E656-A8182D695532}</Project>      <Name>Assembly-CSharp</Name>    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

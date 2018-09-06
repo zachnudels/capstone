@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{34D8EBE8-0895-E73F-36B9-6B7F011AA638}</ProjectGuid>
+    <ProjectGuid>{63A0162B-B6EC-BBCE-E656-A8182D695532}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -123,6 +123,7 @@
      <Compile Include="Assets\scripts\BlackHoleBoy.cs" />
      <Compile Include="Assets\scripts\blackHoleGenerator.cs" />
      <Compile Include="Assets\scripts\CameraOrbit.cs" />
+     <Compile Include="Assets\scripts\changeDirection.cs" />
      <Compile Include="Assets\scripts\CheckPoint.cs" />
      <Compile Include="Assets\scripts\fallingPlatform.cs" />
      <Compile Include="Assets\scripts\forwardBack.cs" />
@@ -136,6 +137,7 @@
      <Compile Include="Assets\scripts\rotateUp.cs" />
      <Compile Include="Assets\scripts\SpeedBoost.cs" />
      <Compile Include="Assets\scripts\Spin.cs" />
+     <Compile Include="Assets\scripts\spinCubeCollid.cs" />
      <Compile Include="Assets\scripts\stayOn.cs" />
      <Compile Include="Assets\scripts\TPCamera.cs" />
      <Compile Include="Assets\scripts\TPScameramove.cs" />
@@ -260,16 +262,16 @@
  <HintPath>/Applications/Unity/Unity.app/Contents/PlaybackEngines/MacStandaloneSupport/UnityEditor.OSXStandalone.Extensions.dll</HintPath>
  </Reference>
  <Reference Include="ICSharpCode.SharpZipLib">
- <HintPath>/Users/lauracohen1/Documents/GitHub/capstone/Assets/MORPH3D/Scripts/Plugins/ICSharpCode.SharpZipLib.dll</HintPath>
+ <HintPath>/Users/lauracohen1/Desktop/capstone copy/Assets/MORPH3D/Scripts/Plugins/ICSharpCode.SharpZipLib.dll</HintPath>
  </Reference>
  <Reference Include="M3D_DLL">
- <HintPath>/Users/lauracohen1/Documents/GitHub/capstone/Assets/MORPH3D/Scripts/Plugins/M3D_DLL.dll</HintPath>
+ <HintPath>/Users/lauracohen1/Desktop/capstone copy/Assets/MORPH3D/Scripts/Plugins/M3D_DLL.dll</HintPath>
  </Reference>
  <Reference Include="M3DIMPORT_DLL">
- <HintPath>/Users/lauracohen1/Documents/GitHub/capstone/Assets/MORPH3D/Scripts/Plugins/M3DIMPORT_DLL.dll</HintPath>
+ <HintPath>/Users/lauracohen1/Desktop/capstone copy/Assets/MORPH3D/Scripts/Plugins/M3DIMPORT_DLL.dll</HintPath>
  </Reference>
  <Reference Include="MCS_Utilities">
- <HintPath>/Users/lauracohen1/Documents/GitHub/capstone/Assets/MORPH3D/Scripts/Plugins/MCS_Utilities.dll</HintPath>
+ <HintPath>/Users/lauracohen1/Desktop/capstone copy/Assets/MORPH3D/Scripts/Plugins/MCS_Utilities.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.Advertisements">
  <HintPath>/Users/lauracohen1/Library/Unity/cache/packages/packages.unity.com/com.unity.ads@2.0.3/UnityEngine.Advertisements.dll</HintPath>
@@ -295,7 +297,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Assembly-CSharp-firstpass.csproj">
-      <Project>{5D9F8868-6F7E-643B-25D9-CB8EA60A3368}</Project>      <Name>Assembly-CSharp-firstpass</Name>    </ProjectReference>
+      <Project>{1DA180FE-74DD-D58F-9695-108C424BE4FA}</Project>      <Name>Assembly-CSharp-firstpass</Name>    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -11,6 +11,7 @@ public class MCSAnimationController : MonoBehaviour {
 	public int turnSpeed;
 	public float gravity;
 	public float ground = 0.0f;
+	private bool onSpin;
 
 	public GameObject tp;
 	private Rigidbody RB;
@@ -36,6 +37,7 @@ public class MCSAnimationController : MonoBehaviour {
 	private float spawnx, spawny, spawnz;
 
 	void Start () {
+		onSpin = false;
 		currentCam = tp;
 		anim = GetComponent<Animator> ();
 		walking = 0.0f; 
@@ -60,14 +62,12 @@ public class MCSAnimationController : MonoBehaviour {
 		transform.Rotate (new Vector3 (0.0f, turnSpeed*turning*Time.deltaTime));
 
 		bool jumpHit = Input.GetKeyDown (KeyCode.Space);
-		bool onGround = Physics.Raycast (transform.position + (new Vector3 (-0.1f, 0.2f, -0.1f)), (Vector3.down), out hit, 1);
-		Debug.DrawRay (transform.position +new Vector3 (-0.1f, 0.2f, -0.1f), (Vector3.down), Color.green);
-		anim.SetBool ("onGround", onGround);
+
 
 		jump = Input.GetKey (KeyCode.Space);
 		anim.SetBool ("jump", jumpHit);
-		if(jumpHit)
-			Debug.Log (jumpTime);
+//		if(jumpHit)
+//			Debug.Log (jumpTime);
 
 		if (jumpHit  && jumpTime >1.2f) {
 
@@ -111,12 +111,26 @@ public class MCSAnimationController : MonoBehaviour {
 			RB.AddRelativeForce (new Vector3 (0.0f, -5.0f, 0.0f));
 		}
 
+		bool onGround = Physics.Raycast (transform.position + (new Vector3 (-0.1f, 0.2f, -0.1f)), (Vector3.down), out hit, 1);
+
+		if (hit.collider.tag == "spinPlat") {
+			transform.parent.parent = hit.collider.gameObject.transform;
+	
+		} else {
+			transform.parent.parent = null;
+		}
+
+		//		Debug.DrawRay (transform.position +new Vector3 (-0.1f, 0.2f, -0.1f), (Vector3.down), Color.green);
+		anim.SetBool ("onGround", onGround);
+
+
 		// Add Checkpoint to Game World with Key Press 'R'
 		if (Input.GetKeyDown (KeyCode.R) && spawner == true) {
 			Instantiate (SpawnObject, transform.position, transform.rotation);
 			spawnx = transform.position.x;
 			spawny = transform.position.y;
 			spawnz = transform.position.z;
+			spawner = false;
 
 			//Debug.Log (SpawnObject.transform.position);
 		}
@@ -125,6 +139,10 @@ public class MCSAnimationController : MonoBehaviour {
 
 		// If falling, move back to Checkpoint
 		if (RB.velocity.y < -55 && spawnx !=0 && spawny != 0 && spawnz != 0) {
+			transform.position = new Vector3 (spawnx, spawny, spawnz);
+		}
+
+		if (Input.GetKeyDown (KeyCode.U)) {
 			transform.position = new Vector3 (spawnx, spawny, spawnz);
 		}
 

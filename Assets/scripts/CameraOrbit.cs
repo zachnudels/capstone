@@ -16,7 +16,7 @@ public class CameraOrbit : MonoBehaviour {
 	void Update () {
 		//Rotate orbiting camera
 		parPos = transform.parent.position;
-		Debug.Log (parPos);
+//		Debug.Log (parPos);
 		transform.RotateAround (parPos, Vector3.up, angle * Time.deltaTime);
 		transform.LookAt (parPos);
 	}
