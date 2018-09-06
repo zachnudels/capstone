@@ -1,9 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Networking;
 
-public class generatePlatforms : NetworkBehaviour {
+public class generatePlatforms : MonoBehaviour {
 	float randomX;
 	float randomY;
 	float randomZ;
@@ -34,12 +33,14 @@ public class generatePlatforms : NetworkBehaviour {
 	GameObject[] randomPlatformHolder;
 	GameObject[] availablePlatforms = new GameObject[9];
 
-	GameObject MyInstantiate;
+	public int lights_per_platforms;
+	public GameObject lightPrefab;
+
 
 
 	void makeRandoms(){
 		//init the amount of platforms to be generated
-		numberOfPlatforms = Random.Range (100, 150);
+		numberOfPlatforms = Random.Range (20, 30);
 		randomXHolder = new float[numberOfPlatforms];
 		randomYHolder = new float[numberOfPlatforms];
 		randomZHolder = new float[numberOfPlatforms];
@@ -311,7 +312,7 @@ public class generatePlatforms : NetworkBehaviour {
 				///////////////////////////////////////////////////////////////////////////////////////////////////////// Z
 
 				//for z, the moving platform will move -20 to +20 from its position, so must put it 20 away to not crash
-				float zadd = 40.0f;
+				float zadd = 23.0f;
 
 				//will it be added to the back or front? Check what last one was, add to the same.
 				int ZposOrNeg = ZpositiveOrNegative[j-1];
@@ -326,9 +327,9 @@ public class generatePlatforms : NetworkBehaviour {
 				}
 				//if negative or postive add/sub the scale Z (7 for yBF) and add/sub the random range
 				if (ZposOrNeg == 0) {
-					randomZ = randomZHolder [j - 1] - 7.0f - zadd;
+					randomZ = randomZHolder [j - 1] - 3.5f - zadd;
 				} else if (ZposOrNeg == 1) {
-					randomZ = randomZHolder [j - 1] + 7.0f + zadd;
+					randomZ = randomZHolder [j - 1] + 3.5f + zadd;
 				}
 
 				randomXHolder [j] = randomX;
@@ -373,7 +374,7 @@ public class generatePlatforms : NetworkBehaviour {
 				///////////////////////////////////////////////////////////////////////////////////////////////////////// X
 
 				//for z, the moving platform will move -20 to +20 from its position, so must put it 20 away to not crash
-				float xadd = 40.0f;
+				float xadd = 23.0f;
 
 				//will it be added to the back or front? Check what last one was, add to the same.
 				int XposOrNeg = XpositiveOrNegative[j-1];
@@ -388,9 +389,9 @@ public class generatePlatforms : NetworkBehaviour {
 				}
 				//if negative or postive add/sub the scale Z (7 for yBF) and add/sub the random range
 				if (XposOrNeg == 0) {
-					randomX = randomXHolder [j - 1] - 7.0f - xadd;
+					randomX = randomXHolder [j - 1] - 3.5f - xadd;
 				} else if (XposOrNeg == 1) {
-					randomX = randomXHolder [j - 1] + 7.0f + xadd;
+					randomX = randomXHolder [j - 1] + 3.5f + xadd;
 				}
 
 				randomXHolder [j] = randomX;
@@ -557,9 +558,9 @@ public class generatePlatforms : NetworkBehaviour {
 				}
 				//if negative or postive add/sub the scale X (20 for small) and add/sub the random range
 				if (XposOrNeg == 0) {
-					randomX = randomXHolder [j - 1] - 20.0f - xadd;
+					randomX = randomXHolder [j - 1] - 10.0f - xadd;
 				} else if (XposOrNeg == 1) {
-					randomX = randomXHolder [j - 1] + 20.0f + xadd;
+					randomX = randomXHolder [j - 1] + 10.0f + xadd;
 				}
 
 				///////////////////////////////////////////////////////////////////////////////////////////////////////// Z
@@ -580,9 +581,9 @@ public class generatePlatforms : NetworkBehaviour {
 				}
 				//if negative or postive add/sub the scale Z (10 for small) and add/sub the random range
 				if (ZposOrNeg == 0) {
-					randomZ = randomZHolder [j - 1] - 10.0f - zadd;
+					randomZ = randomZHolder [j - 1] - 5.0f - zadd;
 				} else if (ZposOrNeg == 1) {
-					randomZ = randomZHolder [j - 1] + 10.0f + zadd;
+					randomZ = randomZHolder [j - 1] + 5.0f + zadd;
 				}
 
 				randomXHolder [j] = randomX;
@@ -619,10 +620,10 @@ public class generatePlatforms : NetworkBehaviour {
 				}
 				//if negative or postive add/sub the scale X (50 for medium) and add/sub the random range
 				if (XposOrNeg == 0) {
-					randomX = randomXHolder [j - 1] - 50.0f - xadd;
+					randomX = randomXHolder [j - 1] - 25.0f - xadd;
 					randomXHolder [j - 1] += -15.0f;
 				} else if (XposOrNeg == 1) {
-					randomX = randomXHolder [j - 1] + 50.0f + xadd;
+					randomX = randomXHolder [j - 1] + 25.0f + xadd;
 					randomXHolder [j - 1] += 15.0f;
 				}
 
@@ -644,10 +645,10 @@ public class generatePlatforms : NetworkBehaviour {
 				}
 				//if negative or postive add/sub the scale Z (20 for medium) and add/sub the random range
 				if (ZposOrNeg == 0) {
-					randomZ = randomZHolder [j - 1] - 20.0f - zadd;
+					randomZ = randomZHolder [j - 1] - 10.0f - zadd;
 					randomZHolder [j-1] += -9.0f;
 				} else if (ZposOrNeg == 1) {
-					randomZ = randomZHolder [j - 1] + 20.0f + zadd;
+					randomZ = randomZHolder [j - 1] + 10.0f + zadd;
 					randomZHolder [j-1] += 9.0f;
 				}
 
@@ -716,7 +717,7 @@ public class generatePlatforms : NetworkBehaviour {
 					randomZ = randomZHolder [j - 1] - 15.0f - zadd;
 					//randomZHolder [j-1] += -9.0f;
 				} else if (ZposOrNeg == 1) {
-					randomZ = randomZHolder [j - 1] + 25.0f + zadd;
+					randomZ = randomZHolder [j - 1] + 15.0f + zadd;
 					//randomZHolder [j-1] += 9.0f;
 				}
 
@@ -813,13 +814,30 @@ public class generatePlatforms : NetworkBehaviour {
 		availablePlatforms [8] = regularPlatform;
 
 		makeRandoms ();
+
 	
+		int platforms_per_light = 100/lights_per_platforms;
+		Debug.Log (platforms_per_light);
+		Debug.Log (numberOfPlatforms);
+		int light_count = 0;
+
 		for (int i = 0; i < numberOfPlatforms; i++) {
 
 			spawnPosition = new Vector3 (randomXHolder[i], randomYHolder[i], randomZHolder[i]);
-			MyInstantiate = Instantiate (randomPlatformHolder[i], spawnPosition, transform.rotation);
-			NetworkServer.Spawn (MyInstantiate);
+			Instantiate (randomPlatformHolder[i], spawnPosition, transform.rotation);
+
+
+			if (i % platforms_per_light == 0) {
+				light_count++;
+				Vector3 lightPos = spawnPosition + new Vector3 (0.0f, 5, 0.0f);
+				Quaternion lightInitRot = Quaternion.Euler(new Vector3 (135, 0, 0) + transform.rotation.eulerAngles);
+				Instantiate (lightPrefab, lightPos, lightInitRot);
+
+			}
+
+
 		}
+		Debug.Log (light_count);
 
 	
 

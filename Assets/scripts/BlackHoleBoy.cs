@@ -10,7 +10,7 @@ public class BlackHoleBoy : MonoBehaviour {
 	private bool start;
 	private bool playerIn;
 	private float pullRadius = 20;
-	private float timePassed = 0;
+	private float timePassed;
 	private float forceStrength = 1;
 	private bool still = false;
 
@@ -20,7 +20,7 @@ public class BlackHoleBoy : MonoBehaviour {
 		delta = -2.0f;
 		playerIn = false;
 		start = true;
-
+		timePassed = 0;
 	}
 	
 	// Update is called once per frame
@@ -63,9 +63,12 @@ public class BlackHoleBoy : MonoBehaviour {
 
 			// apply force on target towards me
 			if (collider.tag == "Player") {
-				Vector3 forceDir = transform.position - collider.transform.position;
-				forceDir = new Vector3 (forceDir.x, 0.0f, forceDir.z);
-				collider.gameObject.GetComponentInParent<Rigidbody>().AddRelativeForce(forceDir*forceStrength,ForceMode.Force);
+				if (Mathf.Abs (collider.gameObject.transform.position.y - transform.position.y) < 1) {
+					Vector3 forceDir = transform.position - collider.transform.position;
+					forceDir = new Vector3 (forceDir.x, 0.0f, forceDir.z);
+					collider.gameObject.GetComponentInParent<Rigidbody>().AddRelativeForce(forceDir*forceStrength,ForceMode.Force);
+
+				}
 			}
 		}
 	}

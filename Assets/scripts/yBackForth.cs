@@ -8,12 +8,18 @@ public class yBackForth : MonoBehaviour
 	public float leftLimit = 50f;
 	private int direction = 1;
 
-
+	void OnCollisionEnter(Collision collision){
+		print ("trigger has hit " + collision.gameObject.tag);
+		if (collision.gameObject.tag == "platform" || collision.gameObject.tag == "spinPlat" ) {
+			print ("changed direction");
+			direction = direction * -1;
+		}
+	}
 
 	void Start(){
-		rightLimit = transform.position.z + 40f;
+		rightLimit = transform.position.z + 25f;
 		//changed - 20
-		leftLimit = transform.position.z;
+		leftLimit = transform.position.z -15;
 
 		speed = Random.Range(2.0f, 18.0f);
 
