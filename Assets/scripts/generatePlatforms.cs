@@ -827,6 +827,8 @@ public class generatePlatforms : MonoBehaviour {
 			
 			spawnPosition = new Vector3 (randomXHolder[i], randomYHolder[i], randomZHolder[i]);
 			Instantiate (randomPlatformHolder[i], spawnPosition, transform.rotation);
+
+
 			if (i % platforms_per_light == 0) {
 				light_count++;
 				Vector3 lightPos = spawnPosition + new Vector3 (0.0f, 5, 0.0f);
