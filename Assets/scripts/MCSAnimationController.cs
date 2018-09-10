@@ -61,15 +61,15 @@ public class MCSAnimationController : MonoBehaviour {
 		walking = Input.GetAxis ("Vertical");
 		anim.SetFloat ("walking", walking);
 
-		if (walking > 0.1 && !isWalking) {
-			//			Debug.Log ("Trying to foot");
-			transform.Find("Footsteps").GetComponent<AudioSource>().Play();
-			//			transform.Find ("Footsteps").GetComponent<AudioSource> ().volume = 0.3f;
-			isWalking = true;
-		} else if (walking < 0.1 && isWalking || inJump) {
-			transform.Find("Footsteps").GetComponent<AudioSource>().Stop();
-			isWalking = false;
-		}
+//		if (walking > 0.1 && !isWalking) {
+//			//			Debug.Log ("Trying to foot");
+//			transform.Find("Footsteps").GetComponent<AudioSource>().Play();
+//			//			transform.Find ("Footsteps").GetComponent<AudioSource> ().volume = 0.3f;
+//			isWalking = true;
+//		} else if (walking < 0.1 && isWalking || inJump) {
+//			transform.Find("Footsteps").GetComponent<AudioSource>().Stop();
+//			isWalking = false;
+//		}
 
 		turning = Input.GetAxis("Horizontal");
 		transform.Rotate (new Vector3 (0.0f, turnSpeed*turning*Time.deltaTime));
