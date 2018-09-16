@@ -128,7 +128,7 @@ public class MCSAnimationController : MonoBehaviour {
 
 		bool onGround = Physics.Raycast (transform.position + (new Vector3 (-0.1f, 0.2f, -0.1f)), (Vector3.down), out hit, 1);
 
-		if (hit.collider.tag == "spinPlat") {
+		if (onGround && hit.collider.tag == "spinPlat") {
 			transform.parent.parent = hit.collider.gameObject.transform;
 	
 		} else {
