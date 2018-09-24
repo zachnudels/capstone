@@ -42,7 +42,7 @@ public class MCSAnimationController : MonoBehaviour {
 		onSpin = false;
 		currentCam = tp;
 		anim = GetComponent<Animator> ();
-		walking = 0.0f; 
+		walking = 0.0f;
 		time = 0;
 		turning = 0.0f;
 		inJump = false;
@@ -129,8 +129,8 @@ public class MCSAnimationController : MonoBehaviour {
 		bool onGround = Physics.Raycast (transform.position + (new Vector3 (-0.1f, 0.2f, -0.1f)), (Vector3.down), out hit, 1);
 
 		if (onGround && hit.collider.tag == "spinPlat") {
-			transform.parent.parent = hit.collider.gameObject.transform;
-	
+			transform.parent.parent = hit.collider.gameObject.transform.parent;
+
 		} else {
 			transform.parent.parent = null;
 		}
