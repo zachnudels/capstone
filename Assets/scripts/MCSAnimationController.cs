@@ -130,7 +130,7 @@ public class MCSAnimationController : MonoBehaviour {
 
 		if (onGround && hit.collider.tag == "spinPlat") {
 			Debug.Log ("Hit");
-			transform.parent = hit.collider.gameObject.transform;
+			transform.parent.parent = hit.collider.gameObject.transform;
 
 		} else {
 			transform.parent.parent = null;
