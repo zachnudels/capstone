@@ -6,7 +6,7 @@ public class generatePlatforms : MonoBehaviour {
 	float randomX;
 	float randomY;
 	float randomZ;
-	int numberOfPlatforms;
+	public int numberOfPlatforms;
 	float startingY;
 	int chosenPlatform;
 
@@ -39,7 +39,7 @@ public class generatePlatforms : MonoBehaviour {
 
 	Vector3 spawnPosition;
 
-	GameObject[] randomPlatformHolder;
+	public GameObject[] randomPlatformHolder;
 	GameObject[] availablePlatforms = new GameObject[9];
 
 	public int lights_per_platforms;
@@ -91,7 +91,7 @@ public class generatePlatforms : MonoBehaviour {
 
 	void constructPlatforms(){
 		//init the amount of platforms to be generated
-		numberOfPlatforms = 100;
+//		numberOfPlatforms = 100;
 		randomXHolder = new float[numberOfPlatforms];
 		randomYHolder = new float[numberOfPlatforms];
 		randomZHolder = new float[numberOfPlatforms];
