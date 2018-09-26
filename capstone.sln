@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "capstone", "Assembly-CSharp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "capstone", "Assembly-CSharp-Editor.csproj", "{A0D3939D-C1C5-32A4-B114-28F3E51713C6}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "capstone", "Assembly-CSharp-Editor-firstpass.csproj", "{2115E1E8-D9F8-147E-A83E-E3755E808AE6}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -25,6 +27,10 @@ Global
 		{A0D3939D-C1C5-32A4-B114-28F3E51713C6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A0D3939D-C1C5-32A4-B114-28F3E51713C6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A0D3939D-C1C5-32A4-B114-28F3E51713C6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2115E1E8-D9F8-147E-A83E-E3755E808AE6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2115E1E8-D9F8-147E-A83E-E3755E808AE6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2115E1E8-D9F8-147E-A83E-E3755E808AE6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2115E1E8-D9F8-147E-A83E-E3755E808AE6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
