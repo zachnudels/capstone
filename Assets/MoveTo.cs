@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System.Linq;
 using UnityEngine.AI;
 using UnityStandardAssets.Characters.ThirdPerson; 
 
@@ -9,14 +10,14 @@ public class MoveTo : MonoBehaviour {
 	public Transform goal;
 	public ThirdPersonCharacter character;
 	NavMeshAgent agent;
-	public GameObject[] platforms;
+	public indexFinder[] platforms;
 
 
 	void Start () {
 		
-//		platforms = GetComponent<generatePlatforms> ().randomPlatformHolder;
+		platforms = FindObjectsOfType<indexFinder>().OrderBy( go => go.name ).ToArray();
 		agent = GetComponent<NavMeshAgent>();
-		agent.destination = goal.position; 
+		agent.destination = platforms[platforms.Length-1].transform.position; 
 //		agent.destination = platforms[platforms.Length-1].transform.position;
 		agent.updateRotation = false;
 	}

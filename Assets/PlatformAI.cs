@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.AI;
 
@@ -11,19 +12,21 @@ public class PlatformAI : MonoBehaviour {
 //	public int platformLength;
 	// Use this for initialization
 	void Start () {
-		platforms = FindObjectsOfType<indexFinder>() as indexFinder[];
+		platforms = FindObjectsOfType<indexFinder>().OrderBy( go => go.name ).ToArray();
+//		Array.Sort(platforms,
+//			delegate(indexFinder x, indexFinder y) { return x.chance.CompareTo(y.chance); });
 		links = new NavMeshLink[platforms.Length];
 //		GameObject currPlatform = platforms [0];
-		for(int i = 1; i != platforms.Length; ++i) {
+		for(int i = 0; i != platforms.Length; ++i) {
 //			string currname = "Platform" + i;
 //			string prevname = "Platform" + (i-1);
 //			Debug.Log (currname);
 //			Transform currPlatformT = transform.Find ("Platform1");
 //			if (currPlatformT == null) {
-//				Debug.Log ("No platform found");
+				Debug.Log (i);
 //			} else {
 			GameObject currPlatform = platforms[i].gameObject;
-			GameObject nextPlatform = platforms[i-1].gameObject;
+			GameObject nextPlatform = platforms[i+1].gameObject;
 			Vector3 currCent = currPlatform.transform.position;
 			Vector3 nextCent = nextPlatform.transform.position;
 //				NavMeshLink currLink = currPlatform.AddComponent<NavMeshLink>();
