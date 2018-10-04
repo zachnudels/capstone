@@ -70,6 +70,7 @@ public class generatePlatforms : MonoBehaviour {
 		for (int i = 0; i < numberOfPlatforms; i++) {
 
 			spawnPosition = new Vector3 (randomXHolder[i], randomYHolder[i], randomZHolder[i]);
+			randomPlatformHolder [i].GetComponent<indexFinder> ().index = i;
 			Instantiate (randomPlatformHolder[i], spawnPosition, transform.rotation);
 
 
@@ -120,13 +121,19 @@ public class generatePlatforms : MonoBehaviour {
 
 			--platformDist[chosenPlatform];
 			randomPlatformHolder[i] = availablePlatforms[chosenPlatform];
+			//randomPlatformHolder [i].GetComponent<indexFinder> ().index = i;
+			Debug.Log("plaforms " + numberOfPlatforms);
 			Debug.Log(i+": "+chosenPlatform);
 
 		}//all platforms now generated in holder array
 
+
 	}
 
+
+
 	void makeRandoms(){
+
 
 		constructPlatforms();
 		GameObject lastPlatform = randomPlatformHolder[1];

@@ -61,6 +61,7 @@ GameObject:
   - component: {fileID: 23821895046371370}
   - component: {fileID: 114573491904715784}
   - component: {fileID: 65446209694186786}
+  - component: {fileID: 114105798965540008}
   m_Layer: 0
   m_Name: FallingCube
   m_TagString: platform
@@ -294,6 +295,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Player: {fileID: 0}
+--- !u!114 &114105798965540008
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1939186503569794}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c75ba7bac2f114bf5a7e7044bf9f4dfb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  index: 9
 --- !u!114 &114573491904715784
 MonoBehaviour:
   m_ObjectHideFlags: 1

@@ -23,6 +23,7 @@ GameObject:
   - component: {fileID: 65150700671160768}
   - component: {fileID: 23906893159376792}
   - component: {fileID: 114826071725762478}
+  - component: {fileID: 114623177104943332}
   m_Layer: 0
   m_Name: SpinCube
   m_TagString: spinPlat
@@ -1690,6 +1691,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Player: {fileID: 0}
+--- !u!114 &114623177104943332
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1110776027708770}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c75ba7bac2f114bf5a7e7044bf9f4dfb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  index: 5
 --- !u!114 &114654970633683022
 MonoBehaviour:
   m_ObjectHideFlags: 1
