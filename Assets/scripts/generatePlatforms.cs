@@ -122,8 +122,8 @@ public class generatePlatforms : MonoBehaviour {
 			--platformDist[chosenPlatform];
 			randomPlatformHolder[i] = availablePlatforms[chosenPlatform];
 			//randomPlatformHolder [i].GetComponent<indexFinder> ().index = i;
-			Debug.Log("plaforms " + numberOfPlatforms);
-			Debug.Log(i+": "+chosenPlatform);
+			//Debug.Log("plaforms " + numberOfPlatforms);
+			//Debug.Log(i+": "+chosenPlatform);
 
 		}//all platforms now generated in holder array
 

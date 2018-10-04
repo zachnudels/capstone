@@ -29,11 +29,16 @@ public class PlayerColour : NetworkBehaviour {
 			mesh1.material.color = colour;
 		}
 
+		Debug.Log (transform.root.name);
+		Debug.Log (id.isLocalPlayer);
+
 		//mesh1.material.color = colour;
 	}
 	
 	// Update is called once per frame
 	void Update () {
+
+		//Debug.Log (transform.root.name);
 		//mesh1.
 		
 	}
