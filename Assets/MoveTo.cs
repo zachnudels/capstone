@@ -9,10 +9,15 @@ public class MoveTo : MonoBehaviour {
 	public Transform goal;
 	public ThirdPersonCharacter character;
 	NavMeshAgent agent;
+	public GameObject[] platforms;
+
 
 	void Start () {
+		
+		platforms = GetComponent<generatePlatforms> ().randomPlatformHolder;
 		agent = GetComponent<NavMeshAgent>();
-		agent.destination = goal.position; 
+//		agent.destination = goal.position; 
+		agent.destination = platforms[platforms.Length-1].transform.position;
 		agent.updateRotation = false;
 	}
 

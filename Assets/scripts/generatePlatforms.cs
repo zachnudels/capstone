@@ -36,6 +36,8 @@ public class generatePlatforms : MonoBehaviour {
 	int XposOrNeg = 0;
 	int ZposOrNeg = 0;
 
+	public PlatformAI aiScript;
+
 
 	Vector3 spawnPosition;
 
@@ -63,14 +65,16 @@ public class generatePlatforms : MonoBehaviour {
 
 
 		int platforms_per_light = 100/lights_per_platforms;
-		Debug.Log (platforms_per_light);
-		Debug.Log (numberOfPlatforms);
+//		Debug.Log (platforms_per_light);
+//		Debug.Log (numberOfPlatforms);
 		int light_count = 0;
 
 		for (int i = 0; i < numberOfPlatforms; i++) {
 
 			spawnPosition = new Vector3 (randomXHolder[i], randomYHolder[i], randomZHolder[i]);
-			Instantiate (randomPlatformHolder[i], spawnPosition, transform.rotation);
+			GameObject platform = Instantiate (randomPlatformHolder[i], spawnPosition, transform.rotation);
+			string name = "Platform" + i;
+			platform.name = name;
 
 
 			if (i % platforms_per_light == 0) {
@@ -83,6 +87,7 @@ public class generatePlatforms : MonoBehaviour {
 
 
 		}
+		aiScript.enabled = true;
 		Debug.Log (light_count);
 
 
@@ -102,9 +107,9 @@ public class generatePlatforms : MonoBehaviour {
 		int[] platformDist = new int[percentagePlatforms.Length];
 
 		for(int i = 0 ; i < percentagePlatforms.Length; ++i){
-			Debug.Log(percentagePlatforms[i]);
+//			Debug.Log(percentagePlatforms[i]);
 			platformDist[i] = (int) (percentagePlatforms[i] * numberOfPlatforms * 0.01);
-			Debug.Log("platform "+i+": "+platformDist[i]);
+//			Debug.Log("platform "+i+": "+platformDist[i]);
 		}
 
 		//loops through each position of platforms
@@ -120,7 +125,7 @@ public class generatePlatforms : MonoBehaviour {
 
 			--platformDist[chosenPlatform];
 			randomPlatformHolder[i] = availablePlatforms[chosenPlatform];
-			Debug.Log(i+": "+chosenPlatform);
+//			Debug.Log(i+": "+chosenPlatform);
 
 		}//all platforms now generated in holder array
 
