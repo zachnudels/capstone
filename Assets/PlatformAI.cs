@@ -6,36 +6,55 @@ using UnityEngine.AI;
 public class PlatformAI : MonoBehaviour {
 
 
-//	public GameObject[] platforms;
-	public int platformLength;
+	public indexFinder[] platforms;
+	public NavMeshLink[] links;
+//	public int platformLength;
 	// Use this for initialization
 	void Start () {
-//		for(int i = 1; i != platformLength-1; ++i) {
+		platforms = FindObjectsOfType<indexFinder>() as indexFinder[];
+		links = new NavMeshLink[platforms.Length];
+//		GameObject currPlatform = platforms [0];
+		for(int i = 1; i != platforms.Length; ++i) {
 //			string currname = "Platform" + i;
 //			string prevname = "Platform" + (i-1);
 //			Debug.Log (currname);
-			Transform currPlatformT = transform.Find ("Platform1");
-			if (currPlatformT == null) {
-				Debug.Log ("No platform found");
-			} else {
-//				GameObject currPlatform = currPlatformT.gameObject;
-//				Vector3 currCent = transform.Find (currname).position;
-//				Vector3 prevCent = transform.Find (prevname).position;
+//			Transform currPlatformT = transform.Find ("Platform1");
+//			if (currPlatformT == null) {
+//				Debug.Log ("No platform found");
+//			} else {
+			GameObject currPlatform = platforms[i].gameObject;
+			GameObject nextPlatform = platforms[i-1].gameObject;
+			Vector3 currCent = currPlatform.transform.position;
+			Vector3 nextCent = nextPlatform.transform.position;
 //				NavMeshLink currLink = currPlatform.AddComponent<NavMeshLink>();
-//				//			Vector3 thisCent =  currPlatform.transform.position;
-//				//			Vector3 prevCent = prevPlatform.transform.position;
-//				//			Vector3 dir = Vector3.Normalize ((thisCent - prevCent));
-//				currLink.startPoint = prevCent;
-//				currLink.endPoint = currCent;
-			}
+			GameObject linkObj = new GameObject();
+//			Instantiate (linkObj, Vector3.zero, Quaternion.identity);
+			NavMeshLink currLink = linkObj.AddComponent<NavMeshLink>();
+				//			Vector3 thisCent =  currPlatform.transform.position;
+				//			Vector3 prevCent = prevPlatform.transform.position;
+				//			Vector3 dir = Vector3.Normalize ((thisCent - prevCent));
+				currLink.startPoint = currCent;
+			Debug.Log (currLink.startPoint);
+				currLink.endPoint = nextCent;
+//			currLink.transform.position = Vector3.zero;
+			currLink.UpdateLink();
+			currLink.costModifier = 1;
+			links [i] = currLink;
+//			}
 
 
-//		}
+		}
 
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		
+		for (int i = 1; i != links.Length; ++i) {
+			if (i == 1) {
+//				Debug.Log (links [i].startPoint);
+			}
+//			links [i].UpdateLink ();
+		}
+
 	}
 }

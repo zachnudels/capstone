@@ -23,6 +23,7 @@ GameObject:
   - component: {fileID: 65782349749427434}
   - component: {fileID: 23472328586305622}
   - component: {fileID: 114325153838408402}
+  - component: {fileID: 114548493466653306}
   m_Layer: 0
   m_Name: small platform
   m_TagString: platform
@@ -109,3 +110,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spawn: {fileID: 1692567589730466, guid: 9bdf89e5d693e4901a3f2f47bf74a902, type: 2}
   speed: {fileID: 1969199646401848, guid: 4854c28ff5780406c984c97f861b355a, type: 2}
+--- !u!114 &114548493466653306
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1110357403209740}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c75ba7bac2f114bf5a7e7044bf9f4dfb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  index: 0

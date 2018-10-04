@@ -14,10 +14,10 @@ public class MoveTo : MonoBehaviour {
 
 	void Start () {
 		
-		platforms = GetComponent<generatePlatforms> ().randomPlatformHolder;
+//		platforms = GetComponent<generatePlatforms> ().randomPlatformHolder;
 		agent = GetComponent<NavMeshAgent>();
-//		agent.destination = goal.position; 
-		agent.destination = platforms[platforms.Length-1].transform.position;
+		agent.destination = goal.position; 
+//		agent.destination = platforms[platforms.Length-1].transform.position;
 		agent.updateRotation = false;
 	}
 

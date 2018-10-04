@@ -54,6 +54,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4255911787129746}
   - component: {fileID: 114629084054921588}
+  - component: {fileID: 114665179217150570}
   m_Layer: 0
   m_Name: xBFcube
   m_TagString: spinPlat
@@ -276,6 +277,18 @@ MonoBehaviour:
   rightLimit: 100
   leftLimit: 100
   direction: 1
+--- !u!114 &114665179217150570
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1344751299735254}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c75ba7bac2f114bf5a7e7044bf9f4dfb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  index: 0
 --- !u!114 &114799998981023064
 MonoBehaviour:
   m_ObjectHideFlags: 1
