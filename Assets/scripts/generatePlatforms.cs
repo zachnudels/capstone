@@ -68,13 +68,31 @@ public class generatePlatforms : MonoBehaviour {
 //		Debug.Log (platforms_per_light);
 //		Debug.Log (numberOfPlatforms);
 		int light_count = 0;
+		string a_suf = "";
 
 		for (int i = 0; i < numberOfPlatforms; i++) {
 
 			spawnPosition = new Vector3 (randomXHolder[i], randomYHolder[i], randomZHolder[i]);
 			GameObject platform = Instantiate (randomPlatformHolder[i], spawnPosition, transform.rotation);
-			string name = "Platform" + i;
+//			string suffix = "";
+			int suf_dig = i % 10;
+//			int num = i;
+//			int digits = 0;
+//			while (num != 0) {
+//				num = (int)(num / 10);
+//				++digits;
+//			}
+//			--digits;
+//			for(int j = 0; j < digits; ++j){
+//				suffix+="a";
+//			}
+//			suffix+=suf_dig;
+			if (i % 10 == 0 && i >9) {
+				a_suf += "a";
+			}
+			string name = "Platform" + a_suf + suf_dig;
 			platform.name = name;
+
 
 
 			if (i % platforms_per_light == 0) {
