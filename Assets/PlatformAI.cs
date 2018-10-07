@@ -17,8 +17,22 @@ public class PlatformAI : MonoBehaviour {
 //		Array.Sort(platforms,
 //			delegate(indexFinder x, indexFinder y) { return x.chance.CompareTo(y.chance); });
 		links = new NavMeshLink[platforms.Length];
+
 //		GameObject currPlatform = platforms [0];
-		for(int i = 0; i != platforms.Length-1; ++i) {
+
+		for (int i = 0; i < platforms.Length; i++) 
+		{
+			platforms [i].GetComponent<NavMeshSurface>().BuildNavMesh ();   
+		} 
+
+		GameObject firstLinkObj = new GameObject();
+		NavMeshLink firstLink = firstLinkObj.AddComponent<NavMeshLink>();
+		firstLink.startPoint = new Vector3 (-4.7f, -8.1f, -20.15f);
+		firstLink.endPoint = platforms [0].gameObject.transform.position;
+		firstLink.UpdateLink ();
+		firstLink.costModifier = 1;
+
+		for(int i = 1; i != platforms.Length; ++i) {
 //			string currname = "Platform" + i;
 //			string prevname = "Platform" + (i-1);
 //			Debug.Log (currname);
@@ -26,8 +40,8 @@ public class PlatformAI : MonoBehaviour {
 //			if (currPlatformT == null) {
 //				Debug.Log (i);
 //			} else {
-			GameObject currPlatform = platforms[i].gameObject;
-			GameObject nextPlatform = platforms[i+1].gameObject;
+			GameObject currPlatform = platforms[i-1].gameObject;
+			GameObject nextPlatform = platforms[i].gameObject;
 			Debug.Log (currPlatform.name + " " + nextPlatform.name);
 			Vector3 currCent = currPlatform.transform.position;
 			Vector3 nextCent = nextPlatform.transform.position;
@@ -41,6 +55,7 @@ public class PlatformAI : MonoBehaviour {
 				currLink.startPoint = currCent;
 //			Debug.Log (currLink.startPoint);
 				currLink.endPoint = nextCent;
+			currLink.costModifier = 1;
 //			currLink.transform.position = Vector3.zero;
 			currLink.UpdateLink();
 			currLink.costModifier = 1;
@@ -50,7 +65,7 @@ public class PlatformAI : MonoBehaviour {
 
 		}
 		moveTo.enabled = true;
-
+		  
 	}
 	
 	// Update is called once per frame

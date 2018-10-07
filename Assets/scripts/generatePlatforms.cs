@@ -74,19 +74,8 @@ public class generatePlatforms : MonoBehaviour {
 
 			spawnPosition = new Vector3 (randomXHolder[i], randomYHolder[i], randomZHolder[i]);
 			GameObject platform = Instantiate (randomPlatformHolder[i], spawnPosition, transform.rotation);
-//			string suffix = "";
+
 			int suf_dig = i % 10;
-//			int num = i;
-//			int digits = 0;
-//			while (num != 0) {
-//				num = (int)(num / 10);
-//				++digits;
-//			}
-//			--digits;
-//			for(int j = 0; j < digits; ++j){
-//				suffix+="a";
-//			}
-//			suffix+=suf_dig;
 			if (i % 10 == 0 && i >9) {
 				a_suf += "a";
 			}

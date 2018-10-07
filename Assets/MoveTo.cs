@@ -7,7 +7,7 @@ using UnityStandardAssets.Characters.ThirdPerson;
 
 public class MoveTo : MonoBehaviour {
 	
-	public Transform goal;
+//	public Transform goal;
 	public ThirdPersonCharacter character;
 	NavMeshAgent agent;
 	public indexFinder[] platforms;
