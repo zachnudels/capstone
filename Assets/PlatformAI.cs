@@ -48,13 +48,34 @@ public class PlatformAI : MonoBehaviour {
 			GameObject currPlatform = platforms[i-1].gameObject;
 			GameObject nextPlatform = platforms[i].gameObject;
 
-			Bounds nextBound = nextPlatform.GetComponent<Renderer> ().bounds;
-			Bounds currBound = currPlatform.GetComponent<Renderer> ().bounds;
+			Bounds currBound;
+			Bounds nextBound;
+
+			Vector3 currYBump = Vector3.zero;
+			Vector3 nextYBump = Vector3.zero;
+
+			if (nextPlatform.transform.childCount > 0) {
+				nextBound = nextPlatform.GetComponentInChildren<Renderer> ().bounds;
+				nextYBump += new Vector3 (0, nextBound.extents.y, 0);
+			} else {
+				nextBound = nextPlatform.GetComponent<Renderer> ().bounds;
+			}
+
+			if (currPlatform.transform.childCount > 0) {
+				currBound = currPlatform.GetComponentInChildren<Renderer> ().bounds;
+				currYBump += new Vector3 (0, currBound.extents.y, 0);
+			} else {
+				currBound = currPlatform.GetComponent<Renderer> ().bounds;
+			}
+
+
 
 
 //			Debug.Log (currPlatform.name + " " + nextPlatform.name);
-			Vector3 currCent = currPlatform.transform.position;
-			Vector3 nextCent = nextPlatform.transform.position;
+			Vector3 currCent = currBound.center + currYBump;
+			Vector3 nextCent = nextBound.center + nextYBump;
+
+//			if(currBound.transform.childCount
 //				NavMeshLink currLink = currPlatform.AddComponent<NavMeshLink>();
 			GameObject linkObj = new GameObject();
 //			Instantiate (linkObj, Vector3.zero, Quaternion.identity);
@@ -92,7 +113,7 @@ public class PlatformAI : MonoBehaviour {
 			if (i == 1) {
 //				Debug.Log (links [i].startPoint);
 			}
-//			links [i].UpdateLink ();
+			links [i].UpdateLink ();
 		}
 
 	}

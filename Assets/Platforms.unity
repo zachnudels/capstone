@@ -261,7 +261,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 834451840}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7a5ac11cc976e418e8d13136b07e1f52, type: 3}
   m_Name: 
@@ -282,7 +282,7 @@ MonoBehaviour:
   m_OverrideVoxelSize: 0
   m_VoxelSize: 0.16666667
   m_BuildHeightMesh: 0
-  m_NavMeshData: {fileID: 23800000, guid: 61e57f14d5f1a42699790342f5278b9b, type: 2}
+  m_NavMeshData: {fileID: 0}
 --- !u!4 &834451842
 Transform:
   m_ObjectHideFlags: 0
@@ -410,7 +410,7 @@ Prefab:
     - target: {fileID: 114122171426909014, guid: 81614bfcc509a416cbc6d6ff0d160147,
         type: 2}
       propertyPath: percentagePlatforms.Array.data[2]
-      value: 0
+      value: 102
       objectReference: {fileID: 0}
     - target: {fileID: 114122171426909014, guid: 81614bfcc509a416cbc6d6ff0d160147,
         type: 2}
@@ -425,27 +425,27 @@ Prefab:
     - target: {fileID: 114122171426909014, guid: 81614bfcc509a416cbc6d6ff0d160147,
         type: 2}
       propertyPath: percentagePlatforms.Array.data[5]
-      value: 51
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 114122171426909014, guid: 81614bfcc509a416cbc6d6ff0d160147,
         type: 2}
       propertyPath: percentagePlatforms.Array.data[6]
-      value: 51
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 114122171426909014, guid: 81614bfcc509a416cbc6d6ff0d160147,
         type: 2}
       propertyPath: percentagePlatforms.Array.data[7]
-      value: 51
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 114122171426909014, guid: 81614bfcc509a416cbc6d6ff0d160147,
         type: 2}
       propertyPath: percentagePlatforms.Array.data[8]
-      value: 51
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 114122171426909014, guid: 81614bfcc509a416cbc6d6ff0d160147,
         type: 2}
       propertyPath: numberOfPlatforms
-      value: 50
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 114976040700989386, guid: 81614bfcc509a416cbc6d6ff0d160147,
         type: 2}
