@@ -94,7 +94,7 @@ public class generatePlatforms : MonoBehaviour {
 
 
 		}
-		aiScript.enabled = true;
+//		aiScript.enabled = true;
 		Debug.Log (light_count);
 
 
@@ -118,9 +118,9 @@ public class generatePlatforms : MonoBehaviour {
 			platformDist[i] = (int) (percentagePlatforms[i] * numberOfPlatforms * 0.01);
 //			Debug.Log("platform "+i+": "+platformDist[i]);
 		}
-
+		randomPlatformHolder [0] = availablePlatforms [8];
 		//loops through each position of platforms
-		for (int i = 0; i < numberOfPlatforms; i++) {
+		for (int i = 1; i < numberOfPlatforms; i++) {
 			//There are number ranges associated with each platform
 			//to create different probabilities of each happening
 			chosenPlatform = Random.Range (1, 10000);
@@ -166,15 +166,17 @@ public class generatePlatforms : MonoBehaviour {
 				continue;
 			}
 			else{
+				Bounds lastB = lastPlatform.GetComponent<Renderer> ().bounds;
+				Bounds currB = currPlatform.GetComponent<Renderer> ().bounds;
 				if ((j != 0) && (randomPlatformHolder [j - 1] == availablePlatforms [1])) {///////////////////////////////////////////YBF
-					setRegularLocation(j, lastPlatform.transform.lossyScale.x, lastPlatform.transform.lossyScale.z, currPlatform.transform.lossyScale.x, currPlatform.transform.lossyScale.z, 1);
+					setRegularLocation(j, lastB.extents.x, lastB.extents.z, currB.extents.x, currB.extents.z, 1);
 				}
 
 				if ((j != 0) && (randomPlatformHolder [j - 1] == availablePlatforms [2])) {///////////////////////////////////////////XBF
-					setRegularLocation(j, lastPlatform.transform.lossyScale.x, lastPlatform.transform.lossyScale.z,currPlatform.transform.lossyScale.x, currPlatform.transform.lossyScale.z, 2);
+					setRegularLocation(j, lastB.extents.x, lastB.extents.z, currB.extents.x, currB.extents.z, 2);
 				}
 				else {
-					setRegularLocation(j, lastPlatform.transform.lossyScale.x, lastPlatform.transform.lossyScale.z,currPlatform.transform.lossyScale.x, currPlatform.transform.lossyScale.z, 0);
+					setRegularLocation(j, lastB.extents.x, lastB.extents.z, currB.extents.x, currB.extents.z, 0);
 				}
 			}
 
@@ -198,8 +200,8 @@ public class generatePlatforms : MonoBehaviour {
 
 
 	void setRegularLocation(int j, float prevXSize, float prevZSize, float currXSize, float currZSize, int move){
-		float xSize = prevXSize/2 + currXSize/2;
-		float zSize = prevZSize/2 + currZSize/2;
+		float xSize = prevXSize + currXSize;
+		float zSize = prevZSize + currZSize;
 		//if the last platform is small
 
 			///////////////////////////////////////////////////////////////////////////////////////////////////////// Y
@@ -223,10 +225,10 @@ public class generatePlatforms : MonoBehaviour {
 			XposOrNeg = XpositiveOrNegative[j-1];
 
 			//if going out of boundaries on POS side, switch to NEG
-			if(((randomXHolder[j-1] + 10) > 50)){
+			if(((randomXHolder[j-1] + 10) > 200)){
 				XposOrNeg = 0;
 			}
-			else if(((randomXHolder[j-1] - 10) < -120)){
+			else if(((randomXHolder[j-1] - 10) < -200)){
 				XposOrNeg = 1;
 
 			}
@@ -249,10 +251,10 @@ public class generatePlatforms : MonoBehaviour {
 			ZposOrNeg = ZpositiveOrNegative[j-1];
 
 			//if going out of boundaries on POS side, switch to NEG
-			if(((randomZHolder[j-1] + 10.0f) > 50.0f)){
+			if(((randomZHolder[j-1] + 10.0f) > 200.0f)){
 				ZposOrNeg = 0;
 			}
-			else if(((randomZHolder[j-1] - 10.0f) < -120.0f)){
+			else if(((randomZHolder[j-1] - 10.0f) < -200.0f)){
 				ZposOrNeg = 1;
 
 			}

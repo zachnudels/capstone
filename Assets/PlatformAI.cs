@@ -42,7 +42,7 @@ public class PlatformAI : MonoBehaviour {
 //			} else {
 			GameObject currPlatform = platforms[i-1].gameObject;
 			GameObject nextPlatform = platforms[i].gameObject;
-			Debug.Log (currPlatform.name + " " + nextPlatform.name);
+//			Debug.Log (currPlatform.name + " " + nextPlatform.name);
 			Vector3 currCent = currPlatform.transform.position;
 			Vector3 nextCent = nextPlatform.transform.position;
 //				NavMeshLink currLink = currPlatform.AddComponent<NavMeshLink>();
