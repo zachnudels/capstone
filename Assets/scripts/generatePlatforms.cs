@@ -1,8 +1,9 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Networking;
 
-public class generatePlatforms : MonoBehaviour {
+public class generatePlatforms : NetworkBehaviour {
 	float randomX;
 	float randomY;
 	float randomZ;
@@ -45,6 +46,8 @@ public class generatePlatforms : MonoBehaviour {
 	public int lights_per_platforms;
 	public GameObject lightPrefab;
 
+	GameObject MyInstantiate;
+
 
 	// Use this for initialization
 	void Start () {
@@ -71,7 +74,8 @@ public class generatePlatforms : MonoBehaviour {
 
 			spawnPosition = new Vector3 (randomXHolder[i], randomYHolder[i], randomZHolder[i]);
 			randomPlatformHolder [i].GetComponent<indexFinder> ().index = i;
-			Instantiate (randomPlatformHolder[i], spawnPosition, transform.rotation);
+			GameObject spawner = Instantiate (randomPlatformHolder[i], spawnPosition, transform.rotation);
+			NetworkServer.Spawn (spawner);
 
 
 			if (i % platforms_per_light == 0) {

@@ -62,6 +62,8 @@ GameObject:
   - component: {fileID: 114573491904715784}
   - component: {fileID: 65446209694186786}
   - component: {fileID: 114105798965540008}
+  - component: {fileID: 114551343251310922}
+  - component: {fileID: 114878385637224834}
   m_Layer: 0
   m_Name: FallingCube
   m_TagString: platform
@@ -306,7 +308,39 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c75ba7bac2f114bf5a7e7044bf9f4dfb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  index: 9
+  index: 16
+--- !u!114 &114551343251310922
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1939186503569794}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 372142912, guid: dc443db3e92b4983b9738c1131f555cb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_SceneId:
+    m_Value: 0
+  m_AssetId:
+    i0: 143
+    i1: 217
+    i2: 83
+    i3: 242
+    i4: 49
+    i5: 164
+    i6: 244
+    i7: 230
+    i8: 9
+    i9: 36
+    i10: 23
+    i11: 14
+    i12: 59
+    i13: 193
+    i14: 248
+    i15: 161
+  m_ServerOnly: 0
+  m_LocalPlayerAuthority: 0
 --- !u!114 &114573491904715784
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -319,3 +353,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Player: {fileID: 0}
+--- !u!114 &114878385637224834
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1939186503569794}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1768714887, guid: dc443db3e92b4983b9738c1131f555cb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_TransformSyncMode: 1
+  m_SendInterval: 0.1
+  m_SyncRotationAxis: 7
+  m_RotationSyncCompression: 0
+  m_SyncSpin: 0
+  m_MovementTheshold: 0.001
+  m_VelocityThreshold: 0.0001
+  m_SnapThreshold: 5
+  m_InterpolateRotation: 1
+  m_InterpolateMovement: 1

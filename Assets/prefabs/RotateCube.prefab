@@ -24,6 +24,8 @@ GameObject:
   - component: {fileID: 23511816475353742}
   - component: {fileID: 114371982774929598}
   - component: {fileID: 114881085775016984}
+  - component: {fileID: 114273903445035348}
+  - component: {fileID: 114977773066194260}
   m_Layer: 0
   m_Name: RotateCube
   m_TagString: platform
@@ -182,6 +184,38 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &114273903445035348
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1310968526673958}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 372142912, guid: dc443db3e92b4983b9738c1131f555cb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_SceneId:
+    m_Value: 0
+  m_AssetId:
+    i0: 153
+    i1: 48
+    i2: 56
+    i3: 169
+    i4: 182
+    i5: 192
+    i6: 228
+    i7: 113
+    i8: 107
+    i9: 137
+    i10: 154
+    i11: 114
+    i12: 95
+    i13: 50
+    i14: 115
+    i15: 37
+  m_ServerOnly: 0
+  m_LocalPlayerAuthority: 0
 --- !u!114 &114371982774929598
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -205,4 +239,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c75ba7bac2f114bf5a7e7044bf9f4dfb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  index: 7
+  index: 63
+--- !u!114 &114977773066194260
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1310968526673958}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1768714887, guid: dc443db3e92b4983b9738c1131f555cb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_TransformSyncMode: 1
+  m_SendInterval: 0.1
+  m_SyncRotationAxis: 7
+  m_RotationSyncCompression: 0
+  m_SyncSpin: 0
+  m_MovementTheshold: 0.001
+  m_VelocityThreshold: 0.0001
+  m_SnapThreshold: 5
+  m_InterpolateRotation: 1
+  m_InterpolateMovement: 1

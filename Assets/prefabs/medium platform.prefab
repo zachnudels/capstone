@@ -24,6 +24,8 @@ GameObject:
   - component: {fileID: 23849557262356324}
   - component: {fileID: 114490811908803814}
   - component: {fileID: 114049008033034402}
+  - component: {fileID: 114238274825047380}
+  - component: {fileID: 114100913570168630}
   m_Layer: 0
   m_Name: medium platform
   m_TagString: platform
@@ -108,7 +110,60 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c75ba7bac2f114bf5a7e7044bf9f4dfb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  index: 2
+  index: 72
+--- !u!114 &114100913570168630
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1648371530351260}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1768714887, guid: dc443db3e92b4983b9738c1131f555cb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_TransformSyncMode: 1
+  m_SendInterval: 0.1
+  m_SyncRotationAxis: 7
+  m_RotationSyncCompression: 0
+  m_SyncSpin: 0
+  m_MovementTheshold: 0.001
+  m_VelocityThreshold: 0.0001
+  m_SnapThreshold: 5
+  m_InterpolateRotation: 1
+  m_InterpolateMovement: 1
+--- !u!114 &114238274825047380
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1648371530351260}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 372142912, guid: dc443db3e92b4983b9738c1131f555cb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_SceneId:
+    m_Value: 0
+  m_AssetId:
+    i0: 169
+    i1: 133
+    i2: 65
+    i3: 136
+    i4: 215
+    i5: 156
+    i6: 132
+    i7: 185
+    i8: 139
+    i9: 147
+    i10: 41
+    i11: 43
+    i12: 222
+    i13: 1
+    i14: 180
+    i15: 41
+  m_ServerOnly: 0
+  m_LocalPlayerAuthority: 0
 --- !u!114 &114490811908803814
 MonoBehaviour:
   m_ObjectHideFlags: 1

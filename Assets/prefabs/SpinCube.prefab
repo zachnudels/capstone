@@ -24,6 +24,8 @@ GameObject:
   - component: {fileID: 23906893159376792}
   - component: {fileID: 114826071725762478}
   - component: {fileID: 114623177104943332}
+  - component: {fileID: 114306251641504044}
+  - component: {fileID: 114087241327736868}
   m_Layer: 0
   m_Name: SpinCube
   m_TagString: spinPlat
@@ -1595,6 +1597,27 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Player: {fileID: 0}
+--- !u!114 &114087241327736868
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1110776027708770}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1768714887, guid: dc443db3e92b4983b9738c1131f555cb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_TransformSyncMode: 1
+  m_SendInterval: 0.1
+  m_SyncRotationAxis: 7
+  m_RotationSyncCompression: 0
+  m_SyncSpin: 0
+  m_MovementTheshold: 0.001
+  m_VelocityThreshold: 0.0001
+  m_SnapThreshold: 5
+  m_InterpolateRotation: 1
+  m_InterpolateMovement: 1
 --- !u!114 &114128750250419732
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1631,6 +1654,38 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Player: {fileID: 0}
+--- !u!114 &114306251641504044
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1110776027708770}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 372142912, guid: dc443db3e92b4983b9738c1131f555cb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_SceneId:
+    m_Value: 0
+  m_AssetId:
+    i0: 213
+    i1: 65
+    i2: 33
+    i3: 220
+    i4: 7
+    i5: 26
+    i6: 228
+    i7: 143
+    i8: 152
+    i9: 4
+    i10: 77
+    i11: 192
+    i12: 225
+    i13: 165
+    i14: 238
+    i15: 221
+  m_ServerOnly: 0
+  m_LocalPlayerAuthority: 0
 --- !u!114 &114327702554308072
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1702,7 +1757,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c75ba7bac2f114bf5a7e7044bf9f4dfb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  index: 5
+  index: 61
 --- !u!114 &114654970633683022
 MonoBehaviour:
   m_ObjectHideFlags: 1
