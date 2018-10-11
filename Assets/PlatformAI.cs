@@ -22,7 +22,12 @@ public class PlatformAI : MonoBehaviour {
 
 		for (int i = 0; i < platforms.Length; i++) 
 		{
-			platforms [i].GetComponent<NavMeshSurface>().BuildNavMesh ();   
+			if (platforms [i] == null) {
+				Debug.Log (i + " is null");
+			} else {
+				platforms [i].GetComponent<NavMeshSurface>().BuildNavMesh ();   
+			}
+
 		} 
 
 		GameObject firstLinkObj = new GameObject();
@@ -42,6 +47,11 @@ public class PlatformAI : MonoBehaviour {
 //			} else {
 			GameObject currPlatform = platforms[i-1].gameObject;
 			GameObject nextPlatform = platforms[i].gameObject;
+
+			Bounds nextBound = nextPlatform.GetComponent<Renderer> ().bounds;
+			Bounds currBound = currPlatform.GetComponent<Renderer> ().bounds;
+
+
 //			Debug.Log (currPlatform.name + " " + nextPlatform.name);
 			Vector3 currCent = currPlatform.transform.position;
 			Vector3 nextCent = nextPlatform.transform.position;
@@ -49,12 +59,20 @@ public class PlatformAI : MonoBehaviour {
 			GameObject linkObj = new GameObject();
 //			Instantiate (linkObj, Vector3.zero, Quaternion.identity);
 			NavMeshLink currLink = linkObj.AddComponent<NavMeshLink>();
+
+			Vector3 direction = nextBound.center - currBound.center;
+
+			Vector3 forwardDir = Vector3.Normalize(new Vector3(direction.x, 0 , direction.z));
+
+			float currMag = Vector3.Magnitude (new Vector3 (currBound.extents.x, 0, currBound.extents.z))*0.5f;
+			float nextMag = Vector3.Magnitude (new Vector3 (nextBound.extents.x, 0, nextBound.extents.z)) * 0.5f;
 				//			Vector3 thisCent =  currPlatform.transform.position;
 				//			Vector3 prevCent = prevPlatform.transform.position;
 				//			Vector3 dir = Vector3.Normalize ((thisCent - prevCent));
-				currLink.startPoint = currCent;
+			currLink.startPoint = currCent + currMag*(forwardDir);
+
 //			Debug.Log (currLink.startPoint);
-				currLink.endPoint = nextCent;
+			currLink.endPoint = nextCent - (nextMag*forwardDir);// - nextBound.extents + new Vector3(1, 0, 1);
 			currLink.costModifier = 1;
 //			currLink.transform.position = Vector3.zero;
 			currLink.UpdateLink();

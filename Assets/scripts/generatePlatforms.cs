@@ -94,7 +94,7 @@ public class generatePlatforms : MonoBehaviour {
 
 
 		}
-//		aiScript.enabled = true;
+		aiScript.enabled = true;
 		Debug.Log (light_count);
 
 
@@ -141,56 +141,55 @@ public class generatePlatforms : MonoBehaviour {
 	void makeRandoms(){
 
 		constructPlatforms();
-		GameObject lastPlatform = randomPlatformHolder[1];
-		GameObject currPlatform = randomPlatformHolder[0];
+		GameObject lastPlatform = randomPlatformHolder[0];
+		GameObject currPlatform = randomPlatformHolder[1];
 
-		for (int j = 0; j < numberOfPlatforms; j++) {
+		randomX = 11.0f;
+		randomY = -5.0f;
+		randomZ = -27.0f;
+		//randomZ = Random.Range (-120.0f, 50.0f);
+
+		randomXHolder [0] = randomX;
+		randomYHolder [0] = randomY;
+		randomZHolder [0] = randomZ;
+		XpositiveOrNegative [0] = 0;
+		ZpositiveOrNegative [0] = 0;
+
+		for (int j = 1; j < numberOfPlatforms; j++) {
+
+			lastPlatform = randomPlatformHolder[j-1];
+			currPlatform = randomPlatformHolder[j];
 
 
 
 
-			//first platform must be at certain height
-			if (j == 0) {
-				//working in a space of 170 by 170
-				//randomX = Random.Range (-120.0f, 50.0f);
-				randomX = 11.0f;
-				randomY = -5.0f;
-				randomZ = -27.0f;
-				//randomZ = Random.Range (-120.0f, 50.0f);
+			Bounds lastBound = lastPlatform.GetComponent<Renderer> ().bounds;
+			Bounds currBound = currPlatform.GetComponent<Renderer> ().bounds;
 
-				randomXHolder [j] = randomX;
-				randomYHolder [j] = randomY;
-				randomZHolder [j] = randomZ;
-				XpositiveOrNegative [j] = 0;
-				ZpositiveOrNegative [j] = 0;
-				continue;
+
+			if ((j != 0) && (randomPlatformHolder [j - 1] == availablePlatforms [1])) {///////////////////////////////////////////YBF
+				setRegularLocation(j, lastBound.extents.x, lastBound.extents.z, currBound.extents.x, currPlatform.transform.lossyScale.z, 1);
 			}
-			else{
-				Bounds lastB = lastPlatform.GetComponent<Renderer> ().bounds;
-				Bounds currB = currPlatform.GetComponent<Renderer> ().bounds;
-				if ((j != 0) && (randomPlatformHolder [j - 1] == availablePlatforms [1])) {///////////////////////////////////////////YBF
-					setRegularLocation(j, lastB.extents.x, lastB.extents.z, currB.extents.x, currB.extents.z, 1);
-				}
 
-				if ((j != 0) && (randomPlatformHolder [j - 1] == availablePlatforms [2])) {///////////////////////////////////////////XBF
-					setRegularLocation(j, lastB.extents.x, lastB.extents.z, currB.extents.x, currB.extents.z, 2);
-				}
-				else {
-					setRegularLocation(j, lastB.extents.x, lastB.extents.z, currB.extents.x, currB.extents.z, 0);
-				}
+			if ((j != 0) && (randomPlatformHolder [j - 1] == availablePlatforms [2])) {///////////////////////////////////////////XBF
+				setRegularLocation(j, lastPlatform.transform.lossyScale.x, lastPlatform.transform.lossyScale.z,currPlatform.transform.lossyScale.x, currPlatform.transform.lossyScale.z, 2);
 			}
+			else {
+				setRegularLocation(j, lastBound.extents.x, lastBound.extents.z, currBound.extents.x, currBound.extents.z, 0);
+			}
+
 
 			randomXHolder [j] = randomX;
 			randomYHolder [j] = randomY;
 			randomZHolder [j] = randomZ;
 			XpositiveOrNegative [j] = XposOrNeg;
 			ZpositiveOrNegative [j] = ZposOrNeg;
-			lastPlatform = randomPlatformHolder[j];
-			currPlatform = randomPlatformHolder[j-1];
+
+			//			currPlatform = randomPlatformHolder[j];
+
 
 		}
 	}
-
 
 
 	// Update is called once per frame
@@ -225,10 +224,10 @@ public class generatePlatforms : MonoBehaviour {
 			XposOrNeg = XpositiveOrNegative[j-1];
 
 			//if going out of boundaries on POS side, switch to NEG
-			if(((randomXHolder[j-1] + 10) > 200)){
+			if(((randomXHolder[j-1] + 10) > 120)){
 				XposOrNeg = 0;
 			}
-			else if(((randomXHolder[j-1] - 10) < -200)){
+			else if(((randomXHolder[j-1] - 10) < -50)){
 				XposOrNeg = 1;
 
 			}
@@ -251,10 +250,10 @@ public class generatePlatforms : MonoBehaviour {
 			ZposOrNeg = ZpositiveOrNegative[j-1];
 
 			//if going out of boundaries on POS side, switch to NEG
-			if(((randomZHolder[j-1] + 10.0f) > 200.0f)){
+			if(((randomZHolder[j-1] + 10.0f) > 120.0f)){
 				ZposOrNeg = 0;
 			}
-			else if(((randomZHolder[j-1] - 10.0f) < -200.0f)){
+			else if(((randomZHolder[j-1] - 10.0f) < -50.0f)){
 				ZposOrNeg = 1;
 
 			}
