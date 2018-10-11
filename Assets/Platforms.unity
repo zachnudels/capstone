@@ -378,6 +378,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 067c3d972ed2149f8bcb03e1d1689c1c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  numberOfPlatforms: 10
   fallingPlatform: {fileID: 1939186503569794, guid: 8fd953f231a4f4e60924170e3bc1f8a1,
     type: 2}
   yBFPlatform: {fileID: 1451609666099814, guid: 8305c7f55bfa44a4892cca2713065f33,
