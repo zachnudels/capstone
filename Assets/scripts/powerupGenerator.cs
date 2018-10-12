@@ -1,8 +1,9 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Networking;
 
-public class powerupGenerator : MonoBehaviour {
+public class powerupGenerator : NetworkBehaviour {
 
 	Vector3 startingPos;
 	bool powerUp;
@@ -22,11 +23,13 @@ public class powerupGenerator : MonoBehaviour {
 		if (powerUp) {
 			if (power == 1) {
 				//instantaite spawn
-				Instantiate (spawn, pos, transform.rotation);
+				GameObject spawny = Instantiate (spawn, pos, transform.rotation);
+				NetworkServer.Spawn (spawny);
 			}
 			if (power == 2) {
 				//instantaite speed
-				Instantiate (speed, pos, transform.rotation);
+				GameObject speedy = Instantiate (speed, pos, transform.rotation);
+				NetworkServer.Spawn (speedy);
 			}
 		}
 	}

@@ -24,6 +24,7 @@ GameObject:
   - component: {fileID: 114363627516447160}
   - component: {fileID: 64990968475864964}
   - component: {fileID: 114001209987726322}
+  - component: {fileID: 114938416212450234}
   m_Layer: 0
   m_Name: Speed Power Up
   m_TagString: Untagged
@@ -136,3 +137,35 @@ MonoBehaviour:
   endScale: {x: 1.5, y: 1.5, z: 1.5}
   scaleSpeed: 1
   scaleRate: 0.5
+--- !u!114 &114938416212450234
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1969199646401848}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 372142912, guid: dc443db3e92b4983b9738c1131f555cb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_SceneId:
+    m_Value: 0
+  m_AssetId:
+    i0: 72
+    i1: 84
+    i2: 194
+    i3: 143
+    i4: 245
+    i5: 120
+    i6: 4
+    i7: 6
+    i8: 201
+    i9: 132
+    i10: 201
+    i11: 127
+    i12: 134
+    i13: 27
+    i14: 53
+    i15: 90
+  m_ServerOnly: 0
+  m_LocalPlayerAuthority: 0
