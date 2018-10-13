@@ -34,7 +34,7 @@ public class PlatformAI : MonoBehaviour {
 
 		GameObject firstLinkObj = new GameObject();
 		NavMeshLink firstLink = firstLinkObj.AddComponent<NavMeshLink>();
-		firstLink.startPoint = new Vector3 (-4.7f, -8.1f, -20.15f);
+		firstLink.startPoint = new Vector3 (-4.7f, -8.4f, -20.15f);
 		firstLink.endPoint = platforms [0].gameObject.transform.position;
 		firstLink.UpdateLink ();
 		firstLink.costModifier = 1;
@@ -99,8 +99,9 @@ public class PlatformAI : MonoBehaviour {
 
 			currLink.startPoint = currCent + currMag*(forwardDir);
 			currLink.endPoint = nextCent - (nextMag*forwardDir);
-			currLink.UpdateLink();
 			currLink.costModifier = 1;
+			currLink.UpdateLink();
+//			currLink.costModifier = 1;
 			links [i] = currLink;
 
 			currPlatform = nextPlatform;
