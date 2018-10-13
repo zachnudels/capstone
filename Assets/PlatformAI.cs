@@ -22,6 +22,8 @@ public class PlatformAI : MonoBehaviour {
 
 		for (int i = 0; i < platforms.Length; i++) 
 		{
+			if (platforms[i].tag == "spinPlat")
+				continue;
 			if (platforms [i] == null) {
 				Debug.Log (i + " is null");
 			} else {
