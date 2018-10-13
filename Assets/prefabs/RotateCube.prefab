@@ -23,6 +23,7 @@ GameObject:
   - component: {fileID: 65283625338016232}
   - component: {fileID: 23511816475353742}
   - component: {fileID: 114371982774929598}
+  - component: {fileID: 114231564574013274}
   m_Layer: 0
   m_Name: RotateCube
   m_TagString: platform
@@ -181,6 +182,18 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &114231564574013274
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1310968526673958}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c75ba7bac2f114bf5a7e7044bf9f4dfb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  index: 0
 --- !u!114 &114371982774929598
 MonoBehaviour:
   m_ObjectHideFlags: 1

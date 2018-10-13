@@ -23,6 +23,8 @@ GameObject:
   - component: {fileID: 65759322696382582}
   - component: {fileID: 23849557262356324}
   - component: {fileID: 114490811908803814}
+  - component: {fileID: 114366585920688076}
+  - component: {fileID: 114983932124036450}
   m_Layer: 0
   m_Name: medium platform
   m_TagString: platform
@@ -96,7 +98,7 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &114490811908803814
+--- !u!114 &114366585920688076
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -104,8 +106,48 @@ MonoBehaviour:
   m_GameObject: {fileID: 1648371530351260}
   m_Enabled: 1
   m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c75ba7bac2f114bf5a7e7044bf9f4dfb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  index: 0
+--- !u!114 &114490811908803814
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1648371530351260}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 460c4f51c4a214f55b361f7ff578682c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   spawn: {fileID: 1692567589730466, guid: 9bdf89e5d693e4901a3f2f47bf74a902, type: 2}
   speed: {fileID: 1969199646401848, guid: 4854c28ff5780406c984c97f861b355a, type: 2}
+--- !u!114 &114983932124036450
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1648371530351260}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a5ac11cc976e418e8d13136b07e1f52, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_AgentTypeID: 0
+  m_CollectObjects: 0
+  m_Size: {x: 10, y: 10, z: 10}
+  m_Center: {x: 0, y: 2, z: 0}
+  m_LayerMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_UseGeometry: 0
+  m_DefaultArea: 0
+  m_IgnoreNavMeshAgent: 1
+  m_IgnoreNavMeshObstacle: 1
+  m_OverrideTileSize: 0
+  m_TileSize: 256
+  m_OverrideVoxelSize: 0
+  m_VoxelSize: 0.16666667
+  m_BuildHeightMesh: 0
+  m_NavMeshData: {fileID: 0}

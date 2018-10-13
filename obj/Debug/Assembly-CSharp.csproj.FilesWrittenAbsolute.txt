@@ -158,3 +158,5 @@
 /Users/Zach/Google Drive/UCT/2018/CSC3020H/Games Project 2018/Capstone/capstone/Temp/bin/Debug/Unity.Cecil.Mdb.dll
 /Users/Zach/Google Drive/UCT/2018/CSC3020H/Games Project 2018/Capstone/capstone/Temp/bin/Debug/UnityEditor.iOS.Extensions.Xcode.dll
 /Users/Zach/Google Drive/UCT/2018/CSC3020H/Games Project 2018/Capstone/capstone/Temp/bin/Debug/UnityEditor.iOS.Extensions.Xcode.xml
+/Users/Zach/Google Drive/UCT/2018/CSC3020H/Games Project 2018/Capstone/capstone/Temp/bin/Debug/Assembly-CSharp.dll.mdb
+/Users/Zach/Google Drive/UCT/2018/CSC3020H/Games Project 2018/Capstone/capstone/Temp/bin/Debug/Assembly-CSharp.dll

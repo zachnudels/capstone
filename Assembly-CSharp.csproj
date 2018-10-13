@@ -63,6 +63,10 @@
      <Compile Include="Assets\MORPH3D\Vendor\Unity\Shaders\Hair\HairRenderer.cs" />
      <Compile Include="Assets\MORPH3D\Vendor\Unity\Shaders\UniqueShadow\UniqueShadow.cs" />
      <Compile Include="Assets\MORPH3D\Vendor\Unity\Shaders\UniqueShadow\UniqueShadowSun.cs" />
+     <Compile Include="Assets\NavMeshComponents\Scripts\NavMeshLink.cs" />
+     <Compile Include="Assets\NavMeshComponents\Scripts\NavMeshModifier.cs" />
+     <Compile Include="Assets\NavMeshComponents\Scripts\NavMeshModifierVolume.cs" />
+     <Compile Include="Assets\NavMeshComponents\Scripts\NavMeshSurface.cs" />
      <Compile Include="Assets\PostProcessing\Runtime\Attributes\GetSetAttribute.cs" />
      <Compile Include="Assets\PostProcessing\Runtime\Attributes\MinAttribute.cs" />
      <Compile Include="Assets\PostProcessing\Runtime\Attributes\TrackballAttribute.cs" />
@@ -120,6 +124,7 @@
      <Compile Include="Assets\RPG Character Animation Pack\Elements\ImageEffects\Scripts\ScreenSpaceAmbientObscurance.cs" />
      <Compile Include="Assets\RPG Character Animation Pack\Elements\ImageEffects\Scripts\ScreenSpaceAmbientOcclusion.cs" />
      <Compile Include="Assets\RPG Character Animation Pack\Elements\ImageEffects\Scripts\Triangles.cs" />
+     <Compile Include="Assets\scripts\AgentLinkMover.cs" />
      <Compile Include="Assets\scripts\BlackHoleBoy.cs" />
      <Compile Include="Assets\scripts\blackHoleGenerator.cs" />
      <Compile Include="Assets\scripts\CameraOrbit.cs" />
@@ -128,8 +133,11 @@
      <Compile Include="Assets\scripts\fallingPlatform.cs" />
      <Compile Include="Assets\scripts\forwardBack.cs" />
      <Compile Include="Assets\scripts\generatePlatforms.cs" />
+     <Compile Include="Assets\scripts\indexFinder.cs" />
      <Compile Include="Assets\scripts\MCSAnimationController.cs" />
      <Compile Include="Assets\scripts\MovePlayer.cs" />
+     <Compile Include="Assets\scripts\MoveTo.cs" />
+     <Compile Include="Assets\scripts\PlatformAI.cs" />
      <Compile Include="Assets\scripts\platformAttach.cs" />
      <Compile Include="Assets\scripts\PositionBoost.cs" />
      <Compile Include="Assets\scripts\PostJump.cs" />

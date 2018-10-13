@@ -161,8 +161,21 @@ public class generatePlatforms : MonoBehaviour {
 				continue;
 			}
 			else{
-				Bounds lastBound = lastPlatform.GetComponent<Renderer> ().bounds;
-				Bounds currBound = currPlatform.GetComponent<Renderer> ().bounds;
+
+				Bounds currBound;
+				Bounds lastBound;
+				if (currPlatform.transform.childCount > 0) {
+					currBound = currPlatform.GetComponentInChildren<Renderer> ().bounds;
+				} else {
+					currBound = currPlatform.GetComponent<Renderer> ().bounds;
+				}
+				if (lastPlatform.transform.childCount > 0) {
+					lastBound = lastPlatform.GetComponentInChildren<Renderer> ().bounds;
+				} else {
+					lastBound = lastPlatform.GetComponent<Renderer> ().bounds;
+				}
+
+
 				if ((j != 0) && (randomPlatformHolder [j - 1] == availablePlatforms [1])) {///////////////////////////////////////////YBF
 					setRegularLocation(j, lastBound.extents.x, lastBound.extents.z, currBound.extents.x, currPlatform.transform.lossyScale.z, 1);
 				}
