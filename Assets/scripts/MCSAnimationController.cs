@@ -59,7 +59,7 @@ public class MCSAnimationController : MonoBehaviour {
 		jumpTime += Time.unscaledDeltaTime;
 
 		walking = Input.GetAxis ("Vertical");
-		anim.SetFloat ("walking", walking);
+		anim.SetFloat ("Forward", walking);
 
 //		if (walking > 0.1 && !isWalking) {
 //			//			Debug.Log ("Trying to foot");
@@ -80,7 +80,7 @@ public class MCSAnimationController : MonoBehaviour {
 
 
 		jump = Input.GetKey (KeyCode.Space);
-		anim.SetBool ("jump", jumpHit);
+		anim.SetBool ("Jump", jumpHit);
 //		if(jumpHit)
 //			Debug.Log (jumpTime);
 
