@@ -101,7 +101,7 @@ public class PlatformAI : MonoBehaviour {
 			currLink.endPoint = nextCent - (nextMag*forwardDir);
 			currLink.costModifier = 1;
 			currLink.UpdateLink();
-//			currLink.costModifier = 1;
+			currLink.costModifier = 1;
 			links [i] = currLink;
 
 			currPlatform = nextPlatform;
