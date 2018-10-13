@@ -36,10 +36,12 @@ public class generatePlatforms : MonoBehaviour {
 	int XposOrNeg = 0;
 	int ZposOrNeg = 0;
 
+	public PlatformAI aiScript;
+
 
 	Vector3 spawnPosition;
 
-	GameObject[] randomPlatformHolder;
+	public GameObject[] randomPlatformHolder;
 	GameObject[] availablePlatforms = new GameObject[9];
 
 	public int lights_per_platforms;
@@ -63,15 +65,22 @@ public class generatePlatforms : MonoBehaviour {
 
 
 		int platforms_per_light = 100/lights_per_platforms;
-		Debug.Log (platforms_per_light);
-		Debug.Log (numberOfPlatforms);
+//		Debug.Log (platforms_per_light);
+//		Debug.Log (numberOfPlatforms);
 		int light_count = 0;
+		string a_suf = "";
 
 		for (int i = 0; i < numberOfPlatforms; i++) {
 
 			spawnPosition = new Vector3 (randomXHolder[i], randomYHolder[i], randomZHolder[i]);
-			Instantiate (randomPlatformHolder[i], spawnPosition, transform.rotation);
+			GameObject platform = Instantiate (randomPlatformHolder[i], spawnPosition, transform.rotation);
 
+			int suf_dig = i % 10;
+			if (i % 10 == 0 && i >9) {
+				a_suf += "a";
+			}
+			string name = "Platform" + a_suf + suf_dig;
+			platform.name = name;
 
 			if (i % platforms_per_light == 0) {
 				light_count++;
@@ -83,7 +92,8 @@ public class generatePlatforms : MonoBehaviour {
 
 
 		}
-		Debug.Log (light_count);
+		aiScript.enabled = true;
+//		Debug.Log (light_count);
 
 
 
@@ -102,9 +112,9 @@ public class generatePlatforms : MonoBehaviour {
 		int[] platformDist = new int[percentagePlatforms.Length];
 
 		for(int i = 0 ; i < percentagePlatforms.Length; ++i){
-			Debug.Log(percentagePlatforms[i]);
+//			Debug.Log(percentagePlatforms[i]);
 			platformDist[i] = (int) (percentagePlatforms[i] * numberOfPlatforms * 0.01);
-			Debug.Log("platform "+i+": "+platformDist[i]);
+//			Debug.Log("platform "+i+": "+platformDist[i]);
 		}
 
 		//loops through each position of platforms
@@ -120,7 +130,7 @@ public class generatePlatforms : MonoBehaviour {
 
 			--platformDist[chosenPlatform];
 			randomPlatformHolder[i] = availablePlatforms[chosenPlatform];
-			Debug.Log(i+": "+chosenPlatform);
+//			Debug.Log(i+": "+chosenPlatform);
 
 		}//all platforms now generated in holder array
 
@@ -211,7 +221,7 @@ public class generatePlatforms : MonoBehaviour {
 	void setRegularLocation(int j, float prevXSize, float prevZSize, float currXSize, float currZSize, int move){
 		float xSize = prevXSize + currXSize; 
 		float zSize = prevZSize + currZSize;
-		Debug.Log ("xSize: " + xSize);
+//		Debug.Log ("xSize: " + xSize);
 		bool xOverlap = false;
 		bool zOverlap = false;
 		//if the last platform is small

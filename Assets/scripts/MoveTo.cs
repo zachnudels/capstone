@@ -17,6 +17,7 @@ public class MoveTo : MonoBehaviour {
 		
 		platforms = FindObjectsOfType<indexFinder>().OrderBy( go => go.name ).ToArray();
 		agent = GetComponent<NavMeshAgent>();
+
 //		agent.destination = goal.position;
 		agent.destination = platforms[platforms.Length-1].transform.position; 
 		Debug.Log (platforms [platforms.Length - 1].name);
