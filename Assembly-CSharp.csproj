@@ -152,6 +152,7 @@
      <Compile Include="Assets\scripts\TPCamera.cs" />
      <Compile Include="Assets\scripts\TPScameramove.cs" />
      <Compile Include="Assets\scripts\yBackForth.cs" />
+     <Compile Include="Assets\Sibling.cs" />
      <None Include="Assets\PostProcessing\Resources\Shaders\DepthOfField.shader" />
      <None Include="Assets\MORPH3D\Vendor\Unity\Shaders\Standard\StandardSpecular-doublesided.shader" />
      <None Include="Assets\PostProcessing\Resources\Shaders\MotionBlur.cginc" />
