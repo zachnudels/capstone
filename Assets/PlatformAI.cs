@@ -37,22 +37,41 @@ public class PlatformAI : MonoBehaviour {
 		firstLink.UpdateLink ();
 		firstLink.costModifier = 1;
 
-		for(int i = 1; i != platforms.Length; ++i) {
-//			string currname = "Platform" + i;
-//			string prevname = "Platform" + (i-1);
-//			Debug.Log (currname);
-//			Transform currPlatformT = transform.Find ("Platform1");
-//			if (currPlatformT == null) {
-//				Debug.Log (i);
-//			} else {
-			GameObject currPlatform = platforms[i-1].gameObject;
-			GameObject nextPlatform = platforms[i].gameObject;
 
-			Bounds currBound;
-			Bounds nextBound;
+		GameObject currPlatform = platforms[0].gameObject;
+		GameObject nextPlatform = platforms[1].gameObject;
 
-			Vector3 currYBump = Vector3.zero;
-			Vector3 nextYBump = Vector3.zero;
+		Bounds currBound;
+		Bounds nextBound;
+
+		Vector3 currYBump = Vector3.zero;
+		Vector3 nextYBump = Vector3.zero;
+
+		Vector3 currCent;
+
+
+
+
+		if (currPlatform.transform.childCount > 0) {
+			currBound = currPlatform.GetComponentInChildren<Renderer> ().bounds;
+			currYBump += new Vector3 (0, currBound.extents.y, 0);
+		} else {
+			currBound = currPlatform.GetComponent<Renderer> ().bounds;
+		}
+		currCent = currBound.center + currYBump;
+
+		float currMag = Vector3.Magnitude (new Vector3 (currBound.extents.x, 0, currBound.extents.z)) * 0.5f;
+
+
+		for(int i = 0; i != platforms.Length; ++i) {
+
+			nextPlatform = platforms [i].gameObject;
+
+			if (nextPlatform.tag == "spinPlat")
+				continue;
+	
+
+
 
 			if (nextPlatform.transform.childCount > 0) {
 				nextBound = nextPlatform.GetComponentInChildren<Renderer> ().bounds;
@@ -61,45 +80,31 @@ public class PlatformAI : MonoBehaviour {
 				nextBound = nextPlatform.GetComponent<Renderer> ().bounds;
 			}
 
-			if (currPlatform.transform.childCount > 0) {
-				currBound = currPlatform.GetComponentInChildren<Renderer> ().bounds;
-				currYBump += new Vector3 (0, currBound.extents.y, 0);
-			} else {
-				currBound = currPlatform.GetComponent<Renderer> ().bounds;
-			}
 
 
-
-
-//			Debug.Log (currPlatform.name + " " + nextPlatform.name);
-			Vector3 currCent = currBound.center + currYBump;
 			Vector3 nextCent = nextBound.center + nextYBump;
 
-//			if(currBound.transform.childCount
-//				NavMeshLink currLink = currPlatform.AddComponent<NavMeshLink>();
 			GameObject linkObj = new GameObject();
-//			Instantiate (linkObj, Vector3.zero, Quaternion.identity);
 			NavMeshLink currLink = linkObj.AddComponent<NavMeshLink>();
 
 			Vector3 direction = nextBound.center - currBound.center;
 
 			Vector3 forwardDir = Vector3.Normalize(new Vector3(direction.x, 0 , direction.z));
 
-			float currMag = Vector3.Magnitude (new Vector3 (currBound.extents.x, 0, currBound.extents.z))*0.5f;
-			float nextMag = Vector3.Magnitude (new Vector3 (nextBound.extents.x, 0, nextBound.extents.z)) * 0.5f;
-				//			Vector3 thisCent =  currPlatform.transform.position;
-				//			Vector3 prevCent = prevPlatform.transform.position;
-				//			Vector3 dir = Vector3.Normalize ((thisCent - prevCent));
-			currLink.startPoint = currCent + currMag*(forwardDir);
 
-//			Debug.Log (currLink.startPoint);
-			currLink.endPoint = nextCent - (nextMag*forwardDir);// - nextBound.extents + new Vector3(1, 0, 1);
-			currLink.costModifier = 1;
-//			currLink.transform.position = Vector3.zero;
+			float nextMag = Vector3.Magnitude (new Vector3 (nextBound.extents.x, 0, nextBound.extents.z)) * 0.5f;
+
+
+			currLink.startPoint = currCent + currMag*(forwardDir);
+			currLink.endPoint = nextCent - (nextMag*forwardDir);
 			currLink.UpdateLink();
 			currLink.costModifier = 1;
 			links [i] = currLink;
-//			}
+
+			currPlatform = nextPlatform;
+			currBound = nextBound;
+			currCent = nextCent;
+			currMag = nextMag;
 
 
 		}
@@ -109,12 +114,5 @@ public class PlatformAI : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		for (int i = 1; i != links.Length; ++i) {
-			if (i == 1) {
-//				Debug.Log (links [i].startPoint);
-			}
-			links [i].UpdateLink ();
-		}
-
 	}
 }
