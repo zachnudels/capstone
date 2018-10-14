@@ -8,6 +8,8 @@ public class HUDManager : MonoBehaviour {
 	private string index_string;
 	private int i;
 	public Text platform_text;
+	public List < GameObject > p_ups;
+	private int list_indexer;
 
 
 
@@ -16,14 +18,27 @@ public class HUDManager : MonoBehaviour {
 	void Start () {
 		index_string = "";
 		i = 0;
+		list_indexer = 0;
 
-		
+
 	}
 
 
 	
 	// Update is called once per frame
 	void Update () {
+
+		for (int i = 0; i < p_ups.Count; i++) {
+			p_ups [i].SetActive(false);
+		}
+		p_ups [list_indexer].SetActive(true);
+		if (Input.GetKeyDown (KeyCode.Tab)) {
+			list_indexer++;
+			if (list_indexer == p_ups.Count) {
+				list_indexer = 0;
+			}
+		}
+		
 
 	}
 	void OnCollisionEnter (Collision col) {
