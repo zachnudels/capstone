@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class indexFinder : MonoBehaviour {
 
-	public int index = 0;
+	public int index;
 
 	// Use this for initialization
 	void Start () {

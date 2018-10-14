@@ -9,7 +9,7 @@ public class forwardBack : MonoBehaviour
 	public int direction = 1;
 
 	void OnCollisionEnter(Collision collision){
-		print ("trigger has hit " + collision.gameObject.tag);
+		//print ("trigger has hit " + collision.gameObject.tag);
 		if (collision.gameObject.tag == "platform" || collision.gameObject.tag == "spinPlat" ) {
 			print ("changed direction");
 			direction = direction * -1;

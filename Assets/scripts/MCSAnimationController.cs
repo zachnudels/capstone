@@ -32,7 +32,7 @@ public class MCSAnimationController : NetworkBehaviour {
 	//	private Transform idleTrans;
 	// Use this for initialization
 
-	public bool spawner = false;
+	public int spawner = 0;
 	public GameObject SpawnObject;
 	private float spawnx, spawny, spawnz;
 
@@ -80,7 +80,7 @@ public class MCSAnimationController : NetworkBehaviour {
 			jump = Input.GetKey (KeyCode.Space);
 			anim.SetBool ("jump", jumpHit);
 			if (jumpHit)
-				Debug.Log (jumpTime);
+				//Debug.Log (jumpTime);
 
 			if (jumpHit && jumpTime > 1.2f) {
 
@@ -125,12 +125,12 @@ public class MCSAnimationController : NetworkBehaviour {
 			}
 
 			// Add Checkpoint to Game World with Key Press 'R'
-			if (Input.GetKeyDown (KeyCode.R) && spawner == true) {
+			if (Input.GetKeyDown (KeyCode.R) && spawner > 0) {
 				Instantiate (SpawnObject, transform.position, transform.rotation);
 				spawnx = transform.position.x;
 				spawny = transform.position.y;
 				spawnz = transform.position.z;
-				spawner = false;
+				spawner--;
 
 				//Debug.Log (SpawnObject.transform.position);
 			}
