@@ -10,10 +10,10 @@ public class Agent : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		agent.isStopped = true;
-		move.enabled = true;
-		agent.enabled = true;
-		agent.isStopped = false;
+//		agent.isStopped = true;
+//		move.enabled = true;
+//		agent.enabled = true;
+//		agent.isStopped = false;
 	}
 
 	void Awake()
@@ -21,6 +21,8 @@ public class Agent : MonoBehaviour {
 		agent = gameObject.GetComponent<NavMeshAgent> ();
 //		yield return new WaitForSeconds (1);
 		move = gameObject.GetComponent<MoveTo> ();
+		move.enabled = true;
+		agent.enabled = true;
 	}
 
 

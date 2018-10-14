@@ -9,6 +9,7 @@ public class AIPowerup : MonoBehaviour {
 	GameObject model;
 	public GameObject AIModel;
 	public GameObject particleEffect;
+	public NavMeshSurface surface;
 //	public ThirdPersonCharacter modelControl;
 //	public MoveTo moveto;
 //	public NavMeshAgent agent;
@@ -33,6 +34,7 @@ public class AIPowerup : MonoBehaviour {
 			Debug.Log (model.name);
 			pos = model.transform.position;
 			rot = model.transform.rotation;
+
 			Debug.Log ("Instantiating AI");
 
 
@@ -40,11 +42,35 @@ public class AIPowerup : MonoBehaviour {
 //			Destroy (model);
 
 			GameObject AI = model.GetComponentInParent<Sibling> ().sibling;
-//			Instantiate(agent, firstLink.startPoint, Quaternion.identity);
+
+//			
+//			Instantiate(AIModel, pos, rot);
+
 			Destroy(model);
 
-//			yield return new WaitForSeconds (3);
+//			yield return new WaitForSeconds (1);
+			AI.SetActive (false);
+//			AI.transform.position = pos;
+//			surface.BuildNavMesh ();
+			AI.GetComponent<NavMeshAgent> ().enabled = false;
+			AI.GetComponent<NavMeshAgent> ().updatePosition = false;
+			AI.GetComponent<MoveTo> ().enabled = false;
+
+//			AI.GetComponent<NavMeshAgent> ().Warp (pos);
+			AI.transform.rotation = rot;
+
+//			AI.GetComponent<NavMeshAgent> ().enabled = true;
+//			AI.GetComponent<MoveTo> ().enabled = true;
 			AI.SetActive (true);
+
+			AI.GetComponent<Agent> ().enabled = true;
+			AI.GetComponent<NavMeshAgent> ().enabled = true;
+			AI.GetComponent<MoveTo> ().enabled = true;
+			AI.GetComponent<NavMeshAgent> ().updatePosition = true;
+//			Debug.Log (AI.GetComponent<NavMeshAgent> ().pathStatus);
+
+
+//			AI.transform.rotation = rot;
 
 //			Instantiate(AIModel, pos, rot);
 
