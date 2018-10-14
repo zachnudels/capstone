@@ -10,6 +10,9 @@ public class PlatformAI : MonoBehaviour {
 	public indexFinder[] platforms;
 	public NavMeshLink[] links;
 	public MoveTo moveTo;
+	public GameObject agent;
+	public GameObject model;
+	public NavMeshLink firstLink;
 //	public int platformLength;
 	// Use this for initialization
 	void Start () {
@@ -33,7 +36,7 @@ public class PlatformAI : MonoBehaviour {
 		} 
 
 		GameObject firstLinkObj = new GameObject();
-		NavMeshLink firstLink = firstLinkObj.AddComponent<NavMeshLink>();
+		firstLink = firstLinkObj.AddComponent<NavMeshLink>();
 		firstLink.startPoint = new Vector3 (-4.7f, -8.1f, -20.15f);
 		firstLink.endPoint = platforms [0].gameObject.transform.position;
 		firstLink.UpdateLink ();
@@ -110,7 +113,9 @@ public class PlatformAI : MonoBehaviour {
 
 
 		}
-		moveTo.enabled = true;
+//		moveTo.enabled = true;
+	
+//		Instantiate(agent, model.transform.position, model.transform.rotation);
 		  
 	}
 	

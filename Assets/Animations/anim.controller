@@ -8,30 +8,30 @@ AnimatorController:
   m_Name: anim
   serializedVersion: 5
   m_AnimatorParameters:
-  - m_Name: Forward
+  - m_Name: walking
     m_Type: 1
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 9100000}
-  - m_Name: Jump
+    m_Controller: {fileID: 0}
+  - m_Name: jump
     m_Type: 4
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 9100000}
+    m_Controller: {fileID: 0}
   - m_Name: fall
     m_Type: 4
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 9100000}
+    m_Controller: {fileID: 0}
   - m_Name: OnGround
     m_Type: 4
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 9100000}
+    m_Controller: {fileID: 0}
   m_AnimatorLayers:
   - serializedVersion: 5
     m_Name: Base Layer
@@ -101,7 +101,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 4
-    m_ConditionEvent: Forward
+    m_ConditionEvent: walking
     m_EventTreshold: 0.1
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 1102969961725094766}
@@ -125,7 +125,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 4
-    m_ConditionEvent: Forward
+    m_ConditionEvent: walking
     m_EventTreshold: 0.1
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 1102969961725094766}
@@ -149,7 +149,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 1
-    m_ConditionEvent: Jump
+    m_ConditionEvent: jump
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 1102376556686033956}
@@ -173,7 +173,7 @@ AnimatorStateTransition:
   m_Name: return_to_earth
   m_Conditions:
   - m_ConditionMode: 4
-    m_ConditionEvent: Forward
+    m_ConditionEvent: walking
     m_EventTreshold: 0.1
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 1102969961725094766}
@@ -197,10 +197,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 1
-    m_ConditionEvent: OnGround
-    m_EventTreshold: 0
-  - m_ConditionMode: 1
-    m_ConditionEvent: Jump
+    m_ConditionEvent: jump
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 1102376556686033956}
@@ -224,7 +221,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 3
-    m_ConditionEvent: Forward
+    m_ConditionEvent: walking
     m_EventTreshold: 0.1
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 1102613355308996734}
@@ -272,7 +269,7 @@ AnimatorStateTransition:
     m_ConditionEvent: fall
     m_EventTreshold: 0
   - m_ConditionMode: 3
-    m_ConditionEvent: Forward
+    m_ConditionEvent: walking
     m_EventTreshold: 0.1
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 1102613355308996734}
@@ -296,7 +293,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 3
-    m_ConditionEvent: Forward
+    m_ConditionEvent: walking
     m_EventTreshold: 0.1
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 1102613355308996734}
@@ -368,7 +365,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 4
-    m_ConditionEvent: Forward
+    m_ConditionEvent: walking
     m_EventTreshold: -0.1
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 1102708896647639480}
@@ -392,7 +389,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 4
-    m_ConditionEvent: Forward
+    m_ConditionEvent: walking
     m_EventTreshold: -0.1
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 1102708896647639480}
@@ -416,10 +413,10 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 3
-    m_ConditionEvent: Forward
+    m_ConditionEvent: walking
     m_EventTreshold: -0.1
   - m_ConditionMode: 4
-    m_ConditionEvent: Forward
+    m_ConditionEvent: walking
     m_EventTreshold: 0.1
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 1102969961725094766}
@@ -552,10 +549,10 @@ AnimatorState:
   m_TimeParameterActive: 0
   m_Motion: {fileID: 7400000, guid: 4f69189b2f0e64e80ac0b3433047f91e, type: 3}
   m_Tag: 
-  m_SpeedParameter: Forward
-  m_MirrorParameter: Jump
+  m_SpeedParameter: walking
+  m_MirrorParameter: jump
   m_CycleOffsetParameter: 
-  m_TimeParameter: Forward
+  m_TimeParameter: walking
 --- !u!1102 &1102613355308996734
 AnimatorState:
   serializedVersion: 5
@@ -581,10 +578,10 @@ AnimatorState:
   m_TimeParameterActive: 0
   m_Motion: {fileID: 7400000, guid: fcf77e93e571c437a87fd662528a15f7, type: 3}
   m_Tag: 
-  m_SpeedParameter: Forward
+  m_SpeedParameter: walking
   m_MirrorParameter: 
   m_CycleOffsetParameter: 
-  m_TimeParameter: Forward
+  m_TimeParameter: walking
 --- !u!1102 &1102658512197108358
 AnimatorState:
   serializedVersion: 5
@@ -635,10 +632,10 @@ AnimatorState:
   m_TimeParameterActive: 0
   m_Motion: {fileID: 7400000, guid: fcf77e93e571c437a87fd662528a15f7, type: 3}
   m_Tag: 
-  m_SpeedParameter: Forward
+  m_SpeedParameter: walking
   m_MirrorParameter: 
   m_CycleOffsetParameter: 
-  m_TimeParameter: Forward
+  m_TimeParameter: walking
 --- !u!1102 &1102905279861531326
 AnimatorState:
   serializedVersion: 5
