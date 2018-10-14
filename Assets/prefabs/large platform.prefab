@@ -22,11 +22,11 @@ GameObject:
   - component: {fileID: 33160290412807086}
   - component: {fileID: 65604570005850454}
   - component: {fileID: 23280306919022412}
-  - component: {fileID: 114999723151876556}
-  - component: {fileID: 114362977335695332}
   - component: {fileID: 114618607676836128}
   - component: {fileID: 114357468885485746}
   - component: {fileID: 114375153897356088}
+  - component: {fileID: 114999723151876556}
+  - component: {fileID: 114362977335695332}
   m_Layer: 0
   m_Name: large platform
   m_TagString: platform
@@ -176,7 +176,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c75ba7bac2f114bf5a7e7044bf9f4dfb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  index: 19
+  index: 65
 --- !u!114 &114999723151876556
 MonoBehaviour:
   m_ObjectHideFlags: 1

@@ -59,7 +59,6 @@
      <Compile Include="Assets\EffectExamples\Shared\Scripts\ParticleExamples.cs" />
      <Compile Include="Assets\EffectExamples\Shared\Scripts\ParticleMenu.cs" />
      <Compile Include="Assets\Gems Ultimate Pack\Scripts\AnimationScript.cs" />
-     <Compile Include="Assets\HUDManager.cs" />
      <Compile Include="Assets\Lobby\Scripts\DraggablePanel.cs" />
      <Compile Include="Assets\Lobby\Scripts\EventSystemChecker.cs" />
      <Compile Include="Assets\Lobby\Scripts\Lobby\LobbyCountdownPanel.cs" />
@@ -137,6 +136,7 @@
      <Compile Include="Assets\scripts\fallingPlatform.cs" />
      <Compile Include="Assets\scripts\forwardBack.cs" />
      <Compile Include="Assets\scripts\generatePlatforms.cs" />
+     <Compile Include="Assets\scripts\HUDManager.cs" />
      <Compile Include="Assets\scripts\indexFinder.cs" />
      <Compile Include="Assets\scripts\MCSAnimationController.cs" />
      <Compile Include="Assets\scripts\MovePlayer.cs" />
@@ -152,11 +152,11 @@
      <Compile Include="Assets\scripts\spinCubeCollid.cs" />
      <Compile Include="Assets\scripts\SpotLightOrbit.cs" />
      <Compile Include="Assets\scripts\stayOn.cs" />
+     <Compile Include="Assets\scripts\TeleportPlayer.cs" />
      <Compile Include="Assets\scripts\TPCamera.cs" />
      <Compile Include="Assets\scripts\TPScameramove.cs" />
+     <Compile Include="Assets\scripts\WinnerCheck.cs" />
      <Compile Include="Assets\scripts\yBackForth.cs" />
-     <Compile Include="Assets\TeleportPlayer.cs" />
-     <Compile Include="Assets\WinnerCheck.cs" />
      <None Include="Assets\PostProcessing\Resources\Shaders\DepthOfField.shader" />
      <None Include="Assets\NetworkLobby_Third-PartyNotice.txt" />
      <None Include="Assets\StreamingAssets\MORPH3D\Vendor\Unity\Shaders\Standard\StandardSpecular-doublesided.shader" />
