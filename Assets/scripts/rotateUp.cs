@@ -34,34 +34,27 @@ public class rotateUp : MonoBehaviour
 //			transform.Rotate(0.0f, 0.0f, 180.0f);
 //		}
 //	}
+	void rotateIt(){
+
+		if (timer <= 0.0f) {
+			newRot = this.transform.eulerAngles.x;
+			float otherRot = newRot - 340;
+			transform.Rotate (Vector3.left, 25.0f * Time.deltaTime);
+
+			if (this.transform.eulerAngles.x < -165.0f) {
+				//steady == true;
+				timer = 5.0f;
+
+			}
+		}
+
+	}
 
 	void Update ()
 	{
-
+		
 		timer -= Time.deltaTime;
-
-		if (timer <= 0.0f) {
-			//steady = false;
-			//makeRandomSpeed ();
-			newRot = this.transform.eulerAngles.x;
-			float otherRot = newRot - 360;
-			transform.Rotate(Vector3.left, 25.0f * Time.deltaTime);
-
-
-			print ("old rot   " + rot);
-			print ("other rot   " + otherRot);
-			print("new rot   " + newRot);
-				
-
-			if (this.transform.eulerAngles.x == otherRot) {
-				//steady == true;
-				timer += 5.0f;
-
-			}
-
-
-
-		}
+		rotateIt ();
 		
 		//makeRandomSpeed ();
 		//transform.Rotate(Vector3.left, speed * Time.deltaTime);
