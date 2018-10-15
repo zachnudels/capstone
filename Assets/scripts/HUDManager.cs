@@ -44,6 +44,17 @@ public class HUDManager : NetworkBehaviour {
 			p_ups [i].SetActive(false);
 		}
 		p_ups [list_indexer].SetActive(true);
+
+
+		p_ups [0].GetComponentInChildren<Text> ().text = transform.GetComponent<PowerUpManager> ().speed.ToString ();
+
+		if (transform.GetComponent<PowerUpManager> ().checkpoint == true) {
+			p_ups [1].GetComponentInChildren<Text> ().text = "1";
+		}
+		if (transform.GetComponent<PowerUpManager> ().checkpoint == false) {
+			p_ups [1].GetComponentInChildren<Text> ().text = "0";
+		}
+
 		if (Input.GetKeyDown (KeyCode.Tab)) {
 			list_indexer++;
 			if (list_indexer == p_ups.Count) {

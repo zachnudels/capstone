@@ -124,6 +124,7 @@
      <Compile Include="Assets\PostProcessing\Runtime\Utils\GraphicsUtils.cs" />
      <Compile Include="Assets\PostProcessing\Runtime\Utils\MaterialFactory.cs" />
      <Compile Include="Assets\PostProcessing\Runtime\Utils\RenderTextureFactory.cs" />
+     <Compile Include="Assets\PowerUpManager.cs" />
      <Compile Include="Assets\RPG Character Animation Pack\Code\CameraController.cs" />
      <Compile Include="Assets\RPG Character Animation Pack\Code\RPGCharacterControllerFREE.cs" />
      <Compile Include="Assets\RPG Character Animation Pack\Code\RPGCharacterGUI.cs" />
