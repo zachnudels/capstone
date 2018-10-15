@@ -46,7 +46,8 @@ public class AIPowerup : MonoBehaviour {
 //			
 //			Instantiate(AIModel, pos, rot);
 
-			Destroy(model);
+//			Destroy(model);
+			model.SetActive(false);
 
 //			yield return new WaitForSeconds (1);
 			AI.SetActive (false);

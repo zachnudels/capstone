@@ -114,6 +114,7 @@ public class PlatformAI : MonoBehaviour {
 
 
 		}
+
 //		moveTo.enabled = true;
 	
 //		Instantiate(agent, model.transform.position, model.transform.rotation);

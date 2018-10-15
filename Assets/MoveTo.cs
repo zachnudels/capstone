@@ -12,6 +12,7 @@ public class MoveTo : MonoBehaviour {
 	NavMeshAgent agent;
 	public indexFinder[] platforms;
 	public int pathLength;
+	public GameObject model;
 
 
 	void Start () {
@@ -34,6 +35,11 @@ public class MoveTo : MonoBehaviour {
 			character.Move (agent.desiredVelocity, false, true);
 		} else {
 			character.Move (Vector3.zero, false, false);
+			agent.gameObject.SetActive (false);
+//			GameObject model = FindObjectOfType<Sibling> ().gameObject;
+			model.transform.SetPositionAndRotation (transform.position, transform.rotation);
+			model.SetActive (true);
+
 //			Debug.Log (agent.destination);
 //			Debug.Log (transform.position);
 //			Debug.Log (agent.remainingDistance);

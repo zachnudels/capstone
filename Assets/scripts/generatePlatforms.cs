@@ -24,6 +24,7 @@ public class generatePlatforms : MonoBehaviour {
 	public GameObject mediumPlatform;	//6
 	public GameObject largePlatform;	//7
 	public GameObject regularPlatform;	//8
+	public int pathLength;
 
 	public float[] percentagePlatforms;
 
@@ -94,6 +95,7 @@ public class generatePlatforms : MonoBehaviour {
 
 
 		}
+		aiScript.pathLength = pathLength;
 		aiScript.enabled = true;
 		Debug.Log (light_count);
 
@@ -121,6 +123,11 @@ public class generatePlatforms : MonoBehaviour {
 		randomPlatformHolder [0] = availablePlatforms [8];
 		//loops through each position of platforms
 		for (int i = 1; i < numberOfPlatforms; i++) {
+
+			if (i == pathLength) {
+				randomPlatformHolder [i] = availablePlatforms [6];
+				continue;
+			}
 			//There are number ranges associated with each platform
 			//to create different probabilities of each happening
 			chosenPlatform = Random.Range (1, 10000);

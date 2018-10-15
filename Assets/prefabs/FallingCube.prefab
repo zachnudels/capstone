@@ -65,7 +65,7 @@ GameObject:
   - component: {fileID: 114625364710333874}
   m_Layer: 0
   m_Name: FallingCube
-  m_TagString: platform
+  m_TagString: spinPlat
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -307,7 +307,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c75ba7bac2f114bf5a7e7044bf9f4dfb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  index: 0
+  index: 22
 --- !u!114 &114573491904715784
 MonoBehaviour:
   m_ObjectHideFlags: 1
