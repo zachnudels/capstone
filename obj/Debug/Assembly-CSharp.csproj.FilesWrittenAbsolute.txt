@@ -158,3 +158,5 @@
 /Users/Zach/Google Drive/UCT/2018/CSC3020H/Games Project 2018/Capstone/capstone/Temp/bin/Debug/Unity.Cecil.Mdb.dll
 /Users/Zach/Google Drive/UCT/2018/CSC3020H/Games Project 2018/Capstone/capstone/Temp/bin/Debug/UnityEditor.iOS.Extensions.Xcode.dll
 /Users/Zach/Google Drive/UCT/2018/CSC3020H/Games Project 2018/Capstone/capstone/Temp/bin/Debug/UnityEditor.iOS.Extensions.Xcode.xml
+/Users/lauracohen1/Documents/GitHub/capstone/Temp/bin/Debug/TextMeshPro-2017.3-Editor.dll
+/Users/lauracohen1/Documents/GitHub/capstone/Temp/bin/Debug/TextMeshPro-2017.3-Runtime.dll

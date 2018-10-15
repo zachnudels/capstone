@@ -108,3 +108,5 @@
 /Users/lauracohen1/Desktop/capstone copy/Temp/bin/Debug/Unity.CecilTools.dll
 /Users/lauracohen1/Desktop/capstone copy/Temp/bin/Debug/Unity.Cecil.Pdb.dll
 /Users/lauracohen1/Desktop/capstone copy/Temp/bin/Debug/Unity.Cecil.Mdb.dll
+/Users/lauracohen1/Documents/GitHub/capstone/Temp/bin/Debug/TextMeshPro-2017.3-Editor.dll
+/Users/lauracohen1/Documents/GitHub/capstone/Temp/bin/Debug/TextMeshPro-2017.3-Runtime.dll
