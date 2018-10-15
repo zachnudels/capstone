@@ -7,7 +7,7 @@ public class PositionBoost : MonoBehaviour {
 	public GameObject particleEffect;
 
 	void OnTriggerEnter (Collider col) {
-		if (col.CompareTag ("Player")) {
+		if (col.CompareTag ("myPlayer")) {
 			yBoost(col);
 		}
 	}

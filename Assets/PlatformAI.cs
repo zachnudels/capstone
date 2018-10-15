@@ -9,20 +9,20 @@ public class PlatformAI : MonoBehaviour {
 
 	public indexFinder[] platforms;
 	public NavMeshLink[] links;
+	public MoveTo moveTo;
+	public GameObject agent;
+	public GameObject model;
+	public NavMeshLink firstLink;
 	public int pathLength;
-//	public MoveTo moveTo;
-//	public GameObject agent;
-//	public GameObject model;
-//	public NavMeshLink firstLink;
-//	public int platformLength;
+	//	public int platformLength;
 	// Use this for initialization
 	void Start () {
-		platforms = FindObjectsOfType<indexFinder>().OrderBy( go => go.index ).ToArray();
-//		Array.Sort(platforms,
-//			delegate(indexFinder x, indexFinder y) { return x.chance.CompareTo(y.chance); });
-		links = new NavMeshLink[platforms.Length];
+		platforms = FindObjectsOfType<indexFinder>().OrderBy( go => go.name ).ToArray();
+		//		Array.Sort(platforms,
+		//			delegate(indexFinder x, indexFinder y) { return x.chance.CompareTo(y.chance); });
+		links = new NavMeshLink[pathLength +2 ];
 
-//		GameObject currPlatform = platforms [0];
+		//		GameObject currPlatform = platforms [0];
 
 		for (int i = 0; i < pathLength; i++) 
 		{
@@ -37,7 +37,7 @@ public class PlatformAI : MonoBehaviour {
 		} 
 
 		GameObject firstLinkObj = new GameObject();
-		NavMeshLink firstLink = firstLinkObj.AddComponent<NavMeshLink>();
+		firstLink = firstLinkObj.AddComponent<NavMeshLink>();
 		firstLink.startPoint = new Vector3 (-4.7f, -8.1f, -20.15f);
 		firstLink.endPoint = platforms [0].gameObject.transform.position;
 		firstLink.UpdateLink ();
@@ -75,7 +75,7 @@ public class PlatformAI : MonoBehaviour {
 
 			if (nextPlatform.tag == "spinPlat")
 				continue;
-	
+
 
 
 
@@ -114,12 +114,13 @@ public class PlatformAI : MonoBehaviour {
 
 
 		}
-//		moveTo.enabled = true;
-	
-//		Instantiate(agent, model.transform.position, model.transform.rotation);
-		  
+
+		//		moveTo.enabled = true;
+
+		//		Instantiate(agent, model.transform.position, model.transform.rotation);
+
 	}
-	
+
 	// Update is called once per frame
 	void Update () {
 	}

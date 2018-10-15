@@ -8,7 +8,7 @@ public class CheckPoint : MonoBehaviour {
 
 	IEnumerator OnTriggerEnter (Collider col) {
 
-		if (col.CompareTag ("Player")) {
+		if (col.CompareTag ("myPlayer")) {
 			//Speed(col);
 			Instantiate (particleEffect, transform.position, transform.rotation);
 

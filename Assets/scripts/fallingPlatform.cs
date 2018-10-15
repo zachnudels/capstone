@@ -13,12 +13,12 @@ public class fallingPlatform : MonoBehaviour {
 
 	void Start(){
 		yPos = transform.position.y;
-		Player = GameObject.FindGameObjectWithTag("Player").gameObject;
+		Player = GameObject.FindGameObjectWithTag("myPlayer").gameObject;
 	}
 
 	void OnTriggerEnter(Collider collider){
 		print ("colliding");
-		if (collider.gameObject.tag == "Player") {
+		if (collider.gameObject.tag == "myPlayer") {
 			print ("colliding with player");
 			fallSpeed = 0;
 			isFalling = true;
@@ -29,7 +29,7 @@ public class fallingPlatform : MonoBehaviour {
 
 	void OnTriggerExit(Collider collider){
 		print ("leaving");
-		if (collider.gameObject.tag == "Player") {
+		if (collider.gameObject.tag == "myPlayer") {
 			print ("leaving player");
 			upSpeed = 0;
 			isFalling = false;

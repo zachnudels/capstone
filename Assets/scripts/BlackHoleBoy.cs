@@ -41,7 +41,7 @@ public class BlackHoleBoy : MonoBehaviour {
 			speed = delta / 12;
 			start = false;
 		} 
-		if (other.gameObject.tag == "Player" && !still) {
+		if (other.gameObject.tag == "myPlayer" && !still) {
 			playerIn = true;
 			still = true;
 		}
@@ -62,7 +62,7 @@ public class BlackHoleBoy : MonoBehaviour {
 		foreach (Collider collider in Physics.OverlapSphere(transform.position, pullRadius)) {
 
 			// apply force on target towards me
-			if (collider.tag == "Player") {
+			if (collider.tag == "myPlayer") {
 				if (Mathf.Abs (collider.gameObject.transform.position.y - transform.position.y) < 1) {
 					Vector3 forceDir = transform.position - collider.transform.position;
 					forceDir = new Vector3 (forceDir.x, 0.0f, forceDir.z);

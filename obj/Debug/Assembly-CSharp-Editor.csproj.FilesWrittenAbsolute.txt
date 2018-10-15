@@ -154,3 +154,9 @@
 /Users/syipres/Documents/Capstone/capstone/Temp/bin/Debug/Unity.Cecil.Mdb.dll
 /Users/syipres/Documents/Capstone/capstone/Temp/bin/Debug/UnityEditor.iOS.Extensions.Xcode.dll
 /Users/syipres/Documents/Capstone/capstone/Temp/bin/Debug/UnityEditor.iOS.Extensions.Xcode.xml
+/Users/syipres/Documents/Capstone/capstone/Temp/bin/Debug/Assembly-CSharp-Editor.dll.mdb
+/Users/syipres/Documents/Capstone/capstone/Temp/bin/Debug/Assembly-CSharp-Editor.dll
+/Users/syipres/Documents/Capstone/capstone/Temp/bin/Debug/Assembly-CSharp.dll
+/Users/syipres/Documents/Capstone/capstone/Temp/bin/Debug/Assembly-CSharp.dll.mdb
+/Users/syipres/Documents/Capstone/capstone/Temp/bin/Debug/Assembly-CSharp-Editor-firstpass.dll
+/Users/syipres/Documents/Capstone/capstone/Temp/bin/Debug/Assembly-CSharp-Editor-firstpass.dll.mdb

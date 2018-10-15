@@ -76,6 +76,13 @@ public class MCSAnimationController : NetworkBehaviour {
 
 			bool jumpHit = Input.GetKeyDown (KeyCode.Space);
 			bool onGround = Physics.Raycast (transform.position + (new Vector3 (-0.1f, 0.0f, -0.1f)), (Vector3.down), out hit, 0.2f);
+			if (onGround && hit.collider.tag == "spinPlat") {
+				Debug.Log ("Hit");
+				transform.parent.parent = hit.collider.gameObject.transform;
+
+			} else {
+				transform.parent.parent = null;
+			}
 			anim.SetBool ("onGround", onGround);
 
 			jump = Input.GetKey (KeyCode.Space);
