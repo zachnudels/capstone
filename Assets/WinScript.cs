@@ -6,12 +6,12 @@ using UnityEngine.Networking;
 public class WinScript : NetworkBehaviour {
 
 	[SyncVar]
-	public bool win;
+	public bool win = false;
 
 	// Use this for initialization
 	void Start () {
 
-		win = false;
+			win = false;
 		
 	}
 	

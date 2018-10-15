@@ -60,6 +60,7 @@ public class HUDManager : NetworkBehaviour {
 			}
 		}
 
+		Win.GetComponent<WinScript> ().win = false;
 	}
 	void OnCollisionEnter (Collision col) {
 		Debug.Log (col.transform.name);
