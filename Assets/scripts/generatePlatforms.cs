@@ -28,6 +28,9 @@ public class generatePlatforms : MonoBehaviour {
 
 	public float[] percentagePlatforms;
 
+	public GameObject AIPower;
+	public GameObject agent;
+
 	float[] randomXHolder;
 	float[] randomYHolder;
 	float[] randomZHolder;
@@ -51,6 +54,13 @@ public class generatePlatforms : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+
+		GameObject aP = Instantiate (AIPower, new Vector3 (15, -6, 15), Quaternion.identity);
+		GameObject a = Instantiate (agent, new Vector3 (15, -6, 15), Quaternion.identity);
+		a.GetComponent<MoveTo> ().pathLength = pathLength;
+		aP.GetComponent<AIPowerup> ().AI = a;
+		a.SetActive (false);
+
 
 		availablePlatforms [0] = fallingPlatform;
 		availablePlatforms [1] = yBFPlatform;

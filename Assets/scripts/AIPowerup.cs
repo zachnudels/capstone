@@ -7,7 +7,7 @@ using UnityEngine.AI;
 public class AIPowerup : MonoBehaviour {
 
 	GameObject model;
-	public GameObject AIModel;
+	public GameObject AI;
 	public GameObject particleEffect;
 	public NavMeshSurface surface;
 //	public ThirdPersonCharacter modelControl;
@@ -41,7 +41,7 @@ public class AIPowerup : MonoBehaviour {
 //			
 //			Destroy (model);
 
-			GameObject AI = model.GetComponentInParent<Sibling> ().sibling;
+//			GameObject AI = AIModel;// model.GetComponentInParent<Sibling> ().sibling;
 
 //			
 //			Instantiate(AIModel, pos, rot);

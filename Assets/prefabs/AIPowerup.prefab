@@ -38,7 +38,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1260557419038094}
   m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 83.9, y: -5.7, z: -154.6}
+  m_LocalPosition: {x: 15, y: -6, z: 40}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -119,7 +119,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2d82f5067d26a470285a1cf5dc509deb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  AIModel: {fileID: 1467027317049636, guid: be1e160fb5d70409aa656136a6792fe4, type: 2}
   particleEffect: {fileID: 0}
+  surface: {fileID: 0}
 --- !u!135 &135555154252229046
 SphereCollider:
   m_ObjectHideFlags: 1
