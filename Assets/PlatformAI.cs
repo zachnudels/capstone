@@ -17,7 +17,7 @@ public class PlatformAI : MonoBehaviour {
 	//	public int platformLength;
 	// Use this for initialization
 	void Start () {
-		platforms = FindObjectsOfType<indexFinder>().OrderBy( go => go.name ).ToArray();
+		platforms = FindObjectsOfType<indexFinder>().OrderBy( go => go.index ).ToArray();
 		//		Array.Sort(platforms,
 		//			delegate(indexFinder x, indexFinder y) { return x.chance.CompareTo(y.chance); });
 		links = new NavMeshLink[pathLength +2 ];
@@ -38,7 +38,7 @@ public class PlatformAI : MonoBehaviour {
 
 		GameObject firstLinkObj = new GameObject();
 		firstLink = firstLinkObj.AddComponent<NavMeshLink>();
-		firstLink.startPoint = new Vector3 (-4.7f, -8.1f, -20.15f);
+		firstLink.startPoint = new Vector3 (-4.7f, -8.76f, -20.15f);
 		firstLink.endPoint = platforms [0].gameObject.transform.position;
 		firstLink.UpdateLink ();
 		firstLink.costModifier = 1;

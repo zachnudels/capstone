@@ -30,8 +30,8 @@ public class generatePlatforms : NetworkBehaviour {
 
 	public float[] percentagePlatforms;
 
-	public GameObject AIPower;
-	public GameObject agent;
+//	public GameObject AIPower;
+//	public GameObject agent;
 
 	float[] randomXHolder;
 	float[] randomYHolder;
@@ -59,11 +59,11 @@ public class generatePlatforms : NetworkBehaviour {
 	// Use this for initialization
 	void Start () {
 
-		GameObject aP = Instantiate (AIPower, new Vector3 (15, -6, 15), Quaternion.identity);
-		GameObject a = Instantiate (agent, new Vector3 (15, -6, 15), Quaternion.identity);
-		a.GetComponent<MoveTo> ().pathLength = pathLength;
-		aP.GetComponent<AIPowerup> ().AI = a;
-		a.SetActive (false);
+//		GameObject aP = Instantiate (AIPower, new Vector3 (15, -6, 15), Quaternion.identity);
+//		GameObject a = Instantiate (agent, new Vector3 (15, -6, 15), Quaternion.identity);
+//		a.GetComponent<MoveTo> ().pathLength = pathLength;
+//		aP.GetComponent<AIPowerup> ().AI = a;
+//		a.SetActive (false);
 
 
 		availablePlatforms [0] = fallingPlatform;
