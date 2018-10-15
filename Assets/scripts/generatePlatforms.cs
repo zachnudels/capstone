@@ -102,8 +102,8 @@ public class generatePlatforms : NetworkBehaviour {
 
 
 		}
-//		aiScript.pathLength = pathLength;
-//		aiScript.enabled = true;
+		aiScript.pathLength = pathLength;
+		aiScript.enabled = true;
 		Debug.Log (light_count);
 
 
