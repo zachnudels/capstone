@@ -11,6 +11,7 @@ public class MoveTo : MonoBehaviour {
 	public ThirdPersonCharacter character;
 	NavMeshAgent agent;
 	public indexFinder[] platforms;
+	public int pathLength;
 
 
 	void Start () {
@@ -18,7 +19,7 @@ public class MoveTo : MonoBehaviour {
 		platforms = FindObjectsOfType<indexFinder>().OrderBy( go => go.name ).ToArray();
 		agent = GetComponent<NavMeshAgent>();
 //		agent.destination = goal.position;
-		agent.destination = platforms[platforms.Length-1].transform.position; 
+		agent.destination = platforms[pathLength].transform.position; 
 		Debug.Log (agent.destination);
 
 //		agent.destination = platforms[platforms.Length-1].transform.position;

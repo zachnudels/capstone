@@ -13,6 +13,7 @@ public class PlatformAI : MonoBehaviour {
 	public GameObject agent;
 	public GameObject model;
 	public NavMeshLink firstLink;
+	public int pathLength;
 //	public int platformLength;
 	// Use this for initialization
 	void Start () {
@@ -23,7 +24,7 @@ public class PlatformAI : MonoBehaviour {
 
 //		GameObject currPlatform = platforms [0];
 
-		for (int i = 0; i < platforms.Length; i++) 
+		for (int i = 0; i < pathLength; i++) 
 		{
 			if (platforms[i].tag == "spinPlat")
 				continue;
@@ -68,7 +69,7 @@ public class PlatformAI : MonoBehaviour {
 		float currMag = Vector3.Magnitude (new Vector3 (currBound.extents.x, 0, currBound.extents.z)) * 0.5f;
 
 
-		for(int i = 0; i != platforms.Length; ++i) {
+		for(int i = 0; i != pathLength; ++i) {
 
 			nextPlatform = platforms [i].gameObject;
 
