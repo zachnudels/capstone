@@ -12,6 +12,10 @@ public class HUDManager : NetworkBehaviour {
 	public List < GameObject > p_ups;
 	public GameObject canvas;
 	private int list_indexer;
+	public GameObject win_text;
+	public GameObject lose_text;
+
+	public GameObject Win;
 
 	private NetworkIdentity id;
 
@@ -46,7 +50,15 @@ public class HUDManager : NetworkBehaviour {
 				list_indexer = 0;
 			}
 		}
-		
+
+		if (Win.GetComponent<WinScript> ().win) {
+			if (transform.GetComponent<WinnerCheck> ().win) {
+				win_text.SetActive (true);
+			}
+			else {
+				lose_text.SetActive (true);
+			}
+		}
 
 	}
 	void OnCollisionEnter (Collision col) {

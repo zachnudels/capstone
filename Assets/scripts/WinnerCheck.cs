@@ -4,25 +4,26 @@ using UnityEngine;
 
 public class WinnerCheck : MonoBehaviour {
 
-	public bool win = false;
-	public int platform_index = 0;
+	public bool win;
+	public int platform_index;
 	public GameObject endgame;
 
 
-	void OnTriggerEnter (Collider col) {
+	void OnCollisionEnter (Collision col) {
 
 		//indexFinder indf = col.GetComponent<indexFinder>();
-		platform_index = col.GetComponent<indexFinder> ().index;
+		platform_index = col.transform.GetComponent<indexFinder> ().index;
 		Debug.Log (platform_index);
 
 
-		if (platform_index == 100) {
+		if (platform_index == 99) {
 			win = true;
+			endgame.GetComponent<WinScript> ().win = true;
 		} 
 		else {
 			win = false;
 		}
-		Debug.Log (win);
+		//Debug.Log (win);
 		//win = false;
 
 	}
