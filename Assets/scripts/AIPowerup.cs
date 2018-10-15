@@ -28,7 +28,7 @@ public class AIPowerup : MonoBehaviour {
 
 
 	IEnumerator OnTriggerEnter (Collider col) {
-		if (col.CompareTag ("Player")) {
+		if (col.CompareTag ("myPlayer")) {
 			Debug.Log ("Collision");
 			model = col.gameObject.transform.gameObject;
 			Debug.Log (model.name);
@@ -45,6 +45,7 @@ public class AIPowerup : MonoBehaviour {
 
 //			
 //			Instantiate(AIModel, pos, rot);
+			AI.GetComponent<MoveTo>().model = GameObject.FindWithTag ("myPlayer");
 
 //			Destroy(model);
 			model.SetActive(false);

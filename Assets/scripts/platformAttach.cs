@@ -8,7 +8,7 @@ public class platformAttach : MonoBehaviour {
 	private Transform playerParent;
 
 	void Start(){
-		Player = GameObject.FindGameObjectWithTag("Player").gameObject;
+		Player = GameObject.FindGameObjectWithTag("myPlayer").gameObject;
 		playerParent = Player.transform.parent;
 	}
 
@@ -26,7 +26,7 @@ public class platformAttach : MonoBehaviour {
 
 	private void OnTriggerExit(Collider other){
 		print ("trigger has left");
-		if (other.gameObject.tag == "Player") {
+		if (other.gameObject.tag == "myPlayer") {
 			print ("trigger has left platform");
 			Player.transform.parent.parent = null;
 		}

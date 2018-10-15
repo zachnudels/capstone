@@ -36,6 +36,7 @@ public class MoveTo : MonoBehaviour {
 		} else {
 			character.Move (Vector3.zero, false, false);
 			agent.gameObject.SetActive (false);
+
 //			GameObject model = FindObjectOfType<Sibling> ().gameObject;
 			model.transform.SetPositionAndRotation (transform.position, transform.rotation);
 			model.SetActive (true);

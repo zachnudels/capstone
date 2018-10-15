@@ -20,7 +20,7 @@ public class PlatformAI : MonoBehaviour {
 		platforms = FindObjectsOfType<indexFinder>().OrderBy( go => go.name ).ToArray();
 //		Array.Sort(platforms,
 //			delegate(indexFinder x, indexFinder y) { return x.chance.CompareTo(y.chance); });
-		links = new NavMeshLink[platforms.Length];
+		links = new NavMeshLink[pathLength +2 ];
 
 //		GameObject currPlatform = platforms [0];
 

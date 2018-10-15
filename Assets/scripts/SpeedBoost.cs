@@ -11,7 +11,7 @@ public class SpeedBoost : MonoBehaviour {
 
 
 	IEnumerator OnTriggerEnter (Collider col) {
-		if (col.CompareTag ("Player")) {
+		if (col.CompareTag ("myPlayer")) {
 			//Speed(col);
 			Instantiate (particleEffect, transform.position, transform.rotation);
 
