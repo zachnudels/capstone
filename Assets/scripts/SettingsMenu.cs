@@ -19,7 +19,7 @@ public class SettingsMenu : MonoBehaviour {
 	}
 
 	public void quitToMenu(){
-		SceneManager.LoadScene (SceneManager.GetActiveScene ().buildIndex - 1);
+		SceneManager.LoadScene (SceneManager.GetActiveScene ().buildIndex - 2);
 	}
 
 }

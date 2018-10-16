@@ -22,7 +22,7 @@ public class forwardBack : MonoBehaviour
 		rightLimit = transform.position.x + 20f;
 		//change -20
 		leftLimit = transform.position.x -20f;
-//		speed = Random.Range(2.0f, 20.0f);
+		speed = Random.Range(4.0f, 10.0f);
 	}
 	void Update(){
 		if (transform.position.x > rightLimit)
