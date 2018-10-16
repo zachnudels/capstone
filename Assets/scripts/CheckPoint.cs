@@ -16,8 +16,8 @@ public class CheckPoint : MonoBehaviour {
 			mesh.enabled = false;
 
 			// Disable Mesh Collider here
-			MCSAnimationController mcs = col.GetComponent<MCSAnimationController>();
-			mcs.spawner = true;
+			PowerUpManager pman = col.GetComponentInParent<PowerUpManager>();
+			pman.checkpoint = true;
 
 
 

@@ -39,6 +39,8 @@ public class MCSAnimationController : NetworkBehaviour {
 	private NetworkIdentity id;
 	public Camera cam;
 
+	public float anim_speed;
+
 	void Start () {
 		currentCam = tp;
 		anim = GetComponent<Animator> ();
@@ -48,6 +50,7 @@ public class MCSAnimationController : NetworkBehaviour {
 		inJump = false;
 		jump = false;
 		spawner = false;
+		anim_speed = 1;
 		Physics.gravity = new Vector3 (0, gravity, 0);
 		RB = GetComponentInParent<Rigidbody> ();
 		//id = GetComponent<NetworkIdentity> ();
@@ -63,6 +66,8 @@ public class MCSAnimationController : NetworkBehaviour {
 	void Update () {
 
 		if (id.isLocalPlayer) {
+
+			anim.speed = anim_speed;
 
 			//transform.GetComponent<NetworkAnimator> ().GetParameterAutoSend (0);
 			//transform.GetComponent<NetworkAnimator> ().GetParameterAutoSend (1);

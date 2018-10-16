@@ -20,16 +20,18 @@ public class SpeedBoost : MonoBehaviour {
 
 			// Disable Mesh Collider here
 
-
+			col.GetComponentInParent<PowerUpManager> ().speed++;
+			/*
 			anim = col.GetComponent<Animator> ();
 
 			anim.speed = 2;
-
+			*/
 		}
 		Destroy (particleEffect, 1.2f);
 
 		yield return new WaitForSeconds (3);
-		anim.speed = 1;
+		//anim.speed = 1;
+
 		Destroy (gameObject);
 
 	}
