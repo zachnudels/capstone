@@ -39,6 +39,8 @@ public class MCSAnimationController : NetworkBehaviour {
 	private NetworkIdentity id;
 	public Camera cam;
 
+	private PowerUpManager p_man;
+
 	public float anim_speed;
 
 	void Start () {
@@ -55,6 +57,7 @@ public class MCSAnimationController : NetworkBehaviour {
 		RB = GetComponentInParent<Rigidbody> ();
 		//id = GetComponent<NetworkIdentity> ();
 		id = gameObject.transform.parent.gameObject.GetComponent<NetworkIdentity>();
+		p_man = transform.parent.GetComponent<PowerUpManager> ();
 
 		if (!id.isLocalPlayer) {
 			cam.enabled = false;
@@ -138,12 +141,12 @@ public class MCSAnimationController : NetworkBehaviour {
 			}
 
 			// Add Checkpoint to Game World with Key Press 'R'
-			if (Input.GetKeyDown (KeyCode.R) && spawner==true) {
+			if (p_man.legit_checkpoint) {
 				Instantiate (SpawnObject, transform.position, transform.rotation);
 				spawnx = transform.position.x;
 				spawny = transform.position.y;
 				spawnz = transform.position.z;
-				spawner = false;
+				p_man.legit_checkpoint = false;
 
 				//Debug.Log (SpawnObject.transform.position);
 			}
@@ -155,6 +158,9 @@ public class MCSAnimationController : NetworkBehaviour {
 				transform.position = new Vector3 (spawnx, spawny, spawnz);
 			}
 
+			if (Input.GetKeyDown(KeyCode.I)) {
+				transform.position = new Vector3 (spawnx, spawny, spawnz);
+			}
 			if (Input.GetKeyDown (KeyCode.P)) {
 				Debug.Log (spawnx);
 				Debug.Log (spawny);

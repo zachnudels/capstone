@@ -6,6 +6,7 @@ public class PowerUpManager : MonoBehaviour {
 
 	public int speed;
 	public bool checkpoint;
+	public bool legit_checkpoint;
 
 	float time = 3;
 
@@ -25,6 +26,7 @@ public class PowerUpManager : MonoBehaviour {
 	void Start () {
 		speed = 0;
 		checkpoint = false;
+		legit_checkpoint = false;
 		hud = transform.GetComponent<HUDManager> ();
 
 		RB = transform.GetComponent<Rigidbody> ();
@@ -56,22 +58,13 @@ public class PowerUpManager : MonoBehaviour {
 					// Add Checkpoint to Game World with Key Press 'R'
 					if (checkpoint==true) {
 
-						//GameObject model = transform.GetChild[0];
-						Instantiate (SpawnObject, transform.GetChild(0).transform.position, transform.GetChild(0).transform.rotation);
-						spawnx = transform.GetChild(0).transform.position.x;
-						spawny = transform.GetChild(0).transform.position.y;
-						spawnz = transform.GetChild(0).transform.position.z;
+						legit_checkpoint = true;
+
 						checkpoint = false;
 
 						//Debug.Log (SpawnObject.transform.position);
 					}
-
-					//Debug.Log (RB.velocity.y);
-
-					// If falling, move back to Checkpoint
-					if (RB.velocity.y < -55 && spawnx != 0 && spawny != 0 && spawnz != 0) {
-						transform.position = new Vector3 (spawnx, spawny, spawnz);
-					}
+						
 					//checkpoint = false;
 
 				}
