@@ -3,12 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.Networking;
+using TMPro;
 
 public class HUDManager : NetworkBehaviour {
 
 	private string index_string;
 	private int i;
-	public Text platform_text;
+	public TextMeshProUGUI platform_text;
 	public List < GameObject > p_ups;
 	public GameObject canvas;
 	private int list_indexer;
@@ -27,6 +28,7 @@ public class HUDManager : NetworkBehaviour {
 		i = 0;
 		list_indexer = 0;
 		id = GetComponent<NetworkIdentity> ();
+		platform_text = GetComponent<TextMeshProUGUI> ();
 
 		if (!id.isLocalPlayer) {
 			canvas.SetActive (false);
@@ -46,13 +48,13 @@ public class HUDManager : NetworkBehaviour {
 		p_ups [list_indexer].SetActive(true);
 
 
-		p_ups [0].GetComponentInChildren<Text> ().text = transform.GetComponent<PowerUpManager> ().speed.ToString ();
+		p_ups [0].GetComponentInChildren<TextMeshProUGUI> ().text = transform.GetComponent<PowerUpManager> ().speed.ToString ();
 
 		if (transform.GetComponent<PowerUpManager> ().checkpoint == true) {
-			p_ups [1].GetComponentInChildren<Text> ().text = "1";
+			p_ups [1].GetComponentInChildren<TextMeshProUGUI> ().text = "1";
 		}
 		if (transform.GetComponent<PowerUpManager> ().checkpoint == false) {
-			p_ups [1].GetComponentInChildren<Text> ().text = "0";
+			p_ups [1].GetComponentInChildren<TextMeshProUGUI> ().text = "0";
 		}
 
 		if (Input.GetKeyDown (KeyCode.Tab)) {

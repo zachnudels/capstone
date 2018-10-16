@@ -30,8 +30,8 @@ public class generatePlatforms : NetworkBehaviour {
 
 	public float[] percentagePlatforms;
 
-//	public GameObject AIPower;
-//	public GameObject agent;
+	public GameObject AIPower;
+	public GameObject agent;
 
 	float[] randomXHolder;
 	float[] randomYHolder;
@@ -59,11 +59,11 @@ public class generatePlatforms : NetworkBehaviour {
 	// Use this for initialization
 	void Start () {
 
-//		GameObject aP = Instantiate (AIPower, new Vector3 (15, -6, 15), Quaternion.identity);
-//		GameObject a = Instantiate (agent, new Vector3 (15, -6, 15), Quaternion.identity);
-//		a.GetComponent<MoveTo> ().pathLength = pathLength;
-//		aP.GetComponent<AIPowerup> ().AI = a;
-//		a.SetActive (false);
+		GameObject aP = Instantiate (AIPower, new Vector3 (15, -6, 15), Quaternion.identity);
+		GameObject a = Instantiate (agent, new Vector3 (15, -6, 15), Quaternion.identity);
+		a.GetComponent<MoveTo> ().pathLength = pathLength;
+		aP.GetComponent<AIPowerup> ().AI = a;
+		a.SetActive (false);
 
 
 		availablePlatforms [0] = fallingPlatform;
@@ -109,10 +109,9 @@ public class generatePlatforms : NetworkBehaviour {
 
 
 	}
-
 	void constructPlatforms(){
 		//init the amount of platforms to be generated
-//		numberOfPlatforms = 100;
+		//		numberOfPlatforms = 100;
 		randomXHolder = new float[numberOfPlatforms];
 		randomYHolder = new float[numberOfPlatforms];
 		randomZHolder = new float[numberOfPlatforms];
@@ -123,19 +122,18 @@ public class generatePlatforms : NetworkBehaviour {
 		int[] platformDist = new int[percentagePlatforms.Length];
 
 		for(int i = 0 ; i < percentagePlatforms.Length; ++i){
-			Debug.Log(percentagePlatforms[i]);
+			//			Debug.Log(percentagePlatforms[i]);
 			platformDist[i] = (int) (percentagePlatforms[i] * numberOfPlatforms * 0.01);
-			Debug.Log("platform "+i+": "+platformDist[i]);
+			//			Debug.Log("platform "+i+": "+platformDist[i]);
 		}
-
+		randomPlatformHolder [0] = availablePlatforms [8];
 		//loops through each position of platforms
-		for (int i = 0; i < numberOfPlatforms; i++) {
+		for (int i = 1; i < numberOfPlatforms; i++) {
 
 			if (i == pathLength) {
 				randomPlatformHolder [i] = availablePlatforms [6];
 				continue;
 			}
-
 			//There are number ranges associated with each platform
 			//to create different probabilities of each happening
 			chosenPlatform = Random.Range (1, 10000);
@@ -147,15 +145,11 @@ public class generatePlatforms : NetworkBehaviour {
 
 			--platformDist[chosenPlatform];
 			randomPlatformHolder[i] = availablePlatforms[chosenPlatform];
-			//randomPlatformHolder [i].GetComponent<indexFinder> ().index = i;
-			//Debug.Log("plaforms " + numberOfPlatforms);
-			//Debug.Log(i+": "+chosenPlatform);
+			//			Debug.Log(i+": "+chosenPlatform);
 
 		}//all platforms now generated in holder array
 
-
 	}
-
 
 	void makeRandoms(){
 

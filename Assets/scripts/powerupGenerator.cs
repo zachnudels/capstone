@@ -10,8 +10,12 @@ public class powerupGenerator : NetworkBehaviour {
 	public GameObject spawn;
 	public GameObject speed;
 
+	//[SyncVar]
+	//int power;
+
 	[SyncVar]
 	int power;
+		
 
 	float spawnX;
 	float spawnZ;
@@ -48,6 +52,7 @@ public class powerupGenerator : NetworkBehaviour {
 		}
 
 		if (powerUp) {
+			
 			power = Random.Range (1, 3);
 
 		}

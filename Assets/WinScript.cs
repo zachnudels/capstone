@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Networking;
+using UnityEngine.SceneManagement; 
 
 public class WinScript : NetworkBehaviour {
 
@@ -17,6 +18,10 @@ public class WinScript : NetworkBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+
+		if (win) {
+			SceneManager.LoadScene (0);
+		}
 		
 	}
 }

@@ -24,6 +24,8 @@ public class PlatformAI : MonoBehaviour {
 
 		//		GameObject currPlatform = platforms [0];
 
+		Vector3 lilBump = new Vector3 (0, 0.1f, 0);
+
 		for (int i = 0; i < pathLength; i++) 
 		{
 			if (platforms[i].tag == "spinPlat")
@@ -50,8 +52,8 @@ public class PlatformAI : MonoBehaviour {
 		Bounds currBound;
 		Bounds nextBound;
 
-		Vector3 currYBump = Vector3.zero;
-		Vector3 nextYBump = Vector3.zero;
+		Vector3 currYBump = lilBump;
+		Vector3 nextYBump = lilBump;
 
 		Vector3 currCent;
 
@@ -69,7 +71,7 @@ public class PlatformAI : MonoBehaviour {
 		float currMag = Vector3.Magnitude (new Vector3 (currBound.extents.x, 0, currBound.extents.z)) * 0.5f;
 
 
-		for(int i = 0; i != pathLength; ++i) {
+		for(int i = 1; i != pathLength; ++i) {
 
 			nextPlatform = platforms [i].gameObject;
 

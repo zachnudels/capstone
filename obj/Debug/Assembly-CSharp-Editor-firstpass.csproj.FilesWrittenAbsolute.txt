@@ -46,3 +46,5 @@
 /Users/syipres/Documents/Capstone/capstone/Temp/bin/Debug/Unity.Cecil.Mdb.dll
 /Users/syipres/Documents/Capstone/capstone/Temp/bin/Debug/UnityEditor.iOS.Extensions.Xcode.dll
 /Users/syipres/Documents/Capstone/capstone/Temp/bin/Debug/UnityEditor.iOS.Extensions.Xcode.xml
+/Users/syipres/Documents/Capstone/capstone/Temp/bin/Debug/TextMeshPro-2017.3-Editor.dll
+/Users/syipres/Documents/Capstone/capstone/Temp/bin/Debug/TextMeshPro-2017.3-Runtime.dll

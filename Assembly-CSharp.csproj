@@ -125,6 +125,7 @@
      <Compile Include="Assets\PostProcessing\Runtime\Utils\MaterialFactory.cs" />
      <Compile Include="Assets\PostProcessing\Runtime\Utils\RenderTextureFactory.cs" />
      <Compile Include="Assets\PowerUpManager.cs" />
+     <Compile Include="Assets\PropProduction.cs" />
      <Compile Include="Assets\RPG Character Animation Pack\Code\CameraController.cs" />
      <Compile Include="Assets\RPG Character Animation Pack\Code\RPGCharacterControllerFREE.cs" />
      <Compile Include="Assets\RPG Character Animation Pack\Code\RPGCharacterGUI.cs" />
@@ -161,6 +162,10 @@
      <Compile Include="Assets\scripts\rotateUp.cs" />
      <Compile Include="Assets\scripts\SettingsMenu.cs" />
      <Compile Include="Assets\scripts\Sibling.cs" />
+     <Compile Include="Assets\scripts\SoundScripts\GlobalEns.cs" />
+     <Compile Include="Assets\scripts\SoundScripts\GlobalMusic.cs" />
+     <Compile Include="Assets\scripts\SoundScripts\GlobalMusic1.cs" />
+     <Compile Include="Assets\scripts\SoundScripts\GlobalObject.cs" />
      <Compile Include="Assets\scripts\SpeedBoost.cs" />
      <Compile Include="Assets\scripts\Spin.cs" />
      <Compile Include="Assets\scripts\spinCubeCollid.cs" />

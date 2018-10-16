@@ -54,12 +54,13 @@ public class AIPowerup : MonoBehaviour {
 			AI.SetActive (false);
 			//			AI.transform.position = pos;
 			//			surface.BuildNavMesh ();
+
 			AI.GetComponent<NavMeshAgent> ().enabled = false;
 			AI.GetComponent<NavMeshAgent> ().updatePosition = false;
 			AI.GetComponent<MoveTo> ().enabled = false;
 
 			//			AI.GetComponent<NavMeshAgent> ().Warp (pos);
-			AI.transform.rotation = rot;
+//			AI.transform.rotation = rot;
 
 			//			AI.GetComponent<NavMeshAgent> ().enabled = true;
 			//			AI.GetComponent<MoveTo> ().enabled = true;

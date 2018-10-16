@@ -16,6 +16,8 @@ public class MCSAnimationController : NetworkBehaviour {
 	public GameObject tp;
 	private Rigidbody RB;
 
+	public float anim_speed;
+
 	private GameObject currentCam;
 	public GameObject TPSloc;
 	private int time;
@@ -39,11 +41,8 @@ public class MCSAnimationController : NetworkBehaviour {
 	private NetworkIdentity id;
 	public Camera cam;
 
-	private PowerUpManager p_man;
-
-	public float anim_speed;
-
 	void Start () {
+		anim_speed = 1;
 		currentCam = tp;
 		anim = GetComponent<Animator> ();
 		walking = 0.0f; 
@@ -52,12 +51,10 @@ public class MCSAnimationController : NetworkBehaviour {
 		inJump = false;
 		jump = false;
 		spawner = false;
-		anim_speed = 1;
 		Physics.gravity = new Vector3 (0, gravity, 0);
 		RB = GetComponentInParent<Rigidbody> ();
 		//id = GetComponent<NetworkIdentity> ();
 		id = gameObject.transform.parent.gameObject.GetComponent<NetworkIdentity>();
-		p_man = transform.parent.GetComponent<PowerUpManager> ();
 
 		if (!id.isLocalPlayer) {
 			cam.enabled = false;
@@ -67,6 +64,8 @@ public class MCSAnimationController : NetworkBehaviour {
 
 	// Update is called once per frame
 	void Update () {
+
+
 
 		if (id.isLocalPlayer) {
 
@@ -94,12 +93,15 @@ public class MCSAnimationController : NetworkBehaviour {
 			anim.SetBool ("onGround", onGround);
 
 			jump = Input.GetKey (KeyCode.Space);
+
+
+	
 			anim.SetBool ("jump", jumpHit);
 			if (jumpHit)
 				//Debug.Log (jumpTime);
 
 			if (jumpHit && jumpTime > 1.2f) {
-
+				gameObject.GetComponent<AudioSource> ().Play ();
 				jumpTime = 0.0f;
 				RB.mass = 0.1f;
 				inJump = true;
@@ -141,12 +143,12 @@ public class MCSAnimationController : NetworkBehaviour {
 			}
 
 			// Add Checkpoint to Game World with Key Press 'R'
-			if (p_man.legit_checkpoint) {
+			if (Input.GetKeyDown (KeyCode.R) && spawner==true) {
 				Instantiate (SpawnObject, transform.position, transform.rotation);
 				spawnx = transform.position.x;
 				spawny = transform.position.y;
 				spawnz = transform.position.z;
-				p_man.legit_checkpoint = false;
+				spawner = false;
 
 				//Debug.Log (SpawnObject.transform.position);
 			}
@@ -158,9 +160,6 @@ public class MCSAnimationController : NetworkBehaviour {
 				transform.position = new Vector3 (spawnx, spawny, spawnz);
 			}
 
-			if (Input.GetKeyDown(KeyCode.I)) {
-				transform.position = new Vector3 (spawnx, spawny, spawnz);
-			}
 			if (Input.GetKeyDown (KeyCode.P)) {
 				Debug.Log (spawnx);
 				Debug.Log (spawny);
