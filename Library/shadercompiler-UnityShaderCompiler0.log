@@ -1,6 +1,2 @@
 Base path: /Applications/Unity/Unity.app/Contents
 Cmd: initializeCompiler
-Cmd: preprocess
-  error: 2 plat 21 at (126): Can't find include file TMPro_Properties.cginc
-  error: 2 plat 21 at (127): Can't find include file TMPro.cginc
-  insize=10047 outsize=3838 ok=0

@@ -3391,7 +3391,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1105999960
 RectTransform:
   m_ObjectHideFlags: 0
@@ -5087,9 +5087,9 @@ MonoBehaviour:
     maze and make your way to the top before the other player, only one can make it
     out alive! \n\nWatch out for powerful items along the way, and always be weary
     of mysterious space creatues.\n\nMove around the world using standard WASD or
-    the arrow keys and jump using the spacebar. \n\nYou will find mysterious yellow
-    gem's along the way which will allow you to drop your own checkpoint using the
-    'V' key."
+    the arrow keys and jump using the spacebar. \n\nYou will find gems along the way,
+    and you can scroll through your available gems using TAB.\n\n You can use your
+    gem by hitting P, and you can respawn at your checkpoint using B."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 09641b029dfa78843902b548a9de7553, type: 2}
   m_sharedMaterial: {fileID: 2147374, guid: 09641b029dfa78843902b548a9de7553, type: 2}
@@ -5116,8 +5116,8 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 45
-  m_fontSizeBase: 45
+  m_fontSize: 43
+  m_fontSizeBase: 43
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -5157,12 +5157,12 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_textInfo:
     textComponent: {fileID: 1771716150}
-    characterCount: 475
+    characterCount: 532
     spriteCount: 0
-    spaceCount: 93
-    wordCount: 89
+    spaceCount: 107
+    wordCount: 101
     linkCount: 0
-    lineCount: 11
+    lineCount: 12
     pageCount: 1
     materialCount: 1
   m_havePropertiesChanged: 0
@@ -5791,7 +5791,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &2118683523
 RectTransform:
   m_ObjectHideFlags: 0
