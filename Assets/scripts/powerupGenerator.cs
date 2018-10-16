@@ -9,10 +9,16 @@ public class powerupGenerator : NetworkBehaviour {
 	bool powerUp;
 	public GameObject spawn;
 	public GameObject speed;
+
+	[SyncVar]
 	int power;
+
 	float spawnX;
 	float spawnZ;
 	Vector3 pos;
+
+	[SyncVar]
+	int prob;
 
 
 	// Use this for initialization
@@ -36,7 +42,7 @@ public class powerupGenerator : NetworkBehaviour {
 
 
 	void makeRandom(){
-		int prob = 3;
+		prob = 3;
 		if (prob == 3) {
 			powerUp = true;
 		}
